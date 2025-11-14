@@ -1,0 +1,542 @@
+/* 
+ * Main page specific styles
+ * Built on top of template.css
+ */
+
+/* Category Cards Section - WHITE background to prevent grey border */
+.category-cards-section {
+  width: 100%;
+  padding: 4rem 2rem;
+  background: #FFFFFF;
+  margin: 0;
+}
+
+/* Tour Category Cards (GetYourGuide style) */
+.tour-category-card {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.tour-category-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.category-icon {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.tour-category-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.tour-category-card p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.card-stats {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  padding-top: 1rem;
+  margin-top: 0.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.card-stats span {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  white-space: nowrap;
+}
+
+.card-link {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  transition: gap 0.3s ease;
+}
+
+.card-link:hover {
+  gap: 0.5rem;
+}
+
+/* Featured Guide Cards */
+.guide-card-featured {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.guide-card-featured:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.guide-avatar-large {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #f0f0f0;
+}
+
+.guide-card-featured h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.guide-rating {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.guide-card-featured p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.guide-specialties-inline {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.specialty-tag {
+  font-size: 0.75rem;
+  padding: 0.375rem 0.75rem;
+  background: rgba(224, 161, 0, 0.1);
+  color: var(--primary);
+  border-radius: 16px;
+  font-weight: 600;
+}
+
+.guides-section-inline {
+  margin-top: 3rem;
+}
+
+/* Welcome Section */
+.welcome-section {
+  margin-top: 4rem;
+}
+
+/* Partner Cards */
+.partners-section {
+  margin-top: 4rem;
+}
+
+/* Register Section */
+.register-section {
+  margin-top: 4rem;
+}
+
+.partner-card {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.partner-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.partner-logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  margin-bottom: 0.5rem;
+}
+
+.partner-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.partner-card p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.partner-stats {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  padding-top: 1rem;
+  margin-top: 0.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.partner-stats span {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  white-space: nowrap;
+}
+
+.category-cards-container {
+  max-width: var(--content-width, 1200px);
+  margin: 0 auto;
+}
+
+.category-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.category-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.category-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.card-image-wrapper {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.category-card:hover .card-image {
+  transform: scale(1.05);
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 100%);
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary, #282828);
+  margin: 0;
+}
+
+.tour-badge {
+  font-size: 0.875rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.card-description {
+  color: var(--text-secondary, #666);
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.explore-link {
+  color: var(--primary, #E0A100);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.category-card:hover .explore-link {
+  color: var(--primary-dark, #C18F00);
+}
+
+/* Guides Section */
+.guides-section {
+  width: 100%;
+  padding: 4rem 2rem;
+  background: white;
+}
+
+.guides-container {
+  max-width: var(--content-width, 1200px);
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-primary, #282828);
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  font-size: 1.125rem;
+  color: var(--text-secondary, #666);
+}
+
+.guides-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.guide-card {
+  background: white;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.guide-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  border-color: var(--primary, #E0A100);
+}
+
+.guide-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 3px solid var(--primary, #E0A100);
+}
+
+.guide-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary, #282828);
+  margin-bottom: 0.5rem;
+}
+
+.guide-rating {
+  color: #FFB800;
+  margin-bottom: 0.5rem;
+}
+
+.guide-languages {
+  font-size: 0.9rem;
+  color: var(--text-secondary, #666);
+  margin-bottom: 1rem;
+}
+
+.guide-specialties {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.specialty-badge {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  background: rgba(224, 161, 0, 0.1);
+  color: var(--primary, #E0A100);
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .category-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .guides-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* Mini hero */
+.mini-hero {
+  padding: calc(var(--navbar-height) + 3rem) 2rem 4rem;
+  background: linear-gradient(180deg, rgba(15,12,9,0.85) 0%, rgba(255,255,255,0.95) 75%),
+              url('images/hero.webp') center/cover;
+  color: white;
+}
+.mini-hero-content {
+  max-width: 880px;
+  margin: 0 auto;
+  text-align: center;
+}
+.mini-hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+.mini-hero-badges span {
+  background: rgba(255,255,255,0.25);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.4);
+  border-radius: 999px;
+  padding: 0.5rem 1.25rem;
+}
+.mini-hero-badges span {
+  background: #f5f1e8;
+  border-radius: 999px;
+  padding: 0.5rem 1.25rem;
+  font-weight: 600;
+  color: #4f3a2b;
+}
+
+/* Spotlight */
+.guides-spotlight {
+  margin: 4rem auto 0;
+  max-width: 1100px;
+  background: #f7f2ec;
+  border-radius: 20px;
+  display: flex;
+  gap: 2rem;
+  padding: 3rem;
+}
+.spotlight-image {
+  flex: 1;
+  min-height: 320px;
+  border-radius: 16px;
+  background: url('../lisboaporfavor-bootstrap/public/images/guides/lxtourguide/LXtourguide-profile.png') center/cover;
+}
+.spotlight-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.spotlight-stats {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #5a493b;
+}
+.spotlight-stats li {
+  margin-bottom: 0.4rem;
+}
+
+/* Guides grid */
+.guides-grid-section {
+  margin: 4rem auto;
+  max-width: 1200px;
+  padding: 0 2rem;
+}
+.section-heading {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.guides-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+.guide-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.guide-card-media {
+  height: 220px;
+  background-size: cover;
+  background-position: center;
+}
+.guide-card-body {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.guide-card-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.guide-card-badges span {
+  background: rgba(224,161,0,0.12);
+  color: #8b5c04;
+  border-radius: 999px;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+}

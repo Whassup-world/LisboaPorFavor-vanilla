@@ -1,0 +1,106 @@
+/* Quick fixes for layout issues */
+
+/* Remove any default margins/padding */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Ensure app container has no gaps */
+#app {
+  margin: 0;
+  padding: 0;
+}
+
+/* ============================================
+   CONTAMINATED HERO OVERRIDES - ARCHIVED
+   DO NOT USE - template.css has correct version
+   ============================================ */
+/* 
+.hero-section {
+  margin: 0 !important;
+  padding: 0 !important;
+  padding-top: 140px !important;
+  ...REMOVED - was breaking TEST alignment
+}
+*/
+
+/* Ensure seamless transition from hero to content (NO grey border) */
+.hero-section + .category-cards-section {
+  margin-top: 0 !important;
+  padding-top: 4rem !important;
+  border-top: none !important;
+}
+
+/* Force white background on body to prevent any grey showing */
+body {
+  background: #FFFFFF;
+}
+
+/* Hero overlay/content/text styles - all in template.css already (from TEST) */
+/* Content section max-width - also in template.css already */
+/* Removed duplicate definitions */
+
+/* Reduce main image section height from 700px to 400px */
+.image-section {
+  height: 400px !important;
+  min-height: 400px !important;
+  margin-bottom: 0 !important;
+}
+
+.image-section img {
+  height: 120%;
+  min-height: 480px;
+}
+
+/* Ensure footer sits tight against image section */
+footer {
+  margin-top: 0 !important;
+}
+
+/* Fix language selector colors - match footer theme (no blue) */
+.language-selector select {
+  background: rgba(255, 255, 255, 0.15) !important;
+  color: white !important;
+}
+
+.language-selector select option {
+  background: #3C322D !important;
+  color: white !important;
+}
+
+.language-selector select option:hover,
+.language-selector select option:focus,
+.language-selector select option:checked,
+.language-selector select option:active {
+  background: #4A3F39 !important;
+  color: white !important;
+}
+
+/* Remove browser default blue highlight */
+.language-selector select option::selection {
+  background: #4A3F39 !important;
+}
+
+.language-selector select option::-moz-selection {
+  background: #4A3F39 !important;
+}
+
+/* Payment icons from TEST - SVG styling */
+.payment-icons {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.payment-icon {
+  display: block;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.payment-icon:hover {
+  opacity: 1;
+}
