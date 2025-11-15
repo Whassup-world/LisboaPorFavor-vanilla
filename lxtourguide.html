@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LXTourguide - Lisbon Tour Guide | LisboaPorFavor</title>
+  <meta name="description" content="Meet George from LXTourguide, your local Lisbon expert. Personalized walking and biking tours showcasing the best of Lisbon.">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/template.css">
+  <link rel="stylesheet" href="css/guide-page.css">
+</head>
+<body>
+  <!-- Navbar (from template) -->
+  <div id="navbar-placeholder"></div>
+
+  <!-- Main Content -->
+  <main class="guide-page">
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb-nav">
+      <div class="page-container">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <a href="guides.html">Guides</a>
+          <span>/</span>
+          <span class="active" id="breadcrumb-guide-name">LXtourguide</span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Photo Gallery -->
+    <section class="photo-gallery">
+      <div class="page-container">
+        <div class="gallery-container">
+          <div class="gallery-grid" id="featured-gallery">
+            <!-- Filled by JS -->
+          </div>
+          
+          <div class="gallery-grid gallery-more" id="more-gallery" style="display: none;">
+            <!-- Filled by JS -->
+          </div>
+        </div>
+        
+        <div class="gallery-toggle">
+          <button id="toggle-gallery-btn" class="btn-secondary">View all photos</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="page-container">
+      <div class="guide-layout">
+        <!-- Left Column -->
+        <div class="guide-main">
+          <!-- Guide Info Card -->
+          <div class="guide-info-card">
+            <img src="" alt="Guide avatar" class="guide-avatar" id="guide-avatar">
+            <div class="guide-info">
+              <h1 class="guide-name" id="guide-name">LXtourguide</h1>
+              <div class="guide-rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-number" id="rating-number">5.0</span>
+                <span class="review-count" id="review-count">(20 reviews)</span>
+              </div>
+              <div class="guide-badges">
+                <span class="badge badge-verified">✓ Identified Guide</span>
+                <span class="badge badge-partner">Partner</span>
+                <span class="badge badge-expert">Local Expert</span>
+              </div>
+              <div class="guide-id" id="guide-id">ID: PTLIS00001</div>
+            </div>
+          </div>
+
+          <!-- Welcome Text -->
+          <div class="welcome-card">
+            <h2 class="welcome-title" id="welcome-title">Welcome to LXTourguide</h2>
+            <div class="welcome-text" id="welcome-text">
+              <!-- Filled by JS -->
+            </div>
+            <div class="welcome-toggle">
+              <button id="read-more-btn" class="btn-primary">Read More</button>
+            </div>
+          </div>
+
+          <!-- Featured Tours -->
+          <section class="featured-tours">
+            <h2 class="section-title">Featured Tours by <span id="guide-name-tours">LXtourguide</span></h2>
+            <div class="tours-grid" id="tours-grid">
+              <!-- Filled by JS -->
+            </div>
+          </section>
+
+          <!-- Reviews -->
+          <section class="reviews-section">
+            <div class="reviews-header">
+              <h2 class="section-title">Guest Reviews</h2>
+              <div class="reviews-summary">
+                <span class="stars">★★★★★</span>
+                <span class="rating-number">5.0</span>
+                <span class="review-count">(20 reviews)</span>
+              </div>
+            </div>
+            <div class="reviews-list" id="reviews-list">
+              <!-- Filled by JS -->
+            </div>
+            <div class="reviews-toggle">
+              <button class="btn-secondary">See More Reviews</button>
+            </div>
+          </section>
+        </div>
+
+        <!-- Right Column - Booking Card -->
+        <aside class="guide-sidebar">
+          <div class="booking-card">
+            <div class="booking-header">
+              <img src="" alt="Guide avatar" class="booking-avatar" id="booking-avatar">
+              <div class="booking-info">
+                <div class="booking-name" id="booking-name">LXtourguide</div>
+                <div class="booking-rating">
+                  <span class="stars">★★★★★</span>
+                  <span class="rating-number">5.00</span>
+                </div>
+                <div class="booking-reviews">(20 reviews)</div>
+              </div>
+            </div>
+
+            <div class="booking-inputs">
+              <div class="input-field">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                <span>Date</span>
+              </div>
+              <div class="input-field">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+                <span>2 Adults</span>
+              </div>
+            </div>
+
+            <button class="btn-primary btn-block" id="message-btn">Message LXtourguide</button>
+
+            <div class="booking-details">
+              <div class="detail-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M12 16v-4"></path>
+                  <path d="M12 8h.01"></path>
+                </svg>
+                <div>
+                  <div class="detail-label">Languages</div>
+                  <div class="detail-value" id="languages">English, Dutch, German</div>
+                </div>
+              </div>
+              <div class="detail-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <div>
+                  <div class="detail-label">Response Time</div>
+                  <div class="detail-value" id="response-time">6 hours on average</div>
+                </div>
+              </div>
+              <div class="detail-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                <div>
+                  <div class="detail-label">Availability Updated</div>
+                  <div class="detail-value">--</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    <!-- Tour CTA Banner -->
+    <div class="cta-banner">
+      <div class="cta-content">
+        <div class="cta-text">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M12 6v6l4 2"></path>
+          </svg>
+          <div>
+            <h3 class="cta-title">Tours fill up quickly in high season!</h3>
+            <p class="cta-subtitle">Book our most popular Alfama walking tour today</p>
+          </div>
+        </div>
+        <a href="/tours/alfama-vintage-market" class="cta-button">View Tour Details →</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" style="display: none;">
+    <button class="lightbox-close" id="lightbox-close">×</button>
+    <button class="lightbox-prev" id="lightbox-prev">‹</button>
+    <button class="lightbox-next" id="lightbox-next">›</button>
+    <img src="" alt="" id="lightbox-image" class="lightbox-image">
+  </div>
+
+  <!-- Footer (from template) -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Scripts -->
+  <script src="data/tours.js"></script>
+  <script src="data/guides.js"></script>
+  <script src="data/guide-lxtourguide.js"></script>
+  <script src="js/components/navbar.js"></script>
+  <script src="js/components/footer.js"></script>
+  <script src="js/pages/guide-page.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

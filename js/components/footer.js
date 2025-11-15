@@ -86,3 +86,19 @@ function createFooter() {
     </footer>
   `;
 }
+
+// Auto-inject footer into placeholder
+(function() {
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', injectFooter);
+  } else {
+    injectFooter();
+  }
+  
+  function injectFooter() {
+    const placeholder = document.getElementById('footer-placeholder');
+    if (placeholder) {
+      placeholder.innerHTML = createFooter();
+    }
+  }
+})();

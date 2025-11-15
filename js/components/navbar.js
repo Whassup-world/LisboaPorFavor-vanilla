@@ -56,3 +56,20 @@ function initNavbar() {
     }
   });
 }
+
+// Auto-inject navbar into placeholder
+(function() {
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', injectNavbar);
+  } else {
+    injectNavbar();
+  }
+  
+  function injectNavbar() {
+    const placeholder = document.getElementById('navbar-placeholder');
+    if (placeholder) {
+      placeholder.innerHTML = createNavbar();
+      initNavbar();
+    }
+  }
+})();

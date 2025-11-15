@@ -1,0 +1,876 @@
+/* ============================================
+   GUIDE PAGE STYLES
+   Using locked template colors & design
+   ============================================ */
+
+.guide-page {
+  padding-top: var(--navbar-height);
+  background-color: #F5F5F5;
+  min-height: 100vh;
+}
+
+/* Breadcrumb - Hidden */
+.breadcrumb-nav {
+  display: none;
+}
+
+/* Photo Gallery */
+.photo-gallery {
+  padding: 2rem 0 3rem;
+}
+
+.page-container {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.photo-gallery .page-container {
+  position: relative;
+}
+
+.gallery-container {
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin-bottom: 1.5rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 0;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-item .zoom-icon {
+  position: absolute;
+  bottom: 0.75rem;
+  right: 0.75rem;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.gallery-item:hover .zoom-icon {
+  opacity: 1;
+}
+
+.gallery-more {
+  margin-top: 1rem;
+}
+
+.gallery-more .gallery-item img {
+  height: 140px;
+}
+
+.gallery-toggle {
+  position: relative;
+  text-align: center;
+  margin: -1.75rem 0 0 0;
+  z-index: 10;
+}
+
+.gallery-toggle button {
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Guide Layout */
+.guide-layout {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 2rem;
+  padding: 0 0 3rem;
+}
+
+.guide-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Guide Info Card */
+.guide-info-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.guide-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.guide-info {
+  flex: 1;
+}
+
+.guide-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #49403C;
+  margin: 0 0 0.5rem 0;
+}
+
+.guide-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.stars {
+  color: #F59E0B;
+  font-size: 1rem;
+}
+
+.rating-number {
+  font-weight: 600;
+  color: #1F2937;
+}
+
+.review-count {
+  color: #6B7280;
+  font-size: 0.875rem;
+}
+
+.guide-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.badge-verified {
+  background: #10B981;
+  color: white;
+}
+
+.badge-partner {
+  background: rgba(16, 185, 129, 0.1);
+  color: #10B981;
+}
+
+.badge-expert {
+  background: rgba(37, 99, 235, 0.1);
+  color: #2563EB;
+}
+
+.guide-id {
+  font-size: 0.875rem;
+  color: #6B7280;
+}
+
+/* Welcome Card */
+.welcome-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.welcome-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1F2937;
+  margin: 0 0 1.5rem 0;
+}
+
+.welcome-text {
+  color: #6B7280;
+  line-height: 1.7;
+  white-space: pre-line;
+  margin-bottom: 1.5rem;
+}
+
+.welcome-toggle {
+  border-top: 1px solid #E5E7EB;
+  padding-top: 1.5rem;
+  text-align: center;
+}
+
+/* Featured Tours */
+.featured-tours {
+  margin: 2rem 0;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #49403C;
+  margin: 0 0 1.5rem 0;
+}
+
+.tours-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.tour-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.tour-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.tour-image-wrapper {
+  position: relative;
+}
+
+.tour-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.tour-badge {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  background: #2563EB;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.tour-content {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.tour-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #1F2937;
+  margin: 0 0 0.5rem 0;
+}
+
+.tour-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.tour-description {
+  color: #6B7280;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  flex: 1;
+  margin-bottom: 1rem;
+}
+
+.tour-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.tour-price {
+  font-weight: 700;
+  color: #49403C;
+  font-size: 1.125rem;
+}
+
+.tour-duration {
+  color: #6B7280;
+  font-size: 0.875rem;
+}
+
+.tour-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.btn-outline {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border: 1px solid #49403C;
+  background: transparent;
+  color: #49403C;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  text-align: center;
+}
+
+.btn-outline:hover {
+  background: #49403C;
+  color: white;
+}
+
+.btn-success {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: #10B981;
+  color: white;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  text-align: center;
+}
+
+.btn-success:hover {
+  background: #059669;
+}
+
+/* Reviews Section */
+.reviews-section {
+  margin: 2rem 0;
+}
+
+.reviews-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.reviews-summary {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.review-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.review-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.review-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.review-info {
+  flex: 1;
+}
+
+.review-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.25rem;
+}
+
+.review-name {
+  font-weight: 700;
+  color: #1F2937;
+}
+
+.review-date {
+  color: #6B7280;
+  font-size: 0.875rem;
+}
+
+.review-stars {
+  color: #F59E0B;
+  margin-bottom: 0.5rem;
+}
+
+.review-text {
+  color: #6B7280;
+  line-height: 1.6;
+}
+
+.reviews-toggle {
+  text-align: center;
+}
+
+/* Booking Card (Sticky Sidebar) */
+.guide-sidebar {
+  position: relative;
+}
+
+.booking-card {
+  position: sticky;
+  top: calc(var(--navbar-height) + 1rem);
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.booking-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.booking-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.booking-name {
+  font-weight: 700;
+  color: #49403C;
+  margin-bottom: 0.25rem;
+}
+
+.booking-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.booking-reviews {
+  color: #2563EB;
+  font-size: 0.875rem;
+  text-decoration: underline;
+}
+
+.booking-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.input-field {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  background: #F9FAFB;
+  color: #6B7280;
+}
+
+.input-field svg {
+  color: #9CA3AF;
+}
+
+.btn-block {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.booking-details {
+  border-top: 1px solid #E5E7EB;
+  padding-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.detail-item {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.detail-item svg {
+  color: #9CA3AF;
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+}
+
+.detail-label {
+  font-weight: 600;
+  color: #1F2937;
+  font-size: 0.875rem;
+}
+
+.detail-value {
+  color: #6B7280;
+  font-size: 0.875rem;
+}
+
+/* CTA Banner */
+.cta-banner {
+  position: relative;
+  background-image: url('/images/_rawslug/lisbon.webp');
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  margin-top: 3rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.cta-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(73, 64, 60, 0.85) 0%, rgba(73, 64, 60, 0.75) 100%);
+  z-index: 1;
+}
+
+.cta-content {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 2rem 2.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.cta-text {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  flex: 1;
+}
+
+.cta-text svg {
+  color: #F59E0B;
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+}
+
+.cta-title {
+  margin: 0 0 0.25rem 0;
+  color: #1F2937;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.cta-subtitle {
+  margin: 0;
+  color: #6B7280;
+  font-size: 0.875rem;
+}
+
+.cta-button {
+  background: #F59E0B;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 24px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.3);
+}
+
+.cta-button:hover {
+  background: #D97706;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-image {
+  max-width: 95vw;
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: white;
+  border: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  color: #1F2937;
+  transition: all 0.3s ease;
+}
+
+.lightbox-close:hover {
+  background: #F3F4F6;
+  transform: scale(1.1);
+}
+
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  color: #1F2937;
+  transition: all 0.3s ease;
+}
+
+.lightbox-prev {
+  left: 1.5rem;
+}
+
+.lightbox-next {
+  right: 1.5rem;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  background: #F3F4F6;
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* Buttons (page-specific, not navbar) */
+.guide-page .btn-primary:not(.navbar .btn-primary),
+.guide-page .btn-secondary {
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 24px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.guide-page .btn-primary:not(.navbar .btn-primary) {
+  background: #49403C;
+  color: white;
+  border: 1px solid #49403C;
+}
+
+.guide-page .btn-primary:not(.navbar .btn-primary):hover {
+  background: #5a4f4a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(73, 64, 60, 0.3);
+}
+
+.guide-page .btn-secondary {
+  background: transparent;
+  color: #49403C;
+  border: 1px solid #49403C;
+}
+
+.guide-page .btn-secondary:hover {
+  background: #49403C;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .guide-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .guide-sidebar {
+    order: -1;
+  }
+
+  .booking-card {
+    position: static;
+  }
+
+  .gallery-container {
+    padding: 0.75rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .guide-page {
+    padding-top: calc(var(--navbar-height) - 20px);
+  }
+
+  .page-container {
+    padding: 0 1rem;
+  }
+
+  .photo-gallery {
+    padding: 1.5rem 0 2rem;
+  }
+
+  .gallery-container {
+    padding: 0.75rem;
+    border-radius: 8px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .gallery-item img {
+    height: 180px;
+  }
+
+  .gallery-toggle {
+    margin-top: -1.5rem;
+  }
+
+  .guide-info-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.25rem;
+  }
+
+  .guide-avatar {
+    width: 80px;
+    height: 80px;
+  }
+
+  .guide-layout {
+    gap: 1.5rem;
+  }
+
+  .guide-main {
+    gap: 1.5rem;
+  }
+
+  .tours-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reviews-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .lightbox-prev {
+    left: 0.5rem;
+  }
+
+  .lightbox-next {
+    right: 0.5rem;
+  }
+
+  .cta-banner {
+    height: 400px;
+    padding: 1.5rem;
+  }
+
+  .cta-content {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem 2rem;
+    gap: 1.5rem;
+  }
+
+  .cta-text {
+    gap: 0.75rem;
+  }
+
+  .cta-button {
+    width: 100%;
+    text-align: center;
+  }
+}
