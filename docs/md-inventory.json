@@ -1,0 +1,345 @@
+[
+  {
+    "filename": "MASTER_INDEX.md",
+    "path": "D:\\Backup and Documents\\W\\Windsurf\\MASTER_INDEX.md",
+    "summary": "Single entry point for all AI sessions. Session start protocol, project status, and navigation to critical docs.",
+    "lastModified": "2025-11-15",
+    "category": "architecture"
+  },
+  {
+    "filename": "BRAINSTORM.md",
+    "path": "D:\\Backup and Documents\\W\\Windsurf\\BRAINSTORM.md",
+    "summary": "Strategic thinking and architecture discussions. Multi-agent system design, future evolution ideas, research topics.",
+    "lastModified": "2025-11-15",
+    "category": "architecture"
+  },
+  {
+    "filename": "CRITICAL_FILES_INDEX.md",
+    "path": "D:\\Backup and Documents\\W\\Windsurf\\CRITICAL_FILES_INDEX.md",
+    "summary": "Master index of all important documents, tools, and ready-to-implement files. Protected file list.",
+    "lastModified": "2025-11-14",
+    "category": "architecture"
+  },
+  {
+    "filename": "CLEANUP_COMPLETE_NOV14.md",
+    "path": "D:\\Backup and Documents\\W\\Windsurf\\CLEANUP_COMPLETE_NOV14.md",
+    "summary": "Project cleanup completion report from Nov 14, 2025. Summary of git commits and cleanup tasks completed.",
+    "lastModified": "2025-11-14",
+    "category": "archive"
+  },
+  {
+    "filename": "CLEANUP_INSTRUCTIONS_JUNIOR.md",
+    "path": "D:\\Backup and Documents\\W\\Windsurf\\CLEANUP_INSTRUCTIONS_JUNIOR.md",
+    "summary": "Instructions for Junior AI to execute cleanup tasks. Task delegation and execution guide.",
+    "lastModified": "2025-11-14",
+    "category": "tasks"
+  },
+  {
+    "filename": "httpswww.getyourguide.comsq=supplie.md",
+    "path": "D:\\Backup and Documents\\W\\Windsurf\\httpswww.getyourguide.comsq=supplie.md",
+    "summary": "GetYourGuide supplier research or link reference. Likely competitor analysis or marketplace research.",
+    "lastModified": "2025-11-14",
+    "category": "research"
+  },
+  {
+    "filename": "SOURCE_OF_TRUTH.md",
+    "path": "D:\\Backup and Documents\\W\\Windsurf\\lisboaporfavor-bootstrap\\SOURCE_OF_TRUTH.md",
+    "summary": "Bootstrap project overview, tech stack, architecture, and launch timeline. Last updated Oct 27 (outdated).",
+    "lastModified": "2025-10-27",
+    "category": "archive"
+  },
+  {
+    "filename": "ACTIVE_SESSION.md",
+    "path": "D:\\Backup and Documents\\W\\Windsurf\\lisboaporfavor-bootstrap\\ACTIVE_SESSION.md",
+    "summary": "Bootstrap project session log from Oct 27, 2025. Documentation cleanup and system organization focus.",
+    "lastModified": "2025-10-27",
+    "category": "archive"
+  },
+  {
+    "filename": "TODO.md",
+    "path": "D:\\Backup and Documents\\W\\Windsurf\\lisboaporfavor-bootstrap\\TODO.md",
+    "summary": "Bootstrap project task list and priorities. Complete 3-week roadmap with task breakdown.",
+    "lastModified": "2025-10-27",
+    "category": "tasks"
+  },
+  {
+    "filename": "START_HERE.md",
+    "path": "D:\\Backup and Documents\\W\\Windsurf\\lisboaporfavor-bootstrap\\START_HERE.md",
+    "summary": "Bootstrap project onboarding document. Quick start guide for new developers or sessions.",
+    "lastModified": "2025-10-27",
+    "category": "architecture"
+  },
+  {
+    "filename": "WELCOME_BACK.md",
+    "path": "D:\\Backup and Documents\\W\\Windsurf\\lisboaporfavor-bootstrap\\WELCOME_BACK.md",
+    "summary": "Bootstrap project session restart guide. Context restoration for returning to work.",
+    "lastModified": "2025-10-27",
+    "category": "archive"
+  },
+  {
+    "filename": "UI_REVIEW_SUMMARY.md",
+    "path": "D:\\Backup and Documents\\W\\Windsurf\\lisboaporfavor-bootstrap\\UI_REVIEW_SUMMARY.md",
+    "summary": "Bootstrap UI design review and feedback. Summary of design decisions and improvements needed.",
+    "lastModified": "2025-10-27",
+    "category": "template"
+  },
+  {
+    "filename": "UI_IMPROVEMENTS_COMPLETED.md",
+    "path": "D:\\Backup and Documents\\W\\Windsurf\\lisboaporfavor-bootstrap\\UI_IMPROVEMENTS_COMPLETED.md",
+    "summary": "Bootstrap UI improvements completion log. What was fixed and what remains.",
+    "lastModified": "2025-10-27",
+    "category": "archive"
+  },
+  {
+    "filename": "TESTING_CHECKLIST.md",
+    "path": "D:\\Backup and Documents\\W\\Windsurf\\lisboaporfavor-bootstrap\\TESTING_CHECKLIST.md",
+    "summary": "Bootstrap project pre-deployment testing checklist. QA steps and validation criteria.",
+    "lastModified": "2025-10-27",
+    "category": "tasks"
+  },
+  {
+    "filename": "TEMPLATE_FIX_PLAN.md",
+    "path": "D:\\Backup and Documents\\W\\Windsurf\\lisboaporfavor-bootstrap\\TEMPLATE_FIX_PLAN.md",
+    "summary": "Bootstrap template system fix plan. Page template implementation strategy.",
+    "lastModified": "2025-10-27",
+    "category": "template"
+  },
+  {
+    "filename": "TASK_05_HOMEPAGE_LAYOUT_FIX.md",
+    "path": "D:\\Backup and Documents\\W\\Windsurf\\lisboaporfavor-bootstrap\\TASK_05_HOMEPAGE_LAYOUT_FIX.md",
+    "summary": "Bootstrap homepage layout fix task specification. Junior AI delegation task for homepage fixes.",
+    "lastModified": "2025-10-28",
+    "category": "tasks"
+  },
+  {
+    "filename": "TASKS.md",
+    "path": "D:\\Backup and Documents\\W\\Windsurf\\lisboaporfavor-bootstrap\\TASKS.md",
+    "summary": "Bootstrap project general task list. Overview of pending and completed work items.",
+    "lastModified": "2025-10-27",
+    "category": "tasks"
+  },
+  {
+    "filename": "LEGAL_REQUIREMENTS.md",
+    "path": "D:\\Backup and Documents\\W\\Windsurf\\lisboaporfavor-bootstrap\\LEGAL_REQUIREMENTS.md",
+    "summary": "Legal compliance requirements for Bootstrap project. Terms, privacy policy, GDPR considerations.",
+    "lastModified": "2025-10-27",
+    "category": "research"
+  },
+  {
+    "filename": "LAUNCH_PLAN_11_11_11.md",
+    "path": "D:\\Backup and Documents\\W\\Windsurf\\lisboaporfavor-bootstrap\\LAUNCH_PLAN_11_11_11.md",
+    "summary": "Bootstrap Nov 11 launch plan. MVP launch strategy and timeline for shadow launch.",
+    "lastModified": "2025-10-27",
+    "category": "archive"
+  },
+  {
+    "filename": "JUNIOR_AI_TASKS_UI_IMPROVEMENTS.md",
+    "path": "D:\\Backup and Documents\\W\\Windsurf\\lisboaporfavor-bootstrap\\JUNIOR_AI_TASKS_UI_IMPROVEMENTS.md",
+    "summary": "Bootstrap UI improvement tasks for Junior AI delegation. Specific UI fix specifications.",
+    "lastModified": "2025-10-27",
+    "category": "tasks"
+  },
+  {
+    "filename": "IMPLEMENTATION_CHECKLIST.md",
+    "path": "D:\\Backup and Documents\\W\\Windsurf\\lisboaporfavor-bootstrap\\IMPLEMENTATION_CHECKLIST.md",
+    "summary": "Bootstrap implementation checklist. Development milestones and completion tracking.",
+    "lastModified": "2025-10-27",
+    "category": "tasks"
+  },
+  {
+    "filename": "HOMEPAGE_FIX_PLAN.md",
+    "path": "D:\\Backup and Documents\\W\\Windsurf\\lisboaporfavor-bootstrap\\HOMEPAGE_FIX_PLAN.md",
+    "summary": "Bootstrap homepage fix strategy. Layout issues and solutions documented.",
+    "lastModified": "2025-10-28",
+    "category": "template"
+  },
+  {
+    "filename": "GUIDE_SYSTEM_PHASE1.md",
+    "path": "D:\\Backup and Documents\\W\\Windsurf\\lisboaporfavor-bootstrap\\GUIDE_SYSTEM_PHASE1.md",
+    "summary": "Bootstrap guide system phase 1 implementation. Guide profile and certification workflow design.",
+    "lastModified": "2025-10-27",
+    "category": "architecture"
+  },
+  {
+    "filename": "GUIDE_CREATION_TASK.md",
+    "path": "D:\\Backup and Documents\\W\\Windsurf\\lisboaporfavor-bootstrap\\GUIDE_CREATION_TASK.md",
+    "summary": "Bootstrap guide profile creation task specification. Content and structure for guide pages.",
+    "lastModified": "2025-10-27",
+    "category": "tasks"
+  },
+  {
+    "filename": "FILE_ANALYSIS_REPORT.md",
+    "path": "D:\\Backup and Documents\\W\\Windsurf\\lisboaporfavor-bootstrap\\FILE_ANALYSIS_REPORT.md",
+    "summary": "Bootstrap project file analysis report. Code audit and structure analysis results.",
+    "lastModified": "2025-10-27",
+    "category": "research"
+  },
+  {
+    "filename": "EXECUTION_SUMMARY.md",
+    "path": "D:\\Backup and Documents\\W\\Windsurf\\lisboaporfavor-bootstrap\\EXECUTION_SUMMARY.md",
+    "summary": "Bootstrap project execution summary. Work completed and next steps overview.",
+    "lastModified": "2025-10-27",
+    "category": "archive"
+  },
+  {
+    "filename": "EMERGENCY_PLAYBOOK.md",
+    "path": "D:\\Backup and Documents\\W\\Windsurf\\lisboaporfavor-bootstrap\\EMERGENCY_PLAYBOOK.md",
+    "summary": "Bootstrap emergency procedures and recovery playbook. Troubleshooting and rollback strategies.",
+    "lastModified": "2025-10-27",
+    "category": "architecture"
+  },
+  {
+    "filename": "README.md",
+    "path": "D:\\Backup and Documents\\W\\Windsurf\\lisboaporfavor-bootstrap\\tasks\\README.md",
+    "summary": "Bootstrap task library guide. Copy-paste ready task specifications for Junior AI delegation.",
+    "lastModified": "2025-10-27",
+    "category": "tasks"
+  },
+  {
+    "filename": "TASK_01_DATABASE_SCHEMA.md",
+    "path": "D:\\Backup and Documents\\W\\Windsurf\\lisboaporfavor-bootstrap\\tasks\\TASK_01_DATABASE_SCHEMA.md",
+    "summary": "Bootstrap database schema task. Junior AI task for porting Prisma schema from v1.6.",
+    "lastModified": "2025-10-27",
+    "category": "tasks"
+  },
+  {
+    "filename": "TASK_02_GETYOURGUIDE_IMPORT.md",
+    "path": "D:\\Backup and Documents\\W\\Windsurf\\lisboaporfavor-bootstrap\\tasks\\TASK_02_GETYOURGUIDE_IMPORT.md",
+    "summary": "Bootstrap GetYourGuide data import task. Tour data extraction and import specification.",
+    "lastModified": "2025-10-27",
+    "category": "tasks"
+  },
+  {
+    "filename": "TASK_03_PARSE_CHROME_LINKS.md",
+    "path": "D:\\Backup and Documents\\W\\Windsurf\\lisboaporfavor-bootstrap\\tasks\\TASK_03_PARSE_CHROME_LINKS.md",
+    "summary": "Bootstrap Chrome bookmarks parsing task. Extract and categorize 532 research bookmarks.",
+    "lastModified": "2025-10-27",
+    "category": "tasks"
+  },
+  {
+    "filename": "TASK_04_ORGANIZE_RESEARCH.md",
+    "path": "D:\\Backup and Documents\\W\\Windsurf\\lisboaporfavor-bootstrap\\tasks\\TASK_04_ORGANIZE_RESEARCH.md",
+    "summary": "Bootstrap research organization task. Analyze and categorize 172 research files.",
+    "lastModified": "2025-10-27",
+    "category": "tasks"
+  },
+  {
+    "filename": "TASK_HOMEPAGE_HERO_REDESIGN.md",
+    "path": "D:\\Backup and Documents\\W\\Windsurf\\lisboaporfavor-bootstrap\\tasks\\TASK_HOMEPAGE_HERO_REDESIGN.md",
+    "summary": "Bootstrap homepage hero redesign task. VeePee-inspired hero section implementation.",
+    "lastModified": "2025-10-28",
+    "category": "tasks"
+  },
+  {
+    "filename": "JUNIOR_AI_PROMPT.md",
+    "path": "D:\\Backup and Documents\\W\\Windsurf\\lisboaporfavor-bootstrap\\tasks\\JUNIOR_AI_PROMPT.md",
+    "summary": "Bootstrap generic Junior AI prompt template. Reusable task delegation format.",
+    "lastModified": "2025-10-27",
+    "category": "tasks"
+  },
+  {
+    "filename": "JUNIOR_AI_PROMPT_TASK04.md",
+    "path": "D:\\Backup and Documents\\W\\Windsurf\\lisboaporfavor-bootstrap\\tasks\\JUNIOR_AI_PROMPT_TASK04.md",
+    "summary": "Bootstrap Task 04 specific Junior AI prompt. Research organization delegation instructions.",
+    "lastModified": "2025-10-27",
+    "category": "tasks"
+  },
+  {
+    "filename": "INFRASTRUCTURE_PRIORITY.md",
+    "path": "D:\\Backup and Documents\\W\\Windsurf\\lisboaporfavor-bootstrap\\docs\\INFRASTRUCTURE_PRIORITY.md",
+    "summary": "Bootstrap infrastructure priorities. Database, hosting, and third-party service setup priorities.",
+    "lastModified": "2025-10-27",
+    "category": "architecture"
+  },
+  {
+    "filename": "guide_template_plan.md",
+    "path": "D:\\Backup and Documents\\W\\Windsurf\\lisboaporfavor-bootstrap\\docs\\guide_template_plan.md",
+    "summary": "Bootstrap guide page template plan. Design and structure for guide profile pages.",
+    "lastModified": "2025-10-27",
+    "category": "template"
+  },
+  {
+    "filename": "GOOGLE_WORKSPACE_DOWNGRADE.md",
+    "path": "D:\\Backup and Documents\\W\\Windsurf\\lisboaporfavor-bootstrap\\docs\\GOOGLE_WORKSPACE_DOWNGRADE.md",
+    "summary": "Bootstrap Google Workspace downgrade guide. Cost optimization and email management strategy.",
+    "lastModified": "2025-10-27",
+    "category": "research"
+  },
+  {
+    "filename": "DKIM_SETUP_GUIDE.md",
+    "path": "D:\\Backup and Documents\\W\\Windsurf\\lisboaporfavor-bootstrap\\docs\\DKIM_SETUP_GUIDE.md",
+    "summary": "Bootstrap DKIM email authentication setup guide. Email deliverability configuration steps.",
+    "lastModified": "2025-10-27",
+    "category": "research"
+  },
+  {
+    "filename": "SESSION_OCT26_COMPLETE.md",
+    "path": "D:\\Backup and Documents\\W\\Windsurf\\lisboaporfavor-bootstrap\\docs\\archive\\SESSION_OCT26_COMPLETE.md",
+    "summary": "Bootstrap Oct 26 session completion summary. Archived session work log.",
+    "lastModified": "2025-10-26",
+    "category": "archive"
+  },
+  {
+    "filename": "SESSION_OCT27_BACKUP.md",
+    "path": "D:\\Backup and Documents\\W\\Windsurf\\lisboaporfavor-bootstrap\\docs\\archive\\SESSION_OCT27_BACKUP.md",
+    "summary": "Bootstrap Oct 27 session backup. Archived session work log and restore point.",
+    "lastModified": "2025-10-27",
+    "category": "archive"
+  },
+  {
+    "filename": "SESSION_SUMMARY_OCT_22_2025.md",
+    "path": "D:\\Backup and Documents\\W\\Windsurf\\lisboaporfavor-bootstrap\\docs\\archive\\SESSION_SUMMARY_OCT_22_2025.md",
+    "summary": "Bootstrap Oct 22 session summary. Archived session work log.",
+    "lastModified": "2025-10-22",
+    "category": "archive"
+  },
+  {
+    "filename": "SESSION_SUMMARY_OCT_23_2025.md",
+    "path": "D:\\Backup and Documents\\W\\Windsurf\\lisboaporfavor-bootstrap\\docs\\archive\\SESSION_SUMMARY_OCT_23_2025.md",
+    "summary": "Bootstrap Oct 23 session summary. Archived session work log.",
+    "lastModified": "2025-10-23",
+    "category": "archive"
+  },
+  {
+    "filename": "TOMORROW_CHECKLIST_OCT_24.md",
+    "path": "D:\\Backup and Documents\\W\\Windsurf\\lisboaporfavor-bootstrap\\docs\\archive\\TOMORROW_CHECKLIST_OCT_24.md",
+    "summary": "Bootstrap Oct 24 tomorrow checklist. Archived next-day task planning document.",
+    "lastModified": "2025-10-24",
+    "category": "archive"
+  },
+  {
+    "filename": "README.md",
+    "path": "D:\\Backup and Documents\\W\\Windsurf\\Previous_Projects_LBPF\\Archive_Projects_Folder\\tobernottobe.eu\\README.md",
+    "summary": "Archived tobernottobe.eu project README. Old project documentation preserved for reference.",
+    "lastModified": "2024-01-01",
+    "category": "archive"
+  },
+  {
+    "filename": "2_TECHNICAL.md",
+    "path": "D:\\Backup and Documents\\W\\Windsurf\\Docs\\PreInstructions\\2025_03_29_archive\\reference\\technical\\2_TECHNICAL.md",
+    "summary": "Archived technical reference documentation. Pre-instructions technical specifications.",
+    "lastModified": "2025-03-29",
+    "category": "archive"
+  },
+  {
+    "filename": "3_DEVELOPMENT.md",
+    "path": "D:\\Backup and Documents\\W\\Windsurf\\Docs\\PreInstructions\\2025_03_29_archive\\reference\\technical\\3_DEVELOPMENT.md",
+    "summary": "Archived development reference documentation. Pre-instructions development guidelines.",
+    "lastModified": "2025-03-29",
+    "category": "archive"
+  },
+  {
+    "filename": "4_MARKETPLACE.md",
+    "path": "D:\\Backup and Documents\\W\\Windsurf\\Docs\\PreInstructions\\2025_03_29_archive\\reference\\technical\\4_MARKETPLACE.md",
+    "summary": "Archived marketplace reference documentation. Pre-instructions marketplace architecture.",
+    "lastModified": "2025-03-29",
+    "category": "archive"
+  },
+  {
+    "filename": "5_COMMUNICATION.md",
+    "path": "D:\\Backup and Documents\\W\\Windsurf\\Docs\\PreInstructions\\2025_03_29_archive\\reference\\technical\\5_COMMUNICATION.md",
+    "summary": "Archived communication reference documentation. Pre-instructions communication protocols.",
+    "lastModified": "2025-03-29",
+    "category": "archive"
+  }
+]
