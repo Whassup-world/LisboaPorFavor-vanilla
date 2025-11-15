@@ -35,7 +35,8 @@
 
 ### TASK #001 - Documentation Scan & Categorization
 **Date/Time:** Nov 15, 2025 - 3:05pm  
-**Status:** 🟡 Requested
+**Status:** 🟡 Requested  
+**Recommended AI:** Claude Haiku or GPT-4o-mini (data collection task)
 
 **Objective:**
 Scan entire Windsurf folder for markdown files, read each one, extract metadata, and categorize them for building a searchable documentation index.
