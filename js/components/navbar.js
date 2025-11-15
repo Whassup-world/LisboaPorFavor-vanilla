@@ -20,6 +20,7 @@ function createNavbar() {
               <a href="#experiences" class="nav-pill">Experiences</a>
               <a href="#info" class="nav-pill">Info</a>
               <a href="#history" class="nav-pill">History</a>
+              <a href="docs/DOCUMENTATION.html" class="nav-pill" style="opacity: 0.6;">📚 Docs</a>
             </div>
             <div class="navbar-actions">
               <a href="#login" class="btn btn-text">Login</a>
