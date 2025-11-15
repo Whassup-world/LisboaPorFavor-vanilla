@@ -437,7 +437,11 @@
                 <tr>
                     <td>
                         <div class="filename">${doc.filename}</div>
-                        <div class="path" title="${doc.path}">${doc.path}</div>
+                        <div class="path" title="${doc.path}">
+                            <a href="file:///${doc.path}" style="color: #667eea; text-decoration: none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" title="Click to open file">
+                                📄 ${doc.path}
+                            </a>
+                        </div>
                     </td>
                     <td class="summary">${doc.summary}</td>
                     <td><span class="category ${doc.category}">${doc.category}</span></td>
