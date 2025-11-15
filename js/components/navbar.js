@@ -4,7 +4,7 @@ function createNavbar() {
     <nav class="navbar">
       <div class="navbar-wrapper">
         <!-- Logo -->
-        <a href="/" class="navbar-brand">
+        <a href="index.html" class="navbar-brand">
           <img src="images/logo-720.png" alt="LisboaPorFavor" class="navbar-logo">
         </a>
         
@@ -13,7 +13,6 @@ function createNavbar() {
           <!-- Top Row: Category Buttons + User Actions -->
           <div class="navbar-top-row">
             <div class="navbar-categories">
-              <a href="index.html" class="nav-pill">Home</a>
               <a href="guides.html" class="nav-pill">Guides</a>
               <a href="#tours" class="nav-pill">Tours</a>
               <a href="#partners" class="nav-pill">Local Partners</a>
