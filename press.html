@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Press & Media - LisboaPorFavor</title>
+    <meta name="description" content="Press and media inquiries for LisboaPorFavor - media resources and contact information.">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/template.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Main Content -->
+    <main style="padding: 120px 20px 60px; max-width: 880px; margin: 0 auto;">
+        <!-- Header -->
+        <div style="text-align: center; margin-bottom: 60px;">
+            <h1 style="font-size: 3rem; font-weight: bold; color: #49403C; margin-bottom: 16px;">Press & Media</h1>
+            <p style="font-size: 1.25rem; color: #666;">For interviews, articles, and media requests</p>
+        </div>
+
+        <!-- Media Resources -->
+        <div style="background: white; border-radius: 12px; padding: 32px; margin-bottom: 32px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+            <h2 style="font-size: 1.5rem; font-weight: bold; color: #49403C; margin-bottom: 24px;">Media Resources</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; text-align: center;">
+                <div>
+                    <div style="font-size: 3rem; margin-bottom: 12px;">📸</div>
+                    <h5 style="font-weight: 600; margin-bottom: 8px;">Press Kit</h5>
+                    <p style="font-size: 0.9rem; color: #666; margin-bottom: 12px;">Logos, photos, and brand guidelines</p>
+                    <button style="padding: 8px 16px; background: #667eea; color: white; border: none; border-radius: 6px; cursor: pointer;">Download Kit</button>
+                </div>
+                <div>
+                    <div style="font-size: 3rem; margin-bottom: 12px;">📊</div>
+                    <h5 style="font-weight: 600; margin-bottom: 8px;">Fact Sheet</h5>
+                    <p style="font-size: 0.9rem; color: #666; margin-bottom: 12px;">Company statistics and milestones</p>
+                    <button style="padding: 8px 16px; background: #28a745; color: white; border: none; border-radius: 6px; cursor: pointer;">View Facts</button>
+                </div>
+                <div>
+                    <div style="font-size: 3rem; margin-bottom: 12px;">🎤</div>
+                    <h5 style="font-weight: 600; margin-bottom: 8px;">Interviews</h5>
+                    <p style="font-size: 0.9rem; color: #666; margin-bottom: 12px;">Schedule with our founders</p>
+                    <button style="padding: 8px 16px; background: #ffc107; color: #333; border: none; border-radius: 6px; cursor: pointer;">Book Interview</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Press Contact Form -->
+        <div style="background: white; border-radius: 12px; padding: 32px; margin-bottom: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+            <h3 style="font-size: 1.25rem; font-weight: bold; color: #49403C; margin-bottom: 24px;">Press Contact</h3>
+            <form action="#" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                    <div>
+                        <label for="name" style="display: block; font-weight: 600; color: #49403C; margin-bottom: 8px;">Name *</label>
+                        <input type="text" id="name" name="name" required 
+                               style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 6px; font-size: 1rem;">
+                    </div>
+                    <div>
+                        <label for="email" style="display: block; font-weight: 600; color: #49403C; margin-bottom: 8px;">Email *</label>
+                        <input type="email" id="email" name="email" required 
+                               style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 6px; font-size: 1rem;">
+                    </div>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                    <div>
+                        <label for="organization" style="display: block; font-weight: 600; color: #49403C; margin-bottom: 8px;">Organization *</label>
+                        <input type="text" id="organization" name="organization" required 
+                               style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 6px; font-size: 1rem;">
+                    </div>
+                    <div>
+                        <label for="mediaType" style="display: block; font-weight: 600; color: #49403C; margin-bottom: 8px;">Media Type *</label>
+                        <select id="mediaType" name="mediaType" required 
+                                style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 6px; font-size: 1rem;">
+                            <option value="">Select...</option>
+                            <option value="Online">Online</option>
+                            <option value="Print">Print</option>
+                            <option value="TV">TV</option>
+                            <option value="Radio">Radio</option>
+                            <option value="Podcast">Podcast</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <label for="topic" style="display: block; font-weight: 600; color: #49403C; margin-bottom: 8px;">Topic *</label>
+                    <input type="text" id="topic" name="topic" required 
+                           style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 6px; font-size: 1rem;"
+                           placeholder="Brief description of your story angle">
+                </div>
+                <div>
+                    <label for="details" style="display: block; font-weight: 600; color: #49403C; margin-bottom: 8px;">Details *</label>
+                    <textarea id="details" name="details" rows="5" required 
+                              style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 6px; font-size: 1rem; resize: vertical;"
+                              placeholder="Story details, questions, deadline, etc..."></textarea>
+                </div>
+                <button type="submit" 
+                        style="padding: 14px 32px; background: #667eea; color: white; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; font-size: 1rem;">
+                    Send Request
+                </button>
+            </form>
+        </div>
+
+        <!-- Urgent Contact -->
+        <div style="text-align: center;">
+            <div style="background: #f8f9fa; border-radius: 12px; padding: 32px;">
+                <h4 style="font-weight: 600; margin-bottom: 12px;">Urgent Media Request?</h4>
+                <p style="color: #666; margin-bottom: 24px;">For time-sensitive requests, contact us directly</p>
+                <a href="mailto:press@lisboaporfavor.com" style="display: inline-block; padding: 12px 24px; background: #667eea; color: white; text-decoration: none; border-radius: 6px; font-weight: 600; margin-right: 12px;">📧 press@lisboaporfavor.com</a>
+                <a href="contact.html" style="display: inline-block; padding: 12px 24px; background: #6c757d; color: white; text-decoration: none; border-radius: 6px; font-weight: 600;">General Contact</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="js/components/navbar.js"></script>
+    <script src="js/components/footer.js"></script>
+</body>
+</html>
