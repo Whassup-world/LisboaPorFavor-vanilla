@@ -10,8 +10,8 @@ function createFooter() {
             <div class="footer-column">
               <h6>General</h6>
               <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
               </ul>
             </div>
             
@@ -19,11 +19,11 @@ function createFooter() {
             <div class="footer-column">
               <h6>Legal</h6>
               <ul>
-                <li><a href="#privacy">Privacy Policy</a></li>
-                <li><a href="#terms">Terms</a></li>
-                <li><a href="#payment-terms">Payment Terms</a></li>
-                <li><a href="#cookies">Cookies</a></li>
-                <li><a href="#faq">FAQ</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms</a></li>
+                <li><a href="payment-terms.html">Payment Terms</a></li>
+                <li><a href="cookies.html">Cookies</a></li>
+                <li><a href="faq.html">FAQ</a></li>
               </ul>
             </div>
             
@@ -31,10 +31,10 @@ function createFooter() {
             <div class="footer-column">
               <h6>Relations</h6>
               <ul>
-                <li><a href="#partners">Partners</a></li>
-                <li><a href="#jobs">Vacancies</a></li>
-                <li><a href="#press">Press</a></li>
-                <li><a href="#sitemap">Sitemap</a></li>
+                <li><a href="partners.html">Partners</a></li>
+                <li><a href="vacancies.html">Vacancies</a></li>
+                <li><a href="press.html">Press</a></li>
+                <li><a href="sitemap.html">Sitemap</a></li>
               </ul>
             </div>
             
