@@ -19,7 +19,7 @@ function createMainPage() {
         </div>
         
         <!-- Tour Category Cards -->
-        <div class="card-grid" style="margin-top: 3rem;">
+        <div class="card-grid" id="tours" style="margin-top: 3rem;">
           <div class="tour-category-card">
             <div class="category-icon">🚴</div>
             <h3>Biking Tours</h3>
@@ -52,12 +52,39 @@ function createMainPage() {
           </div>
         </div>
         
-        <!-- Location Map Section -->
-        <div class="location-section">
-          <h3 class="content-title" style="font-size: 2rem;">Location Map</h3>
-          <p class="content-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <div class="map-container">
-            <p>📍 Map placeholder - Google Maps integration here</p>
+        <!-- Reviews Strip Section -->
+        <div class="reviews-section">
+          <div class="reviews-container">
+            <div class="reviews-header">
+              <h3 class="content-title" style="font-size: 2rem;">What travelers say</h3>
+              <p class="content-description">Real feedback from guests who explored Lisbon with our local guides and partners.</p>
+            </div>
+            <div class="reviews-strip">
+              <article class="review-card">
+                <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                <p class="review-text">"LXTourGuide gave us a complete picture of Lisbon in one afternoon – professional, relaxed and full of great stories."</p>
+                <div class="review-meta">
+                  <span class="review-author">Traveler from Germany</span>
+                  <span class="review-tag">Traveler · LXTourGuide walking tour</span>
+                </div>
+              </article>
+              <article class="review-card">
+                <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                <p class="review-text">"Perfect mix of history, viewpoints and photo stops. We felt safe and looked after the whole time."</p>
+                <div class="review-meta">
+                  <span class="review-author">Family visiting Lisbon</span>
+                  <span class="review-tag">Traveler · Private city tour</span>
+                </div>
+              </article>
+              <article class="review-card">
+                <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                <p class="review-text">"Clear communication before the tour and amazing restaurant tips afterwards – highly recommended."</p>
+                <div class="review-meta">
+                  <span class="review-author">Couple from the Netherlands</span>
+                  <span class="review-tag">Traveler · Food &amp; wine experience</span>
+                </div>
+              </article>
+            </div>
           </div>
         </div>
         
@@ -81,7 +108,7 @@ function createMainPage() {
             </div>
             
             <div class="guide-card-featured">
-              <div class="guide-avatar-large" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem; font-weight: bold;">M</div>
+              <div class="guide-avatar-large" style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem; font-weight: bold;">M</div>
               <h3>Maria Santos</h3>
               <div class="guide-rating">⭐⭐⭐⭐⭐ 4.9 (89 reviews)</div>
               <p>Local food expert and wine sommelier. Passionate about Portuguese culinary traditions.</p>
@@ -94,7 +121,7 @@ function createMainPage() {
             </div>
             
             <div class="guide-card-featured">
-              <div class="guide-avatar-large" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem; font-weight: bold;">J</div>
+              <div class="guide-avatar-large" style="background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem; font-weight: bold;">J</div>
               <h3>João Costa</h3>
               <div class="guide-rating">⭐⭐⭐⭐⭐ 4.8 (95 reviews)</div>
               <p>Adventure guide specializing in biking and outdoor experiences around Lisbon.</p>
@@ -129,18 +156,18 @@ function createMainPage() {
           
           <div class="card-grid">
             <div class="partner-card">
-              <div class="partner-logo" style="background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: bold;">LBTO</div>
-              <h3>Lisbon Best Tours & Operators</h3>
-              <p>Premium tour operator specializing in exclusive experiences across Lisbon and Portugal.</p>
+              <div class="partner-logo" style="background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; font-weight: bold;">LBTO</div>
+              <h3>Lisbon Bike Tours and Outdoors</h3>
+              <p>Specialized biking adventures and outdoor activities. Explore Lisbon's nature trails and scenic routes.</p>
               <div class="partner-stats">
-                <span>🏆 500+ Tours</span>
-                <span>⭐ 4.9 Rating</span>
+                <span>🏆 250+ Tours</span>
+                <span>⭐ 4.8 Rating</span>
               </div>
-              <a href="#partner/lbto" class="card-link">Learn More →</a>
+              <a href="#partner/bike-tours-outdoors" class="card-link">View Partner →</a>
             </div>
             
             <div class="partner-card">
-              <div class="partner-logo" style="background: linear-gradient(135deg, #059669 0%, #10b981 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; font-weight: bold;">LA</div>
+              <div class="partner-logo" style="background: linear-gradient(135deg, var(--secondary) 0%, var(--lbpf-color-accent) 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; font-weight: bold;">LA</div>
               <h3>Lisboa Authentica</h3>
               <p>Authentic local experiences connecting travelers with genuine Portuguese culture and traditions.</p>
               <div class="partner-stats">
@@ -151,26 +178,35 @@ function createMainPage() {
             </div>
             
             <div class="partner-card">
-              <div class="partner-logo" style="background: linear-gradient(135deg, #0891b2 0%, #06b6d4 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem; font-weight: bold;">LBTO</div>
-              <h3>Lisbon Bike Tours and Outdoors</h3>
-              <p>Specialized biking adventures and outdoor activities. Explore Lisbon's nature trails and scenic routes.</p>
+              <div class="partner-logo" style="background: linear-gradient(135deg, var(--primary) 0%, var(--lbpf-color-accent) 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.4rem; font-weight: bold;">G2L</div>
+              <h3>Go2Lisbon Tours</h3>
+              <p>Day trips and city experiences connecting Lisbon with Sintra, Cascais and other highlights around Portugal.</p>
               <div class="partner-stats">
-                <span>🏆 250+ Tours</span>
-                <span>⭐ 4.8 Rating</span>
+                <span>🏆 200+ Tours</span>
+                <span>⭐ 4.7 Rating</span>
               </div>
-              <a href="#partner/bike-tours-outdoors" class="card-link">View Partner →</a>
+              <a href="#partner/go2lisbon" class="card-link">View Partner →</a>
             </div>
           </div>
         </div>
+
+        <!-- Location Map Section -->
+        <div class="location-section">
+          <h3 class="content-title" style="font-size: 2rem;">Location Map</h3>
+          <p class="content-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <div class="map-container">
+            <p>📍 Map placeholder - Google Maps integration here</p>
+          </div>
+        </div>
         
-        <!-- Register / Login Section -->
+        <!-- Plan My Lisbon CTA Section -->
         <div class="register-section">
-          <div class="info-box" style="background: #f0f9ff; border-left-color: #3b82f6; text-align: center;">
-            <h3 style="font-size: 1.75rem; font-weight: 700; margin: 0 0 1rem 0; color: var(--text-primary);">Want to join us?</h3>
-            <p style="margin: 0 0 1.5rem 0;">Register as a local partner or guide to share your passion for Lisbon with travelers from around the world.</p>
+          <div class="info-box" style="background: var(--lbpf-color-accent-soft); border-left-color: var(--lbpf-color-accent); text-align: center;">
+            <h3 style="font-size: 1.75rem; font-weight: 700; margin: 0 0 1rem 0; color: var(--text-primary);">Plan your Lisbon experience</h3>
+            <p style="margin: 0 0 1.5rem 0;">Leave your email and we’ll send you curated tours and guide suggestions when we launch.</p>
             <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
-              <a href="#register" class="btn btn-primary" style="background: var(--primary); color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-block;">Register Now</a>
-              <a href="#login" class="btn btn-secondary" style="background: transparent; color: var(--primary); padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; border: 2px solid var(--primary); display: inline-block;">Login</a>
+              <a href="#register" class="btn btn-primary" style="background: var(--primary); color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-block;">Plan my Lisbon experience</a>
+              <a href="#tours" class="btn btn-secondary" style="background: transparent; color: var(--primary); padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; border: 2px solid var(--primary); display: inline-block;">See example tours</a>
             </div>
           </div>
         </div>

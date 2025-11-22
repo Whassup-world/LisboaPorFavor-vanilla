@@ -11,6 +11,13 @@
   let activeIndex = 0;
   let touchStartX = null;
   let savedScrollY = 0;
+  let toursList = [];
+  let bookingState = {
+    selectedTourSlug: null,
+    selectedDate: null,
+    selectedTime: 'AM',
+    monthDate: new Date()
+  };
 
   // DOM Elements (initialized after DOM load)
   let elements = {};
@@ -30,6 +37,9 @@
       guideNameTours: document.getElementById('guide-name-tours'),
       ratingNumber: document.getElementById('rating-number'),
       reviewCount: document.getElementById('review-count'),
+      qualifiedToursPill: document.getElementById('qualified-tours-pill'),
+      languagesPill: document.getElementById('languages-pill'),
+      seeAllReviewsTop: document.getElementById('see-all-reviews-top'),
       guideId: document.getElementById('guide-id'),
       
       // Welcome
@@ -41,14 +51,29 @@
       toursGrid: document.getElementById('tours-grid'),
       
       // Reviews
+      reviewsSection: document.getElementById('guide-reviews'),
+      reviewsRatingNumber: document.getElementById('reviews-rating-number'),
+      reviewsReviewCount: document.getElementById('reviews-review-count'),
       reviewsList: document.getElementById('reviews-list'),
+      seeAllReviewsBottom: document.getElementById('see-all-reviews-bottom'),
       
       // Booking
       bookingAvatar: document.getElementById('booking-avatar'),
       bookingName: document.getElementById('booking-name'),
+      bookingRatingNumber: document.getElementById('booking-rating-number'),
+      bookingTour: document.getElementById('booking-tour'),
+      bookingGuests: document.getElementById('booking-guests'),
+      bookingMaxGuests: document.getElementById('booking-max-guests'),
+      bookingTimeOptions: document.getElementById('booking-time-options'),
+      bookingRequestBtn: document.getElementById('booking-request-btn'),
+      bookingCalendarGrid: document.getElementById('booking-calendar-grid'),
+      bookingMonthLabel: document.getElementById('booking-month-label'),
+      availabilityCard: document.getElementById('availability-card'),
       languages: document.getElementById('languages'),
       responseTime: document.getElementById('response-time'),
       messageBtn: document.getElementById('message-btn'),
+      bookingReviewsLink: document.getElementById('booking-reviews-link'),
+      bookingFeedback: document.getElementById('booking-feedback'),
       
       // Lightbox
       lightbox: document.getElementById('lightbox'),
@@ -76,6 +101,8 @@
       return;
     }
 
+    toursList = Array.isArray(data.tours) ? data.tours.slice() : [];
+
     // Breadcrumb
     elements.breadcrumbGuideName.textContent = data.guideName;
 
@@ -84,9 +111,21 @@
     elements.guideAvatar.alt = data.guideName;
     elements.guideName.textContent = data.guideName;
     elements.guideNameTours.textContent = data.guideName;
-    elements.ratingNumber.textContent = data.rating.toFixed(1);
-    elements.reviewCount.textContent = `(${data.reviewCount} reviews)`;
+    const ratingText = data.rating.toFixed(1);
+    const reviewCountText = `${data.reviewCount} review${data.reviewCount === 1 ? '' : 's'}`;
+    const seeAllLabel = 'See all reviews >';
+
+    elements.ratingNumber.textContent = ratingText;
+    elements.reviewCount.textContent = `(${reviewCountText})`;
     elements.guideId.textContent = `ID: ${data.guideId}`;
+
+    if (elements.qualifiedToursPill) {
+      elements.qualifiedToursPill.textContent = `Qualified for ${data.qualifiedToursCount} tours`;
+    }
+
+    if (elements.languagesPill) {
+      elements.languagesPill.textContent = data.languages.join(' · ');
+    }
 
     // Welcome
     elements.welcomeTitle.textContent = data.title;
@@ -100,6 +139,30 @@
     elements.responseTime.textContent = data.responseTime;
     elements.messageBtn.textContent = `Message ${data.guideName}`;
 
+    if (elements.reviewsRatingNumber) {
+      elements.reviewsRatingNumber.textContent = ratingText;
+    }
+
+    if (elements.reviewsReviewCount) {
+      elements.reviewsReviewCount.textContent = `(${reviewCountText})`;
+    }
+
+    if (elements.bookingRatingNumber) {
+      elements.bookingRatingNumber.textContent = ratingText;
+    }
+
+    if (elements.bookingReviewsLink) {
+      elements.bookingReviewsLink.textContent = `(${reviewCountText})`;
+    }
+
+    if (elements.seeAllReviewsTop) {
+      elements.seeAllReviewsTop.textContent = seeAllLabel;
+    }
+
+    if (elements.seeAllReviewsBottom) {
+      elements.seeAllReviewsBottom.textContent = seeAllLabel;
+    }
+
     // Gallery
     renderGallery(data.images);
     
@@ -108,6 +171,10 @@
     
     // Reviews
     renderReviews(data.reviews);
+
+    // Booking form & calendar
+    initBookingForm(toursList);
+    renderBookingCalendar();
   }
 
   // Render gallery
@@ -165,11 +232,114 @@
           </div>
           <div class="tour-actions">
             <a href="/tours/${tour.slug}" class="btn-outline">View Details</a>
-            <a href="/cart?add=${tour.slug}" class="btn-success">Book now</a>
+            <button type="button" class="btn-success book-tour-btn" data-tour-slug="${tour.slug}">Book now</button>
           </div>
         </div>
       </div>
     `).join('');
+
+    bindTourBookingButtons(tours);
+  }
+
+  function initBookingForm(tours) {
+    if (!elements.bookingTour) return;
+
+    const options = (tours || []).map((tour) => {
+      const maxGuests = tour.maxGuests || '';
+      return `<option value="${tour.slug}" data-max="${maxGuests}">${tour.title}</option>`;
+    }).join('');
+
+    elements.bookingTour.innerHTML = options;
+
+    if (tours && tours.length > 0) {
+      bookingState.selectedTourSlug = tours[0].slug;
+      updateMaxGuestsForSlug(bookingState.selectedTourSlug);
+    }
+  }
+
+  function renderBookingCalendar() {
+    if (!elements.bookingCalendarGrid) return;
+
+    const baseDate = bookingState.monthDate instanceof Date ? bookingState.monthDate : new Date();
+    const monthLabel = baseDate.toLocaleString('default', { month: 'long', year: 'numeric' });
+    if (elements.bookingMonthLabel) {
+      elements.bookingMonthLabel.textContent = monthLabel;
+    }
+
+    const year = baseDate.getFullYear();
+    const monthIndex = baseDate.getMonth();
+    const daysInMonth = new Date(year, monthIndex + 1, 0).getDate();
+    const cells = [];
+
+    for (let day = 1; day <= daysInMonth; day += 1) {
+      const classes = ['calendar-day', 'calendar-day--available'];
+      if (bookingState.selectedDate === day) {
+        classes.push('calendar-day--selected');
+      }
+      cells.push(`<button type="button" class="${classes.join(' ')}" data-day="${day}">${day}</button>`);
+    }
+
+    elements.bookingCalendarGrid.innerHTML = cells.join('');
+
+    elements.bookingCalendarGrid.querySelectorAll('.calendar-day--available').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const value = parseInt(btn.getAttribute('data-day') || '0', 10);
+        if (!value) return;
+        bookingState.selectedDate = value;
+        renderBookingCalendar();
+      });
+    });
+  }
+
+  function bindTourBookingButtons(tours) {
+    const buttons = document.querySelectorAll('.book-tour-btn');
+    if (!buttons.length) return;
+
+    buttons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const slug = btn.getAttribute('data-tour-slug');
+        if (!slug) return;
+        bookingState.selectedTourSlug = slug;
+        setBookingFromTourSlug(slug, tours);
+        scrollToAvailabilityCard();
+      });
+    });
+  }
+
+  function setBookingFromTourSlug(slug, tours) {
+    if (!elements.bookingTour) return;
+
+    elements.bookingTour.value = slug;
+
+    // Ensure toursList is up to date
+    if (!toursList.length && Array.isArray(tours)) {
+      toursList = tours.slice();
+    }
+
+    updateMaxGuestsForSlug(slug);
+  }
+
+  function updateMaxGuestsForSlug(slug) {
+    const tour = findTourBySlug(slug);
+    if (!tour) return;
+
+    const maxGuests = tour.maxGuests || null;
+    if (elements.bookingMaxGuests && maxGuests) {
+      elements.bookingMaxGuests.textContent = `Max ${maxGuests} guests`;
+    }
+
+    if (elements.bookingGuests && maxGuests) {
+      elements.bookingGuests.max = String(maxGuests);
+      const current = parseInt(elements.bookingGuests.value || '1', 10) || 1;
+      if (current > maxGuests) {
+        elements.bookingGuests.value = String(maxGuests);
+      }
+    }
+  }
+
+  function findTourBySlug(slug) {
+    if (!slug || !Array.isArray(toursList)) return null;
+    return toursList.find((tour) => tour.slug === slug) || null;
   }
 
   // Render reviews
@@ -211,12 +381,116 @@
       }
     });
 
+    if (elements.bookingTour) {
+      elements.bookingTour.addEventListener('change', (event) => {
+        const slug = event.target.value;
+        bookingState.selectedTourSlug = slug;
+        updateMaxGuestsForSlug(slug);
+      });
+    }
+
+    if (elements.bookingGuests) {
+      elements.bookingGuests.addEventListener('input', () => {
+        const tour = findTourBySlug(bookingState.selectedTourSlug || (elements.bookingTour && elements.bookingTour.value));
+        if (!tour || !tour.maxGuests) return;
+        let value = parseInt(elements.bookingGuests.value || '1', 10);
+        if (Number.isNaN(value) || value < 1) value = 1;
+        if (value > tour.maxGuests) value = tour.maxGuests;
+        elements.bookingGuests.value = String(value);
+      });
+    }
+
+    if (elements.bookingTimeOptions) {
+      elements.bookingTimeOptions.addEventListener('click', (event) => {
+        const pill = event.target.closest('.time-pill');
+        if (!pill) return;
+        const time = pill.getAttribute('data-time');
+        if (!time) return;
+        bookingState.selectedTime = time;
+        elements.bookingTimeOptions.querySelectorAll('.time-pill').forEach((btn) => {
+          btn.classList.remove('time-pill-active');
+        });
+        pill.classList.add('time-pill-active');
+      });
+    }
+
+    if (elements.bookingRequestBtn) {
+      elements.bookingRequestBtn.addEventListener('click', handleBookingRequest);
+    }
+
+    if (elements.seeAllReviewsTop) {
+      elements.seeAllReviewsTop.addEventListener('click', scrollToReviewsSection);
+    }
+
+    if (elements.seeAllReviewsBottom) {
+      elements.seeAllReviewsBottom.addEventListener('click', scrollToReviewsSection);
+    }
+
+    if (elements.bookingReviewsLink) {
+      elements.bookingReviewsLink.addEventListener('click', scrollToReviewsSection);
+    }
+
     // Keyboard navigation
     document.addEventListener('keydown', handleKeyboard);
 
     // Touch gestures
     elements.lightbox.addEventListener('touchstart', handleTouchStart);
     elements.lightbox.addEventListener('touchend', handleTouchEnd);
+  }
+
+  function scrollToReviewsSection() {
+    if (!elements.reviewsSection) return;
+    elements.reviewsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  function scrollToAvailabilityCard() {
+    if (!elements.availabilityCard) return;
+    elements.availabilityCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  function handleBookingRequest() {
+    if (!elements.bookingFeedback) return;
+
+    const messages = [];
+    const selectedTourSlug = bookingState.selectedTourSlug || (elements.bookingTour && elements.bookingTour.value) || null;
+    const selectedTour = findTourBySlug(selectedTourSlug);
+
+    if (!selectedTourSlug || !selectedTour) {
+      messages.push('Please choose a tour.');
+    }
+
+    if (!bookingState.selectedDate) {
+      messages.push('Please select an available date.');
+    }
+
+    let guests = 1;
+    if (elements.bookingGuests) {
+      guests = parseInt(elements.bookingGuests.value || '1', 10) || 1;
+    }
+
+    if (selectedTour && selectedTour.maxGuests && guests > selectedTour.maxGuests) {
+      messages.push(`Maximum ${selectedTour.maxGuests} guests for this tour.`);
+    }
+
+    if (messages.length) {
+      elements.bookingFeedback.textContent = messages.join(' ');
+      return;
+    }
+
+    const time = bookingState.selectedTime || 'AM';
+
+    const baseDate = bookingState.monthDate instanceof Date ? bookingState.monthDate : new Date();
+    const year = baseDate.getFullYear();
+    const monthIndex = baseDate.getMonth();
+    const dateObj = new Date(year, monthIndex, bookingState.selectedDate || 1);
+    const weekday = dateObj.toLocaleString('default', { weekday: 'long' });
+    const dayNumber = dateObj.getDate();
+
+    const firstLine = `Request sent: "${selectedTour.title}" · ${weekday} ${dayNumber} ${time} ${guests} guest${guests === 1 ? '' : 's'}`;
+    const secondLine = 'We will confirm availability within 12 hours or we will contact you.';
+    const thirdLine = 'For groups please <a href="contact.html">contact LBPF directly</a>.';
+
+    elements.bookingFeedback.innerHTML = `${firstLine}<br>${secondLine}<br>${thirdLine}`;
   }
 
   // Toggle welcome text

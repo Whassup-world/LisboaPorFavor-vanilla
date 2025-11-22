@@ -3,11 +3,11 @@
  * Built on top of template.css
  */
 
-/* Category Cards Section - WHITE background to prevent grey border */
+/* Category Cards Section - LBPF surface background */
 .category-cards-section {
   width: 100%;
-  padding: 4rem 2rem;
-  background: #FFFFFF;
+  padding: var(--space-64) var(--space-32);
+  background: var(--surface);
   margin: 0;
 }
 
@@ -61,7 +61,7 @@
   display: flex;
   align-items: center;
   gap: 0.375rem;
-  white-space: nowrap;
+  white-space: normal;
 }
 
 .card-link {
@@ -102,7 +102,7 @@
   height: 100px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid #f0f0f0;
+  border: 3px solid var(--border);
 }
 
 .guide-card-featured h3 {
@@ -135,8 +135,8 @@
 .specialty-tag {
   font-size: 0.75rem;
   padding: 0.375rem 0.75rem;
-  background: rgba(224, 161, 0, 0.1);
-  color: var(--primary);
+  background: var(--lbpf-color-accent-soft);
+  color: var(--lbpf-color-accent);
   border-radius: 16px;
   font-weight: 600;
 }
@@ -306,21 +306,21 @@
 }
 
 .explore-link {
-  color: var(--primary, #E0A100);
+  color: var(--lbpf-color-accent);
   font-weight: 600;
   font-size: 0.95rem;
   transition: color 0.3s ease;
 }
 
 .category-card:hover .explore-link {
-  color: var(--primary-dark, #C18F00);
+  color: var(--primary);
 }
 
 /* Guides Section */
 .guides-section {
   width: 100%;
-  padding: 4rem 2rem;
-  background: white;
+  padding: var(--space-64) var(--space-32);
+  background: var(--surface);
 }
 
 .guides-container {
@@ -375,7 +375,7 @@
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 1rem;
-  border: 3px solid var(--primary, #E0A100);
+  border: 3px solid var(--lbpf-color-accent);
 }
 
 .guide-name {
@@ -386,7 +386,7 @@
 }
 
 .guide-rating {
-  color: #FFB800;
+  color: var(--lbpf-color-accent);
   margin-bottom: 0.5rem;
 }
 
@@ -406,10 +406,76 @@
 .specialty-badge {
   font-size: 0.75rem;
   padding: 0.25rem 0.75rem;
-  background: rgba(224, 161, 0, 0.1);
-  color: var(--primary, #E0A100);
+  background: var(--lbpf-color-accent-soft);
+  color: var(--lbpf-color-accent);
   border-radius: 12px;
   font-weight: 500;
+}
+/* Reviews Strip Section */
+.reviews-section {
+  width: 100%;
+  padding: var(--space-64) var(--space-32);
+  background: var(--surface);
+}
+
+.reviews-container {
+  max-width: var(--content-width, 1200px);
+  margin: 0 auto;
+}
+
+.reviews-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.reviews-strip {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  scroll-snap-type: x mandatory;
+}
+
+.review-card {
+  min-width: 260px;
+  max-width: 320px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  scroll-snap-align: start;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.review-rating {
+  color: var(--lbpf-color-accent);
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.review-text {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.review-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.review-tag {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.72rem;
 }
 
 /* Responsive */
@@ -430,7 +496,7 @@
 /* Mini hero */
 .mini-hero {
   padding: calc(var(--navbar-height) + 3rem) 2rem 4rem;
-  background: linear-gradient(180deg, rgba(15,12,9,0.85) 0%, rgba(255,255,255,0.95) 75%),
+  background: linear-gradient(180deg, rgba(38,34,32,0.9) 0%, rgba(249,245,240,0.96) 75%),
               url('images/hero.webp') center/cover;
   color: white;
 }
@@ -447,29 +513,29 @@
   margin-top: 1.5rem;
 }
 .mini-hero-badges span {
-  background: rgba(255,255,255,0.25);
-  color: white;
-  border: 1px solid rgba(255,255,255,0.4);
+  background: var(--surface);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
   border-radius: 999px;
   padding: 0.5rem 1.25rem;
 }
 .mini-hero-badges span {
-  background: #f5f1e8;
+  background: var(--surface);
   border-radius: 999px;
   padding: 0.5rem 1.25rem;
   font-weight: 600;
-  color: #4f3a2b;
+  color: var(--text-primary);
 }
 
 /* Spotlight */
 .guides-spotlight {
   margin: 4rem auto 0;
   max-width: 1100px;
-  background: #f7f2ec;
+  background: var(--surface);
   border-radius: 20px;
   display: flex;
-  gap: 2rem;
-  padding: 3rem;
+  gap: var(--space-32);
+  padding: var(--space-40);
 }
 .spotlight-image {
   flex: 1;
@@ -487,7 +553,7 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  color: #5a493b;
+  color: var(--text-secondary);
 }
 .spotlight-stats li {
   margin-bottom: 0.4rem;
@@ -530,13 +596,13 @@
 .guide-card-badges {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: var(--space-8);
 }
 .guide-card-badges span {
-  background: rgba(224,161,0,0.12);
-  color: #8b5c04;
+  background: var(--lbpf-color-accent-soft);
+  color: var(--lbpf-color-accent);
   border-radius: 999px;
-  padding: 0.35rem 0.85rem;
+  padding: var(--space-4) var(--space-16);
   font-size: 0.8rem;
   font-weight: 600;
 }

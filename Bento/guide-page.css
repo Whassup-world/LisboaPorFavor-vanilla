@@ -37,7 +37,7 @@
   padding: 2rem 0 3rem;
 }
 
-.guide-page .page-container {
+.page-container {
   max-width: var(--content-width);
   margin: 0 auto;
   padding: 0 2rem;
@@ -180,17 +180,17 @@
 }
 
 .stars {
-  color: var(--lbpf-color-accent);
+  color: #F59E0B;
   font-size: 1rem;
 }
 
 .rating-number {
   font-weight: 600;
-  color: var(--lbpf-neutral-800);
+  color: #1F2937;
 }
 
 .review-count {
-  color: var(--lbpf-neutral-500);
+  color: #6B7280;
   font-size: 0.875rem;
 }
 
@@ -209,21 +209,21 @@
 }
 
 .badge-verified {
-  background: var(--lbpf-color-accent);
-  color: var(--pt-white);
-  box-shadow: var(--lbpf-shadow-soft);
+  background: linear-gradient(135deg, #0B8A44, #10B981);
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(16, 185, 129, 0.4);
 }
 
 .badge-partner {
-  background: var(--pt-red);
-  color: var(--pt-white);
-  box-shadow: var(--lbpf-shadow-soft);
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(37, 99, 235, 0.25));
+  color: #FFFFFF;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.25);
 }
 
 .badge-expert {
-  background: var(--lbpf-color-accent);
-  color: var(--pt-white);
-  box-shadow: var(--lbpf-shadow-soft);
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.15), rgba(212, 175, 55, 0.35));
+  color: var(--lbpf-color-accent);
+  box-shadow: 0 4px 10px rgba(212, 175, 55, 0.4);
 }
 
 .guide-meta {
@@ -261,7 +261,7 @@
 
 .guide-id {
   font-size: 0.875rem;
-  color: var(--lbpf-neutral-500);
+  color: #6B7280;
 }
 
 /* Welcome Card */
@@ -289,7 +289,7 @@
 }
 
 .welcome-toggle {
-  border-top: 1px solid var(--lbpf-neutral-200);
+  border-top: 1px solid #E5E7EB;
   padding-top: 1.5rem;
   text-align: center;
 }
@@ -342,8 +342,8 @@
   position: absolute;
   top: 0.75rem;
   left: 0.75rem;
-  background: var(--pt-blue);
-  color: var(--pt-white);
+  background: #2563EB;
+  color: white;
   padding: 0.25rem 0.75rem;
   border-radius: 12px;
   font-size: 0.75rem;
@@ -360,7 +360,7 @@
 .tour-title {
   font-size: 1.125rem;
   font-weight: 700;
-  color: var(--lbpf-neutral-800);
+  color: #1F2937;
   margin: 0 0 0.5rem 0;
 }
 
@@ -372,7 +372,7 @@
 }
 
 .tour-description {
-  color: var(--lbpf-neutral-500);
+  color: #6B7280;
   font-size: 0.875rem;
   line-height: 1.6;
   flex: 1;
@@ -388,12 +388,12 @@
 
 .tour-price {
   font-weight: 700;
-  color: var(--lbpf-text);
+  color: #49403C;
   font-size: 1.125rem;
 }
 
 .tour-duration {
-  color: var(--lbpf-neutral-500);
+  color: #6B7280;
   font-size: 0.875rem;
 }
 
@@ -405,9 +405,9 @@
 .btn-outline {
   flex: 1;
   padding: 0.5rem 1rem;
-  border: 1px solid var(--lbpf-text);
+  border: 1px solid #49403C;
   background: transparent;
-  color: var(--lbpf-text);
+  color: #49403C;
   border-radius: 20px;
   font-weight: 600;
   font-size: 0.875rem;
@@ -418,14 +418,14 @@
 }
 
 .btn-outline:hover {
-  background: var(--lbpf-text);
+  background: #49403C;
   color: white;
 }
 
 .btn-success {
   padding: 0.5rem 1rem;
   border: none;
-  background: linear-gradient(135deg, var(--lbpf-color-primary), var(--lbpf-color-primary-dark));
+  background: #10B981;
   color: white;
   border-radius: 20px;
   font-weight: 600;
@@ -437,7 +437,7 @@
 }
 
 .btn-success:hover {
-  background: var(--lbpf-color-primary-dark);
+  background: #059669;
 }
 
 /* Reviews Section */
@@ -499,21 +499,21 @@
 
 .review-name {
   font-weight: 700;
-  color: var(--lbpf-neutral-800);
+  color: #1F2937;
 }
 
 .review-date {
-  color: var(--lbpf-neutral-500);
+  color: #6B7280;
   font-size: 0.875rem;
 }
 
 .review-stars {
-  color: var(--lbpf-color-accent);
+  color: #F59E0B;
   margin-bottom: 0.5rem;
 }
 
 .review-text {
-  color: var(--lbpf-neutral-500);
+  color: #6B7280;
   line-height: 1.6;
 }
 
@@ -583,9 +583,9 @@
 /* Availability calendar */
 .booking-calendar {
   margin-bottom: 1.25rem;
-  border: 1px solid var(--lbpf-neutral-200);
+  border: 1px solid #E5E7EB;
   border-radius: 8px;
-  background: var(--lbpf-neutral-50);
+  background: #F9FAFB;
   padding: 0.75rem 1rem 0.75rem;
 }
 
@@ -614,12 +614,12 @@
   text-align: center;
   padding: 0.35rem 0;
   border-radius: 6px;
-  color: var(--lbpf-neutral-400);
+  color: #9CA3AF;
 }
 
 .calendar-day--available {
-  background: rgba(4, 106, 56, 0.06);
-  color: var(--pt-green);
+  background: rgba(11, 138, 68, 0.06);
+  color: #047857;
   cursor: pointer;
 }
 
@@ -650,11 +650,11 @@
 }
 
 .legend-available {
-  background: var(--pt-green);
+  background: #10B981;
 }
 
 .legend-selected {
-  background: var(--lbpf-color-accent);
+  background: #FBBF24;
 }
 
 /* Booking form */
@@ -682,7 +682,7 @@
   width: 100%;
   padding: 0.4rem 0.6rem;
   border-radius: 6px;
-  border: 1px solid var(--lbpf-neutral-200);
+  border: 1px solid #E5E7EB;
   font-size: 0.875rem;
 }
 
@@ -705,10 +705,10 @@
 .time-pill {
   flex: 1;
   border-radius: 999px;
-  border: 1px solid var(--lbpf-neutral-200);
+  border: 1px solid #E5E7EB;
   padding: 0.3rem 0.5rem;
   font-size: 0.8rem;
-  background: var(--lbpf-neutral-50);
+  background: #F9FAFB;
   cursor: pointer;
 }
 
@@ -730,14 +730,14 @@
   align-items: center;
   gap: 0.75rem;
   padding: 0.75rem;
-  border: 1px solid var(--lbpf-neutral-200);
+  border: 1px solid #E5E7EB;
   border-radius: 8px;
-  background: var(--lbpf-neutral-50);
-  color: var(--lbpf-neutral-500);
+  background: #F9FAFB;
+  color: #6B7280;
 }
 
 .input-field svg {
-  color: var(--lbpf-neutral-400);
+  color: #9CA3AF;
 }
 
 .btn-block {
@@ -755,24 +755,24 @@
 }
 
 .detail-item svg {
-  color: var(--lbpf-neutral-400);
+  color: #9CA3AF;
   flex-shrink: 0;
   margin-top: 0.25rem;
 }
 
 .detail-label {
   font-weight: 600;
-  color: var(--lbpf-neutral-800);
+  color: #1F2937;
   font-size: 0.875rem;
 }
 
 .detail-value {
-  color: var(--lbpf-neutral-500);
+  color: #6B7280;
   font-size: 0.875rem;
 }
 
 .booking-footer-note {
-  border-top: 1px solid var(--lbpf-neutral-200);
+  border-top: 1px solid #E5E7EB;
   margin-top: 1rem;
   padding-top: 0.75rem;
 }
@@ -835,26 +835,26 @@
 }
 
 .cta-text svg {
-  color: var(--lbpf-color-accent);
+  color: #F59E0B;
   flex-shrink: 0;
   margin-top: 0.25rem;
 }
 
 .cta-title {
   margin: 0 0 0.25rem 0;
-  color: var(--lbpf-neutral-800);
+  color: #1F2937;
   font-size: 1.125rem;
   font-weight: 700;
 }
 
 .cta-subtitle {
   margin: 0;
-  color: var(--lbpf-neutral-500);
+  color: #6B7280;
   font-size: 0.875rem;
 }
 
-.cta-button {
-  background: linear-gradient(135deg, var(--lbpf-color-primary), var(--lbpf-color-primary-dark));
+ .cta-button {
+  background: #F59E0B;
   color: white;
   padding: 0.75rem 1.5rem;
   border-radius: 24px;
@@ -863,14 +863,14 @@
   text-decoration: none;
   white-space: nowrap;
   transition: all 0.3s ease;
-  box-shadow: var(--lbpf-shadow-soft);
-}
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.3);
+ }
 
-.cta-button:hover {
-  background: var(--lbpf-color-primary-dark);
+ .cta-button:hover {
+  background: #D97706;
   transform: translateY(-2px);
-  box-shadow: var(--lbpf-shadow-strong);
-}
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
+ }
 
 /* Lightbox */
 .lightbox {
@@ -904,12 +904,12 @@
   font-size: 2rem;
   line-height: 1;
   cursor: pointer;
-  color: var(--lbpf-neutral-800);
+  color: #1F2937;
   transition: all 0.3s ease;
 }
 
 .lightbox-close:hover {
-  background: var(--lbpf-neutral-100);
+  background: #F3F4F6;
   transform: scale(1.1);
 }
 
@@ -926,7 +926,7 @@
   font-size: 2rem;
   line-height: 1;
   cursor: pointer;
-  color: var(--lbpf-neutral-800);
+  color: #1F2937;
   transition: all 0.3s ease;
 }
 
@@ -940,7 +940,7 @@
 
 .lightbox-prev:hover,
 .lightbox-next:hover {
-  background: var(--lbpf-neutral-100);
+  background: #F3F4F6;
   transform: translateY(-50%) scale(1.1);
 }
 
@@ -956,122 +956,78 @@
   transition: all 0.3s ease;
   text-decoration: none;
   display: inline-block;
-}
+ }
 
-.guide-page .btn-primary:not(.navbar .btn-primary) {
-  background: linear-gradient(135deg, var(--lbpf-color-primary), var(--lbpf-color-primary-dark));
+ .guide-page .btn-primary:not(.navbar .btn-primary) {
+  background: #49403C;
   color: white;
-  border: 1px solid var(--lbpf-color-primary-dark);
-}
+  border: 1px solid #49403C;
+ }
 
-.guide-page .btn-primary:not(.navbar .btn-primary):hover {
-  background: var(--lbpf-color-primary-dark);
+ .guide-page .btn-primary:not(.navbar .btn-primary):hover {
+  background: #5a4f4a;
   transform: translateY(-2px);
-  box-shadow: var(--lbpf-shadow-strong);
-}
+  box-shadow: 0 4px 12px rgba(73, 64, 60, 0.3);
+ }
 
-.guide-page .btn-secondary {
+ .guide-page .btn-secondary {
   background: transparent;
-  color: var(--lbpf-text);
-  border: 1px solid var(--lbpf-text);
-}
+  color: #49403C;
+  border: 1px solid #49403C;
+ }
 
-.guide-page .btn-secondary:hover {
-  background: var(--lbpf-text);
+ .guide-page .btn-secondary:hover {
+  background: #49403C;
   color: white;
   transform: translateY(-2px);
-}
+ }
 
 /* Guide Bento Test Page */
-.guide-bento {
+ .guide-bento {
   padding-top: 0;
-  background: var(--lbpf-neutral-50);
-}
+  background: #F9FAFB;
+ }
 
-.guide-bento-hero {
+ .guide-bento-hero {
   padding: 1.75rem 0 1.25rem;
-  background: var(--lbpf-neutral-50);
-}
+  background: #F9FAFB;
+ }
 
-/* Guide Bento page-specific background
-  - Hero: crisp Pink-Street photo only
-  - Tiles band: PT red → fade → green gradient */
-.lbpf-guide-bento-page .guide-bento {
-  background: var(--lbpf-neutral-50);
-}
+ .guide-bento-hero-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+ }
 
-.lbpf-guide-bento-page .guide-bento-hero {
-  background:
-    url("../images/_rawslug/Parc-Eduardo.jpg");
-  background-repeat: no-repeat;
-  /* Fill full viewport width, accept vertical crop for a cinematic effect */
-  background-size: cover;
-  background-position: center center;
-  padding: 4rem 0 0.5rem;
-}
-
-.lbpf-guide-bento-page .guide-bento-tiles {
-  background:
-    linear-gradient(
-      90deg,
-      var(--pt-green) 0%,
-      var(--pt-green) 33%,
-      var(--pt-red) 33%,
-      var(--pt-red) 100%
-    );
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center top;
-}
-
-.lbpf-guide-bento-page .guide-bento-hero-inner {
-  /* Use the same tile shell as .bento-tile for consistency */
-  border-radius: 16px;
-  background:
-    radial-gradient(
-      circle at 22% 0%,
-      rgba(255, 255, 255, 0.58) 0%,
-      rgba(255, 255, 255, 0.22) 40%,
-      rgba(255, 255, 255, 0.03) 100%
-    );
-  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.26);
-  border: 1px solid rgba(255, 255, 255, 0.70);
-  padding: 1.1rem 1.25rem; /* match .bento-tile padding */
-  backdrop-filter: blur(26px) saturate(185%);
-  -webkit-backdrop-filter: blur(26px) saturate(185%);
-}
-
-.guide-bento-partner-label {
+ .guide-bento-partner-label {
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--text-secondary);
   text-align: center;
-  font-weight: 500;
-  opacity: 0.9;
-}
+ }
 
-.guide-bento-hero-main {
+ .guide-bento-hero-main {
   display: flex;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: space-between;
   gap: 1.25rem;
-}
+ }
 
-.guide-bento-main-left {
+ .guide-bento-main-left {
   display: flex;
   align-items: flex-start;
   flex: 0 0 75%;
   max-width: 75%;
   gap: 1rem;
-}
+ }
 
-.guide-bento-avatar {
+ .guide-bento-avatar {
   width: var(--guide-bento-avatar-size);
   height: var(--guide-bento-avatar-size);
   border-radius: 50%;
   background: var(--lx-gold);
-  color: var(--pt-white);
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1079,34 +1035,29 @@
   font-size: 1.35rem;
 }
 
-.guide-bento-heading {
+ .guide-bento-heading {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  min-height: calc(var(--guide-bento-avatar-size) + 1.25rem);
+  min-height: var(--guide-bento-avatar-size);
   gap: 0.25rem;
 }
 
-.guide-bento-name {
+ .guide-bento-name {
   margin: 0;
   font-family: var(--font-heading);
-  font-size: 1.9rem;
+  font-size: 1.75rem;
   color: var(--text-primary);
-}
+ }
 
-.guide-bento-tagline {
+ .guide-bento-tagline {
   margin: 0;
   color: var(--text-secondary);
-  font-size: 0.85rem;
-  line-height: 1.5;
-}
+  font-size: 0.9rem;
+ }
 
-.guide-bento-tagline .tagline-part {
-  display: inline;
-}
-
-.guide-bento-meta-row {
+ .guide-bento-meta-row {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -1114,42 +1065,41 @@
   font-size: 0.8rem;
 }
 
-.guide-bento-rating-line {
+ .guide-bento-rating-line {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
   white-space: nowrap;
-}
+ }
 
-.guide-bento-meta-row .guide-bento-reviews-pill {
-  margin-top: 0.25rem;
-}
+ .guide-bento-meta-row .guide-bento-reviews-pill {
+  flex-basis: 100%;
+  margin-top: 0.5rem;
+  text-align: center;
+ }
 
-.guide-bento-rating-number {
+ .guide-bento-rating-number {
   font-weight: 700;
   color: var(--text-primary);
-}
+ }
 
-.guide-bento-rating-count {
+ .guide-bento-rating-count {
   color: var(--text-secondary);
-}
+ }
 
-.guide-bento-reviews-pill {
-  padding: 0.3rem 0.75rem;
+ .guide-bento-reviews-pill {
+  padding: 0.2rem 2.5rem;
   border-radius: 999px;
-  border: 1px solid rgba(212, 175, 55, 0.7);
-  background: linear-gradient(135deg, var(--lbpf-color-accent-soft), rgba(212, 175, 55, 0.28));
-  color: var(--lbpf-neutral-800);
+  border: 1px solid rgba(251, 191, 36, 0.98);
+  background: linear-gradient(135deg, #FDE68A, #FBBF24);
+  color: #111827;
   font-size: 0.75rem;
   font-weight: 600;
   cursor: pointer;
-  margin-bottom: 0.5rem;
-  display: inline-flex;
-  justify-content: center;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-}
+  margin-bottom: 0.75rem;
+ }
 
-.guide-bento-logo-block {
+ .guide-bento-logo-block {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1157,431 +1107,244 @@
   max-width: 25%;
   gap: 0.25rem;
   text-align: center;
-  text-decoration: none;
-  color: inherit;
-  cursor: pointer;
-  padding: 0.5rem 0.9rem 0.75rem;
-  border-radius: 18px;
-  background: transparent;
-  border: 1px solid rgba(212, 175, 55, 0.45);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
+ }
 
-.guide-bento-logo {
+ .guide-bento-logo {
   width: 72px;
   height: auto;
   margin-top: 2px;
-  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.25));
-}
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.4));
+ }
 
-.guide-bento-logo-tagline {
+ .guide-bento-logo-tagline {
   font-size: 0.7rem;
-  line-height: 1.5;
+  line-height: 1.3;
   color: var(--text-secondary);
-  max-width: 12.25rem;
-  margin-top: 0.25rem;
-}
+ }
 
-.guide-bento-logo-block:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-}
-
-.guide-bento-logo-block:hover .guide-bento-logo-tagline {
-  color: var(--text-primary);
-}
-
-.guide-bento-hero-tags-row {
+ .guide-bento-hero-tags-row {
   margin-top: 0.75rem;
-}
+ }
 
-.guide-bento-hero-tags {
+ .guide-bento-hero-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-}
+ }
 
-.guide-tag {
+ .guide-tag {
   padding: 0.25rem 0.9rem;
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), var(--lbpf-color-accent-soft));
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.16);
-  color: var(--lbpf-neutral-800);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.16), rgba(251, 191, 36, 0.45));
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.26);
+  color: #111827;
   font-size: 0.72rem;
   font-weight: 650;
   letter-spacing: 0.01em;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   white-space: nowrap;
-}
+ }
 
-.guide-tag-id {
-  border-color: var(--lx-gold);
-  background: var(--lx-gold);
-  color: var(--pt-white);
-}
+ .guide-tag-id {
+  border-color: rgba(251, 191, 36, 0.95);
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.95), rgba(245, 158, 11, 0.98));
+  color: #111827;
+ }
 
-.guide-tag-qualified {
-  border-color: var(--pt-blue);
-  background: var(--pt-blue);
-  color: var(--pt-white);
-}
+ .guide-tag-qualified {
+  border-color: rgba(59, 130, 246, 0.9);
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.9), rgba(96, 165, 250, 0.95));
+  color: #F9FAFB;
+ }
 
-.guide-tag-languages {
-  border-color: var(--pt-green);
-  background: var(--pt-green);
-  color: var(--pt-white);
-}
+ .guide-tag-languages {
+  border-color: rgba(16, 185, 129, 0.9);
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.9), rgba(45, 212, 191, 0.95));
+  color: #022c22;
+ }
 
-.guide-tag-verified {
-  border-color: var(--lbpf-neutral-800);
-  background: var(--lbpf-neutral-800);
-  color: var(--pt-white);
-}
+ .guide-tag-verified {
+  border-color: rgba(139, 92, 246, 0.95);
+  background: linear-gradient(135deg, rgba(129, 140, 248, 0.95), rgba(139, 92, 246, 0.98));
+  color: #EEF2FF;
+ }
 
-.guide-tag-partner {
-  border-color: var(--pt-red);
-  background: var(--pt-red);
-  color: var(--pt-white);
-}
+ .guide-tag-partner {
+  border-color: rgba(248, 113, 113, 0.95);
+  background: linear-gradient(135deg, rgba(248, 113, 113, 0.95), rgba(239, 68, 68, 0.98));
+  color: #FEF2F2;
+ }
 
-.guide-tag-expert {
-  border-color: var(--lx-gold);
-  background: var(--lx-gold);
-  color: var(--lbpf-neutral-900);
-}
+ .guide-tag-expert {
+  border-color: rgba(245, 158, 11, 0.95);
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.9), rgba(252, 211, 77, 0.98));
+  color: #78350F;
+ }
 
-.guide-bento-badges-row {
+ .guide-bento-badges-row {
   display: none;
-}
+ }
 
-.guide-bento-badges {
+ .guide-bento-badges {
   display: none;
-}
+ }
 
-.guide-bento-cta {
+ .guide-bento-cta {
   display: flex;
   justify-content: flex-start;
-}
+ }
 
-.guide-bento-cta-btn {
+ .guide-bento-cta-btn {
   width: 100%;
-}
+ }
 
-.guide-bento-tiles {
+ .guide-bento-tiles {
   padding: 1rem 0 2.5rem;
-}
+ }
 
-.bento-grid {
+ .bento-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
-}
+ }
 
-.bento-tile {
-  /* Shape, padding, border, shadow now come from lbpf-tile */
+ .bento-tile {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  padding: 1.1rem 1.25rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-}
+ }
 
-.lbpf-guide-bento-page .bento-tile {
-  background:
-    radial-gradient(
-      circle at 22% 0%,
-      rgba(255, 255, 255, 0.98) 0%,
-      rgba(255, 255, 255, 0.60) 38%,
-      rgba(255, 255, 255, 0.10) 100%
-    );
-  border-color: rgba(255, 255, 255, 0.90);
-  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.26);
-  backdrop-filter: blur(26px) saturate(185%);
-  -webkit-backdrop-filter: blur(26px) saturate(185%);
-}
-
-.lbpf-guide-bento-page .bento-tile--open {
-  background:
-    radial-gradient(
-      circle at 22% 0%,
-      rgba(255, 255, 255, 1.0) 0%,
-      rgba(255, 255, 255, 0.82) 42%,
-      rgba(255, 255, 255, 0.30) 100%
-    );
-}
-
-.bento-tile:hover {
+ .bento-tile:hover {
   transform: translateY(-2px);
   box-shadow: 0 14px 40px rgba(0, 0, 0, 0.14);
-}
+ }
 
-.bento-tile--open {
+ .bento-tile--open {
   background: rgba(255, 255, 255, 0.98);
   box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
-}
+ }
 
-.bento-tile-body {
+ .bento-tile-body {
   margin-top: 0.5rem;
   max-height: 0;
   overflow: hidden;
   opacity: 0;
   transition: max-height 0.35s ease, opacity 0.25s ease;
-}
+ }
 
-.bento-tile--open .bento-tile-body {
+ .bento-tile--open .bento-tile-body {
   max-height: 600px;
   opacity: 1;
-}
+ }
 
-.bento-tile-label {
+ .bento-tile-label {
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--text-secondary);
   margin-bottom: 0.25rem;
-}
+ }
 
-.bento-tile-title {
+ .bento-tile-title {
   margin: 0 0 0.35rem;
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--text-primary);
   font-family: var(--font-heading);
-}
+ }
 
-.bento-tile-text {
+ .bento-tile-text {
   margin: 0;
   font-size: 0.9rem;
   color: var(--text-secondary);
   line-height: 1.6;
-}
+ }
 
-.bento-tile-body p {
+ .bento-tile-body p {
   margin: 0 0 0.6rem;
   font-size: 0.9rem;
   color: var(--text-secondary);
   line-height: 1.7;
   font-weight: 400;
-}
+ }
 
-.bento-tile-body ul {
+ .bento-tile-body ul {
   margin: 0 0 0.6rem 1.1rem;
   padding: 0;
-}
+ }
 
-.bento-tile-body li {
+ .bento-tile-body li {
   margin-bottom: 0.25rem;
   font-size: 0.9rem;
   color: var(--text-secondary);
   line-height: 1.7;
   font-weight: 400;
-}
+ }
 
-/* Tours tile */
-.bento-tours-grid {
+ /* Tours tile */
+ .bento-tours-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 1fr;
   gap: 0.75rem;
-}
+ }
 
-.bento-tour-card {
+ .bento-tour-card {
   padding: 0.75rem 0.85rem;
   border-radius: 12px;
   background: rgba(249, 250, 251, 0.95);
   border: 1px solid rgba(229, 231, 235, 0.9);
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
+ }
 
-.bento-tour-image-wrapper {
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.bento-tour-image-thumb {
-  display: block;
-  width: 100%;
-  height: 96px;
-  object-fit: cover;
-}
-
-.bento-tour-card-content {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.bento-tour-cta {
-  margin-top: 0.25rem;
-  align-self: flex-start;
-  padding: 0.25rem 0.9rem;
-  border-radius: 999px;
-  border: none;
-  background: linear-gradient(135deg, var(--lbpf-color-primary), var(--lbpf-color-primary-dark));
-  color: var(--pt-white);
-  font-size: 0.78rem;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.bento-tour-cta:hover {
-  opacity: 0.95;
-}
-
-.bento-tour-title {
+ .bento-tour-title {
   margin: 0 0 0.25rem;
   font-size: 0.95rem;
   font-weight: 600;
   color: var(--text-primary);
-}
+ }
 
-.bento-tour-meta {
+ .bento-tour-meta {
   margin: 0 0 0.25rem;
   font-size: 0.8rem;
   color: var(--text-secondary);
-}
+ }
 
-.bento-tour-text {
+ .bento-tour-text {
   margin: 0;
   font-size: 0.85rem;
   color: var(--text-secondary);
-}
+ }
 
-.bento-photobook-photos {
-  margin-top: 0.75rem;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.5rem;
-}
-
-.bento-photobook-photo {
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.bento-photobook-photo img {
-  display: block;
-  width: 100%;
-  height: 72px;
-  object-fit: cover;
-}
-
-.bento-reviews-list {
-  margin-top: 0.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
-}
-
-.bento-review-item {
-  padding: 0.5rem 0.65rem;
-  border-radius: 10px;
-  background: rgba(249, 250, 251, 0.92);
-  border: 1px solid rgba(229, 231, 235, 0.9);
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
-}
-
-.bento-review-header {
-  width: 100%;
-  padding: 0;
-  border: none;
-  background: transparent;
-  text-align: left;
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.bento-review-avatar-wrapper {
-  flex-shrink: 0;
-}
-
-.bento-review-avatar {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.bento-review-meta {
-  flex: 1;
-}
-
-.bento-review-name-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 0.15rem;
-}
-
-.bento-review-name {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--text-primary);
-}
-
-.bento-review-date {
-  font-size: 0.75rem;
-  color: var(--text-secondary);
-}
-
-.bento-review-stars {
-  font-size: 0.8rem;
-  color: var(--lbpf-color-accent);
-}
-
-.bento-review-text {
-  margin-top: 0.35rem;
-  font-size: 0.8rem;
-  color: var(--text-secondary);
-  display: none;
-}
-
-.bento-review-owner-reply {
-  margin-top: 0.25rem;
-  font-size: 0.75rem;
-  color: var(--text-secondary);
-  display: none;
-}
-
-.bento-review-item--open .bento-review-text {
-  display: block;
-}
-
-.bento-review-item--open .bento-review-owner-reply {
-  display: block;
-}
-
-/* Availability tile (bento) */
-.bento-calendar {
+ /* Availability tile (bento) */
+ .bento-calendar {
   margin-bottom: 0.75rem;
   border-radius: 8px;
-  border: 1px solid var(--lbpf-neutral-200);
-  background: var(--lbpf-neutral-50);
+  border: 1px solid #E5E7EB;
+  background: #F9FAFB;
   padding: 0.75rem 1rem 0.75rem;
-}
+ }
 
-.bento-calendar-header {
+ .bento-calendar-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 0.35rem;
-}
+ }
 
-.bento-calendar-month {
+ .bento-calendar-month {
   font-size: 0.9rem;
   font-weight: 600;
   color: var(--text-primary);
-}
+ }
 
-.bento-calendar-nav-btn {
+ .bento-calendar-nav-btn {
   border: none;
   background: transparent;
   width: 28px;
@@ -1592,116 +1355,116 @@
   justify-content: center;
   cursor: pointer;
   color: var(--text-secondary);
-}
+ }
 
-.bento-calendar-nav-btn:hover {
-  background: var(--lbpf-neutral-100);
-}
+ .bento-calendar-nav-btn:hover {
+  background: #F3F4F6;
+ }
 
-.bento-calendar-grid {
+ .bento-calendar-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 0.25rem;
   font-size: 0.75rem;
-}
+ }
 
-.bento-calendar-day {
+ .bento-calendar-day {
   width: 100%;
   padding: 0.35rem 0;
   text-align: center;
   border-radius: 6px;
   cursor: pointer;
-  color: var(--lbpf-neutral-400);
-}
+  color: #9CA3AF;
+ }
 
-.bento-calendar-day.bento-calendar-weekday {
+ .bento-calendar-day.bento-calendar-weekday {
   font-weight: 600;
   cursor: default;
-}
+ }
 
-.bento-calendar-day.is-muted {
+ .bento-calendar-day.is-muted {
   opacity: 0.4;
   cursor: default;
-}
+ }
 
-.bento-calendar-day.is-today {
+ .bento-calendar-day.is-today {
   border: 1px solid rgba(56, 189, 248, 0.7);
-}
+ }
 
-.bento-calendar-day.is-selected {
+ .bento-calendar-day.is-selected {
   background: rgba(212, 175, 55, 0.18);
   color: var(--lbpf-color-accent);
   font-weight: 600;
-}
+ }
 
-.bento-booking-controls {
+ .bento-booking-controls {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-}
+ }
 
-.bento-field {
+ .bento-field {
   display: flex;
   flex-direction: column;
   gap: 0.15rem;
-}
+ }
 
-.bento-field-label {
+ .bento-field-label {
   font-size: 0.8rem;
   color: var(--text-secondary);
-}
+ }
 
-.bento-field select,
-.bento-field input[type="number"] {
+ .bento-field select,
+ .bento-field input[type="number"] {
   border-radius: 999px;
-  border: 1px solid var(--lbpf-neutral-300);
+  border: 1px solid #D1D5DB;
   padding: 0.3rem 0.8rem;
   font-size: 0.85rem;
-}
+ }
 
-.bento-time-pills {
+ .bento-time-pills {
   display: flex;
   flex-wrap: wrap;
   gap: 0.35rem;
-}
+ }
 
-.bento-time-pill {
+ .bento-time-pill {
   border-radius: 999px;
-  border: 1px solid var(--lbpf-neutral-300);
+  border: 1px solid #D1D5DB;
   padding: 0.2rem 0.8rem;
-  background: var(--lbpf-neutral-50);
+  background: #F9FAFB;
   font-size: 0.8rem;
   cursor: pointer;
-}
+ }
 
-.bento-time-pill-active {
-  background: var(--lbpf-neutral-900);
-  color: var(--lbpf-neutral-50);
-  border-color: var(--lbpf-neutral-900);
-}
+ .bento-time-pill-active {
+  background: #111827;
+  color: #F9FAFB;
+  border-color: #111827;
+ }
 
-.bento-booking-btn {
+ .bento-booking-btn {
   margin-top: 0.35rem;
   align-self: flex-start;
   padding: 0.35rem 1.2rem;
   border-radius: 999px;
   border: none;
-  background: linear-gradient(135deg, var(--lbpf-color-primary), var(--lbpf-color-primary-dark));
-  color: var(--pt-white);
+  background: linear-gradient(135deg, #0EA5E9, #6366F1);
+  color: #F9FAFB;
   font-size: 0.8rem;
   font-weight: 600;
   cursor: pointer;
-}
+ }
 
-.bento-booking-btn:hover {
+ .bento-booking-btn:hover {
   opacity: 0.95;
-}
+ }
 
-.bento-request-note {
+ .bento-request-note {
   margin: 0.25rem 0 0;
   font-size: 0.8rem;
   color: var(--text-secondary);
-}
+ }
 
  /* Social tile */
  .bento-tile-social ul {
@@ -1709,32 +1472,14 @@
  }
 
 @media (min-width: 769px) {
-  .lbpf-guide-bento-page .guide-bento-hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: flex-end;
-    padding-top: 5rem;
-    padding-bottom: 0;
-  }
-
   .guide-bento-hero-inner {
     gap: 1.5rem;
-  }
-
-  /* Hero tile behaves like Tile 1 in the stack on desktop */
-  .lbpf-guide-bento-page .guide-bento-hero-inner {
-    margin-bottom: 1rem; /* match .bento-grid row gap */
-  }
-
-  .lbpf-guide-bento-page .guide-bento-tiles {
-    padding-top: 0; /* let Tile 2 sit right under the hero tile */
   }
 
   .guide-bento-hero-main {
     align-items: center;
     justify-content: space-between;
     flex-wrap: nowrap;
-    padding: 0 1.25rem;
   }
 
   .guide-bento-main-left {
@@ -1748,19 +1493,7 @@
     align-items: center;
     text-align: center;
     margin-left: 0;
-    margin-right: 0;
     margin-top: -8px;
-  }
-
-  .guide-bento-hero-tags-row {
-    padding: 0 1.25rem;
-  }
-
-  /* On this page, hero content should align exactly with tiles 2–7 */
-  .lbpf-guide-bento-page .guide-bento-hero-main,
-  .lbpf-guide-bento-page .guide-bento-hero-tags-row {
-    padding-left: 0;
-    padding-right: 0;
   }
 
   .guide-bento-badges-row {
@@ -1773,11 +1506,14 @@
   }
 
   .guide-bento-badges .badge {
-    color: var(--pt-white);
+    color: #ffffff;
   }
 
   .guide-bento-meta-row {
     justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: nowrap;
   }
 
   .guide-bento-rating-line {
@@ -1785,7 +1521,10 @@
   }
 
   .guide-bento-meta-row .guide-bento-reviews-pill {
-    margin-top: 0.25rem;
+    flex-basis: auto;
+    width: max-content;
+    margin: 0.5rem auto 0;
+    text-align: center;
   }
 
   .guide-bento-cta-btn {
@@ -1794,8 +1533,8 @@
 
   .guide-bento-footer-sm {
     padding: 1.75rem 0 2.5rem;
-    background: var(--lbpf-neutral-50);
-    border-top: 1px solid var(--lbpf-neutral-200);
+    background: #F9FAFB;
+    border-top: 1px solid #E5E7EB;
   }
 
   .guide-bento-footer-inner {
@@ -1808,7 +1547,7 @@
     margin: 0;
     font-size: 0.95rem;
     font-weight: 600;
-    color: var(--lbpf-neutral-900);
+    color: #111827;
   }
 
   .guide-bento-footer-tags {
@@ -1821,20 +1560,9 @@
     padding: 0.3rem 0.75rem;
     border-radius: 999px;
   }
-
-  .lbpf-guide-bento-page footer,
-  .lbpf-guide-bento-page .footer-main,
-  .lbpf-guide-bento-page .footer-social,
-  .lbpf-guide-bento-page .footer-brand {
-    background: var(--lbpf-neutral-100);
-    box-shadow: none;
-  }
-
-  .lbpf-guide-bento-page .footer-social {
-    border-bottom: 1px solid var(--border);
-  }
 }
 
+/* Responsive */
 @media (max-width: 1024px) {
   .guide-layout {
     grid-template-columns: 1fr;
@@ -1951,34 +1679,10 @@
     gap: 1.25rem;
   }
 
-  .lbpf-guide-bento-page .guide-bento-hero {
-    min-height: 80vh;
-    display: flex;
-    align-items: flex-end;
-    padding-top: 4rem;
-    padding-bottom: 1.5rem;
-  }
-
-  .lbpf-guide-bento-page .guide-bento-hero-inner {
-    background:
-      radial-gradient(
-        circle at 22% 0%,
-        rgba(255, 255, 255, 0.46) 0%,
-        rgba(255, 255, 255, 0.18) 40%,
-        rgba(255, 255, 255, 0.02) 100%
-      );
-    border-color: rgba(255, 255, 255, 0.55);
-  }
-
-  .guide-bento-tagline .tagline-part {
-    display: block;
-  }
-
   .guide-bento-hero-main {
-    flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
-    gap: 1rem;
+    flex-wrap: nowrap;
   }
 
   .guide-bento-main-left {
@@ -1992,8 +1696,7 @@
     align-items: center;
     text-align: center;
     margin-left: 0;
-    margin-top: 0;
-    align-self: flex-start;
+    margin-top: -8px;
   }
 
   .guide-bento-badges-row {
@@ -2006,7 +1709,7 @@
   }
 
   .guide-bento-badges .badge {
-    color: var(--pt-white);
+    color: #ffffff;
   }
 
   .guide-bento-meta-row {
@@ -2021,7 +1724,10 @@
   }
 
   .guide-bento-meta-row .guide-bento-reviews-pill {
-    margin-top: 0.25rem;
+    flex-basis: auto;
+    width: max-content;
+    margin: 0.5rem auto 0;
+    text-align: center;
   }
 
   .guide-bento-cta-btn {
@@ -2030,8 +1736,8 @@
 
   .guide-bento-footer-sm {
     padding: 1.75rem 0 2.5rem;
-    background: var(--lbpf-neutral-50);
-    border-top: 1px solid var(--lbpf-neutral-200);
+    background: #F9FAFB;
+    border-top: 1px solid #E5E7EB;
   }
 
   .guide-bento-footer-inner {
@@ -2044,7 +1750,7 @@
     margin: 0;
     font-size: 0.95rem;
     font-weight: 600;
-    color: var(--lbpf-neutral-900);
+    color: #111827;
   }
 
   .guide-bento-footer-tags {
@@ -2056,25 +1762,13 @@
   .guide-bento-footer-tag {
     padding: 0.3rem 0.75rem;
     border-radius: 999px;
-    border: 1px dashed var(--lbpf-neutral-300);
+    border: 1px dashed #D1D5DB;
     font-size: 0.8rem;
-    color: var(--lbpf-neutral-500);
-    background: var(--lbpf-neutral-50);
+    color: #6B7280;
+    background: #FFFFFF;
   }
 
   .bento-tours-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .lbpf-guide-bento-page footer,
-  .lbpf-guide-bento-page .footer-main,
-  .lbpf-guide-bento-page .footer-social,
-  .lbpf-guide-bento-page .footer-brand {
-    background: var(--lbpf-neutral-100);
-    box-shadow: none;
-  }
-
-  .lbpf-guide-bento-page .footer-social {
-    border-bottom: 1px solid var(--border);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }

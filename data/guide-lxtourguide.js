@@ -5,6 +5,7 @@ const lxtourguideData = {
   avatarUrl: "images/guides/lxtourguide/LXtourguide-profile.png",
   rating: 5.0,
   reviewCount: 20,
+  qualifiedToursCount: 5,
   guideId: "PTLIS00001",
   languages: ["English", "Dutch", "German"],
   responseTime: "6 hours on average",
@@ -47,6 +48,7 @@ Partner of Lisboaporfavor`,
       price: "€35",
       rating: "★★★★★",
       reviews: 12,
+      maxGuests: 8,
       description: "Your bespoke walking route through Alfama's markets and miradouros."
     },
     {
@@ -57,6 +59,7 @@ Partner of Lisboaporfavor`,
       price: "€42",
       rating: "★★★★★",
       reviews: 29,
+      maxGuests: 12,
       description: "Riverside cycling to Belém's monuments with safe, flat paths."
     }
   ],

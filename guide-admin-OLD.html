@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en" class="lbpf-guide-admin-page">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LBPF · Guide Pocket Admin</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <link rel="stylesheet" href="css/template.css">
+  <link rel="stylesheet" href="css/brand-components.css">
+  <link rel="stylesheet" href="css/guide-page.css">
+  <style>
+    body.lbpf-guide-admin-page {
+      margin: 0;
+      font-family: var(--font-body, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif);
+      color: var(--text-primary, #262220);
+      background: var(--lbpf-neutral-100);
+    }
+    .guide-admin-shell {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(to bottom, var(--lbpf-neutral-100), var(--lbpf-neutral-50));
+    }
+    .guide-admin-header {
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1rem;
+      background: var(--pt-white);
+      border-bottom: 1px solid var(--lbpf-neutral-200);
+      box-shadow: var(--lbpf-shadow-soft);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+    .guide-admin-header-left {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .guide-admin-logo {
+      height: 28px;
+      width: auto;
+      display: block;
+    }
+    .guide-admin-header-title {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--lbpf-neutral-900);
+    }
+    .guide-admin-header-right {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .guide-admin-avatar-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+    }
+    .guide-admin-avatar {
+      width: 24px;
+      height: 24px;
+      border-radius: 999px;
+      background: var(--lbpf-neutral-200);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--lbpf-neutral-900);
+    }
+    .guide-admin-shell-main {
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+    }
+    .guide-admin-main-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      padding-top: 0.75rem;
+      padding-bottom: 0.9rem;
+    }
+    .guide-admin-card {
+      padding: 0;
+    }
+    .guide-admin-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .guide-admin-card-title {
+      font-family: var(--font-heading, "Playfair Display", serif);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--lbpf-neutral-900);
+    }
+    .guide-admin-card-subtitle {
+      font-size: 0.75rem;
+      color: var(--lbpf-neutral-500);
+    }
+    .guide-admin-pill {
+      font-size: 0.7rem;
+    }
+    .guide-admin-section {
+      display: none;
+    }
+    .guide-admin-section--active {
+      display: block;
+    }
+    .guide-admin-nav-bottom {
+      position: sticky;
+      bottom: 0;
+      z-index: 20;
+      padding: 0.4rem 0.75rem 0.6rem;
+      background: linear-gradient(to top, rgba(243, 244, 246, 0.98), rgba(243, 244, 246, 0.6));
+      backdrop-filter: blur(10px);
+      border-top: 1px solid var(--lbpf-neutral-200);
+    }
+    .guide-admin-nav-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 0.4rem;
+    }
+    .guide-admin-nav-btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.05rem;
+      cursor: pointer;
+      font-size: 0.7rem;
+    }
+    .guide-admin-nav-btn span {
+      display: block;
+      line-height: 1.2;
+    }
+    .guide-admin-nav-btn--active {
+      font-weight: 600;
+    }
+    .guide-admin-nav-icon {
+      font-size: 0.8rem;
+    }
+    .guide-admin-nav-label {
+      font-size: 0.65rem;
+    }
+    .guide-admin-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-size: 0.8rem;
+      color: var(--lbpf-neutral-600);
+    }
+    .guide-admin-list li::before {
+      content: "•";
+      margin-right: 0.25rem;
+      color: var(--lbpf-neutral-400);
+    }
+    .guide-admin-form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    .guide-admin-field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+      font-size: 0.8rem;
+    }
+    .guide-admin-label {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--lbpf-neutral-800);
+    }
+    .guide-admin-input,
+    .guide-admin-textarea,
+    .guide-admin-select {
+      border-radius: 8px;
+      border: 1px solid var(--lbpf-neutral-200);
+      padding: 0.4rem 0.55rem;
+      font-size: 0.8rem;
+      font-family: inherit;
+      color: var(--lbpf-neutral-900);
+      background: var(--pt-white);
+    }
+    .guide-admin-textarea {
+      resize: vertical;
+      min-height: 72px;
+    }
+    .guide-admin-input:focus,
+    .guide-admin-textarea:focus,
+    .guide-admin-select:focus {
+      outline: none;
+      border-color: var(--lbpf-color-primary, #8b1436);
+      box-shadow: 0 0 0 1px rgba(139, 20, 54, 0.18);
+    }
+    .guide-admin-buttons-row {
+      display: flex;
+      justify-content: flex-end;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+    .guide-admin-btn {
+      border-radius: 999px;
+      border: 1px solid var(--lbpf-neutral-200);
+      padding: 0.35rem 0.9rem;
+      font-size: 0.8rem;
+      cursor: pointer;
+      background: var(--pt-white);
+      color: var(--lbpf-neutral-800);
+    }
+    .guide-admin-btn-primary {
+      border: none;
+      background: transparent;
+      color: inherit;
+      box-shadow: none;
+      font-weight: 600;
+      padding: 0;
+    }
+    .guide-admin-btn-primary:hover {
+      background: transparent;
+    }
+    .guide-admin-badge-muted {
+      font-size: 0.7rem;
+      opacity: 0.85;
+    }
+    .guide-admin-toggle-row {
+      display: flex;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+    }
+    .guide-admin-toggle {
+      border-radius: 999px;
+      border: 1px solid var(--lbpf-neutral-200);
+      padding: 0.2rem 0.7rem;
+      font-size: 0.75rem;
+      background: var(--pt-white);
+      color: var(--lbpf-neutral-800);
+      cursor: pointer;
+    }
+    .guide-admin-toggle[data-on="true"] {
+      border-color: var(--pt-green);
+      background: var(--lbpf-neutral-50);
+      color: var(--pt-green);
+    }
+
+    .guide-admin-btn-ghost {
+      border-radius: 999px;
+      border: 1px solid rgba(229, 231, 235, 0.95);
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.18), rgba(249, 250, 251, 0.7));
+      color: var(--lbpf-neutral-900);
+      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.15);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+
+    .guide-admin-btn-ghost:hover {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.32), rgba(249, 250, 251, 0.9));
+      box-shadow: 0 10px 28px rgba(15, 23, 42, 0.24);
+    }
+
+    .guide-admin-availability-calendar {
+      border-radius: 12px;
+      border: 1px solid var(--lbpf-neutral-200);
+      background: var(--lbpf-neutral-50);
+      padding: 0.65rem 0.75rem 0.75rem;
+    }
+
+    .guide-admin-availability-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0.4rem;
+    }
+
+    .guide-admin-availability-month {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--lbpf-neutral-900);
+    }
+
+    .guide-admin-availability-grid {
+      display: grid;
+      grid-template-columns: repeat(7, minmax(0, 1fr));
+      gap: 0.25rem;
+    }
+
+    .guide-admin-availability-day {
+      border-radius: 8px;
+      padding: 0.25rem 0;
+      text-align: center;
+      font-size: 0.7rem;
+      border: 1px solid var(--lbpf-neutral-200);
+      color: var(--lbpf-neutral-600);
+    }
+
+    .guide-admin-availability-day-number {
+      display: block;
+      font-weight: 500;
+    }
+
+    .guide-admin-availability-day.is-available {
+      background: var(--lbpf-neutral-50);
+      border-color: var(--pt-green);
+      color: var(--pt-green);
+    }
+
+    .guide-admin-availability-day.is-unavailable {
+      background: var(--lbpf-neutral-50);
+      border-color: var(--pt-red);
+      color: var(--pt-red);
+    }
+
+    .guide-admin-availability-legend {
+      margin-top: 0.35rem;
+    }
+  </style>
+</head>
+<body class="lbpf-guide-admin-page">
+  <div class="guide-admin-shell" id="guide-admin-shell" style="background-color: var(--lbpf-neutral-100);">
+    <header class="guide-admin-header">
+      <div class="guide-admin-header-left">
+        <img src="images/logo-720.png" alt="LisboaPorFavor" class="guide-admin-logo">
+        <div class="guide-admin-header-title">Guide Pocket Admin</div>
+      </div>
+      <div class="guide-admin-header-right">
+        <div class="guide-admin-avatar-pill lbpf-pill lbpf-pill--ghost">
+          <div class="guide-admin-avatar" id="guide-admin-avatar">LX</div>
+          <span id="guide-admin-name">Guide</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="guide-admin-shell-main">
+      <div class="page-container guide-admin-main-inner">
+        <!-- Home / Overview -->
+        <section class="guide-admin-section guide-admin-section--active" data-screen="home" id="guide-admin-home">
+        <article class="guide-admin-card lbpf-tile lbpf-tile--dashboard">
+          <div class="guide-admin-card-header">
+            <div>
+              <div class="guide-admin-card-title">Next tour</div>
+              <div class="guide-admin-card-subtitle" id="guide-admin-next-tour-subtitle">No upcoming tour loaded</div>
+            </div>
+            <span class="guide-admin-pill lbpf-pill lbpf-pill--tag" id="guide-admin-next-tour-status">Idle</span>
+          </div>
+          <ul class="guide-admin-list" id="guide-admin-next-tour-list"></ul>
+          <div class="guide-admin-buttons-row">
+            <button type="button" class="guide-admin-btn" id="guide-admin-open-tour-controls">Open tour controls</button>
+          </div>
+        </article>
+
+        <article class="guide-admin-card lbpf-tile lbpf-tile--dashboard">
+          <div class="guide-admin-card-header">
+            <div>
+              <div class="guide-admin-card-title">My profile</div>
+              <div class="guide-admin-card-subtitle">Tagline, welcome text, avatar, languages</div>
+            </div>
+          </div>
+          <ul class="guide-admin-list" id="guide-admin-profile-summary"></ul>
+          <div class="guide-admin-buttons-row">
+            <button type="button" class="guide-admin-btn guide-admin-btn-ghost" data-screen-target="profile-edit">Edit profile</button>
+          </div>
+        </article>
+
+        <article class="guide-admin-card lbpf-tile lbpf-tile--dashboard">
+          <div class="guide-admin-card-header">
+            <div>
+              <div class="guide-admin-card-title">Availability</div>
+              <div class="guide-admin-card-subtitle" id="guide-admin-availability-summary">Default availability</div>
+            </div>
+          </div>
+          <p class="guide-admin-card-subtitle" style="margin-bottom: 0.45rem;">Quick view of when you are usually available.</p>
+          <div class="guide-admin-buttons-row">
+            <button type="button" class="guide-admin-btn" data-screen-target="availability">Edit availability</button>
+          </div>
+        </article>
+
+        <article class="guide-admin-card lbpf-tile lbpf-tile--dashboard">
+          <div class="guide-admin-card-header">
+            <div>
+              <div class="guide-admin-card-title">Requests</div>
+              <div class="guide-admin-card-subtitle">Training & new tour ideas</div>
+            </div>
+          </div>
+          <p class="guide-admin-card-subtitle" style="margin-bottom: 0.45rem;">Ask LBPF to review a new tour idea or training request.</p>
+          <div class="guide-admin-buttons-row">
+            <button type="button" class="guide-admin-btn" data-screen-target="requests">Request new tour training</button>
+          </div>
+        </article>
+      </section>
+
+      <!-- Profile edit -->
+        <section class="guide-admin-section" data-screen="profile-edit" id="guide-admin-profile-edit">
+        <article class="guide-admin-card lbpf-tile lbpf-tile--dashboard">
+          <div class="guide-admin-card-header">
+            <div>
+              <div class="guide-admin-card-title">Edit profile</div>
+              <div class="guide-admin-card-subtitle">Changes are saved as draft for LBPF approval.</div>
+            </div>
+            <span class="guide-admin-badge-muted lbpf-pill lbpf-pill--tag">Draft only</span>
+          </div>
+          <form class="guide-admin-form" id="guide-admin-profile-form">
+            <div class="guide-admin-field">
+              <label class="guide-admin-label" for="guide-tagline">Tagline</label>
+              <input type="text" id="guide-tagline" name="tagline" class="guide-admin-input" maxlength="140">
+            </div>
+            <div class="guide-admin-field">
+              <label class="guide-admin-label" for="guide-welcome-preview">Welcome text (short)</label>
+              <textarea id="guide-welcome-preview" name="welcomePreview" class="guide-admin-textarea" rows="3"></textarea>
+            </div>
+            <div class="guide-admin-field">
+              <label class="guide-admin-label" for="guide-avatar-url">Avatar image URL</label>
+              <input type="url" id="guide-avatar-url" name="avatarUrl" class="guide-admin-input">
+            </div>
+            <div class="guide-admin-field">
+              <label class="guide-admin-label" for="guide-languages">Languages (comma separated)</label>
+              <input type="text" id="guide-languages" name="languages" class="guide-admin-input">
+            </div>
+            <div class="guide-admin-field">
+              <label class="guide-admin-label" for="guide-note">Note to LBPF (optional)</label>
+              <textarea id="guide-note" name="note" class="guide-admin-textarea" rows="2" placeholder="Anything LBPF should know when reviewing your profile changes."></textarea>
+            </div>
+            <div class="guide-admin-buttons-row">
+              <button type="button" class="guide-admin-btn" data-screen-target="home">Cancel</button>
+              <button type="submit" class="guide-admin-btn-primary lbpf-pill lbpf-pill--ghost">Save draft</button>
+            </div>
+          </form>
+        </article>
+      </section>
+
+      <!-- Availability -->
+        <section class="guide-admin-section" data-screen="availability" id="guide-admin-availability">
+        <article class="guide-admin-card lbpf-tile lbpf-tile--dashboard">
+          <div class="guide-admin-card-header">
+            <div>
+              <div class="guide-admin-card-title">Availability</div>
+              <div class="guide-admin-card-subtitle">Calendar snapshot (read-only prototype)</div>
+            </div>
+          </div>
+          <form class="guide-admin-form" id="guide-admin-availability-form">
+            <div class="guide-admin-field">
+              <span class="guide-admin-label">Calendar</span>
+              <div class="guide-admin-availability-calendar">
+                <div class="guide-admin-availability-header">
+                  <div class="guide-admin-availability-month" id="guide-admin-availability-month-label">Month YYYY</div>
+                </div>
+                <div class="guide-admin-availability-grid" id="guide-admin-availability-grid"></div>
+                <p class="guide-admin-card-subtitle guide-admin-availability-legend">Green = available · Red = unavailable. Later we will add AM / PM / Evening and tour-specific availability.</p>
+              </div>
+            </div>
+            <div class="guide-admin-field">
+              <label class="guide-admin-label" for="guide-availability-note">Short note to LBPF (optional)</label>
+              <textarea id="guide-availability-note" name="availabilityNote" class="guide-admin-textarea" rows="2" placeholder="Example: No evenings in July; mornings only in high season."></textarea>
+            </div>
+            <div class="guide-admin-buttons-row">
+              <button type="button" class="guide-admin-btn" data-screen-target="home">Cancel</button>
+              <button type="submit" class="guide-admin-btn-primary lbpf-pill lbpf-pill--ghost">Save availability note</button>
+            </div>
+          </form>
+        </article>
+      </section>
+
+      <!-- Requests -->
+        <section class="guide-admin-section" data-screen="requests" id="guide-admin-requests">
+        <article class="guide-admin-card lbpf-tile lbpf-tile--dashboard">
+          <div class="guide-admin-card-header">
+            <div>
+              <div class="guide-admin-card-title">Request new tour training</div>
+              <div class="guide-admin-card-subtitle">This does not create a live tour yet.</div>
+            </div>
+          </div>
+          <form class="guide-admin-form" id="guide-admin-request-form">
+            <div class="guide-admin-field">
+              <label class="guide-admin-label" for="request-title">Working title</label>
+              <input type="text" id="request-title" name="requestTitle" class="guide-admin-input" placeholder="e.g. Alfama Sunset Stories Walk">
+            </div>
+            <div class="guide-admin-field">
+              <label class="guide-admin-label" for="request-area">Neighbourhoods / areas</label>
+              <input type="text" id="request-area" name="requestArea" class="guide-admin-input" placeholder="Alfama, Mouraria, Graça">
+            </div>
+            <div class="guide-admin-field">
+              <label class="guide-admin-label" for="request-notes">What is the idea?</label>
+              <textarea id="request-notes" name="requestNotes" class="guide-admin-textarea" rows="3" placeholder="Describe the concept and what guests will experience."></textarea>
+            </div>
+            <div class="guide-admin-buttons-row">
+              <button type="button" class="guide-admin-btn" data-screen-target="home">Cancel</button>
+              <button type="submit" class="guide-admin-btn-primary lbpf-pill lbpf-pill--ghost">Send request</button>
+            </div>
+          </form>
+        </article>
+      </section>
+
+      <!-- Tour controls (placeholder, no real lifecycle yet) -->
+        <section class="guide-admin-section" data-screen="tour-controls" id="guide-admin-tour-controls">
+          <article class="guide-admin-card lbpf-tile lbpf-tile--dashboard">
+          <div class="guide-admin-card-header">
+            <div>
+              <div class="guide-admin-card-title">Tour controls</div>
+              <div class="guide-admin-card-subtitle" id="guide-admin-tour-controls-subtitle">No active tour loaded</div>
+            </div>
+          </div>
+          <p class="guide-admin-card-subtitle" style="margin-bottom: 0.45rem;">This is a prototype for Start / End tour and SM upload. It does not affect payments yet.</p>
+          <div class="guide-admin-buttons-row" style="justify-content:flex-start; margin-bottom:0.5rem;">
+            <button type="button" class="guide-admin-btn" id="guide-admin-start-tour-btn">Start tour</button>
+            <button type="button" class="guide-admin-btn" id="guide-admin-end-tour-btn">End tour</button>
+          </div>
+          <form class="guide-admin-form" id="guide-admin-tour-debrief-form">
+            <div class="guide-admin-field">
+              <label class="guide-admin-label" for="tour-remarks">Remarks / incidents</label>
+              <textarea id="tour-remarks" name="tourRemarks" class="guide-admin-textarea" rows="3" placeholder="Anything LBPF should know about this tour."></textarea>
+            </div>
+            <div class="guide-admin-field">
+              <label class="guide-admin-label" for="tour-sm-caption">Short caption (for SM)</label>
+              <textarea id="tour-sm-caption" name="tourSmCaption" class="guide-admin-textarea" rows="2" placeholder="Example: Guests loved the sunset view from Miradouro da Graça today."></textarea>
+            </div>
+            <div class="guide-admin-field">
+              <label class="guide-admin-label" for="tour-photos">Photos from this tour (optional)</label>
+              <input type="file" id="tour-photos" name="tourPhotos" class="guide-admin-input" accept="image/*" multiple>
+              <span class="guide-admin-card-subtitle">Files stay as draft only; LBPF will review any images before using them.</span>
+            </div>
+            <div class="guide-admin-buttons-row">
+              <button type="button" class="guide-admin-btn" data-screen-target="home">Back to home</button>
+              <button type="submit" class="guide-admin-btn-primary lbpf-pill lbpf-pill--ghost">Tour closed (draft)</button>
+            </div>
+          </form>
+        </article>
+      </section>
+      </div>
+    </main>
+
+    <nav class="guide-admin-nav-bottom" aria-label="Pocket Admin navigation">
+      <div class="guide-admin-nav-grid">
+        <button type="button" class="guide-admin-nav-btn guide-admin-nav-btn--active lbpf-nav-pill lbpf-nav-pill--active" data-screen-target="home">
+          <span class="guide-admin-nav-icon">🏠</span>
+          <span class="guide-admin-nav-label">Home</span>
+        </button>
+        <button type="button" class="guide-admin-nav-btn lbpf-nav-pill" data-screen-target="profile-edit">
+          <span class="guide-admin-nav-icon">👤</span>
+          <span class="guide-admin-nav-label">Profile</span>
+        </button>
+        <button type="button" class="guide-admin-nav-btn lbpf-nav-pill" data-screen-target="availability">
+          <span class="guide-admin-nav-icon">🕒</span>
+          <span class="guide-admin-nav-label">Availability</span>
+        </button>
+        <button type="button" class="guide-admin-nav-btn lbpf-nav-pill" data-screen-target="tour-controls">
+          <span class="guide-admin-nav-icon">🎒</span>
+          <span class="guide-admin-nav-label">Tours</span>
+        </button>
+      </div>
+    </nav>
+  </div>
+
+  <script src="data/guide-lxtourguide.js"></script>
+  <script>
+    (function () {
+      'use strict';
+
+      var state = {
+        screen: 'home',
+        draft: null,
+        availability: {
+          morning: false,
+          afternoon: true,
+          evening: true,
+          note: ''
+        }
+      };
+
+      function cloneGuideData(src) {
+        try {
+          return JSON.parse(JSON.stringify(src || {}));
+        } catch (e) {
+          return {};
+        }
+      }
+
+      function initState() {
+        var base = (window.lxtourguideData || {});
+        state.draft = cloneGuideData(base);
+        if (!state.draft.languages && base.languages) {
+          state.draft.languages = base.languages.slice();
+        }
+      }
+
+      function formatLanguages(langs) {
+        if (!langs) return '';
+        if (Array.isArray(langs)) return langs.join(', ');
+        return String(langs);
+      }
+
+      function renderHeader() {
+        var nameEl = document.getElementById('guide-admin-name');
+        var avatarEl = document.getElementById('guide-admin-avatar');
+        var name = state.draft && (state.draft.guideName || state.draft.guideId) || 'Guide';
+        if (nameEl) {
+          nameEl.textContent = name;
+        }
+        if (avatarEl && name) {
+          var initials = name
+            .split(/\s+/)
+            .filter(Boolean)
+            .map(function (part) { return part.charAt(0).toUpperCase(); })
+            .join('')
+            .slice(0, 2);
+          avatarEl.textContent = initials || 'GX';
+        }
+      }
+
+      function renderHome() {
+        var nextTourSubtitle = document.getElementById('guide-admin-next-tour-subtitle');
+        var nextTourList = document.getElementById('guide-admin-next-tour-list');
+        var nextStatus = document.getElementById('guide-admin-next-tour-status');
+        var profileSummary = document.getElementById('guide-admin-profile-summary');
+        var availabilitySummary = document.getElementById('guide-admin-availability-summary');
+        var tours = (state.draft && state.draft.tours) || [];
+        var firstTour = tours.length ? tours[0] : null;
+
+        if (nextTourSubtitle && firstTour) {
+          nextTourSubtitle.textContent = firstTour.title + ' – next assigned tour (prototype)';
+        } else if (nextTourSubtitle) {
+          nextTourSubtitle.textContent = 'No upcoming tour in this prototype.';
+        }
+        if (nextStatus) {
+          nextStatus.textContent = 'Prototype';
+        }
+        if (nextTourList) {
+          nextTourList.innerHTML = '';
+          var fields;
+          if (firstTour) {
+            fields = [
+              'Duration: ' + (firstTour.duration || 'n/a'),
+              'Price: ' + (firstTour.price || 'n/a'),
+              'Max guests: ' + (firstTour.maxGuests || 'n/a'),
+              'Client & contact: will appear here once LBPF assigns this tour to a guest (phone / WhatsApp / email).',
+              'Meeting point: the confirmed start address from LBPF will be shown here.',
+              'Guests & restrictions: adults, children, mobility and food notes (for example gluten free) will be summarised here.'
+            ];
+          } else {
+            fields = [
+              'When LBPF assigns your next tour, you will see client contact, start address and guest restrictions here.'
+            ];
+          }
+          fields.forEach(function (text) {
+            var li = document.createElement('li');
+            li.textContent = text;
+            nextTourList.appendChild(li);
+          });
+        }
+
+        if (profileSummary) {
+          profileSummary.innerHTML = '';
+          var items = [];
+          if (state.draft && state.draft.title) {
+            items.push('Title: ' + state.draft.title);
+          }
+          if (state.draft && state.draft.welcomePreview) {
+            items.push('Welcome: ' + state.draft.welcomePreview.slice(0, 80) + '…');
+          }
+          var langs = formatLanguages(state.draft && state.draft.languages);
+          if (langs) {
+            items.push('Languages: ' + langs);
+          }
+          if (!items.length) {
+            items.push('Profile data will appear here once loaded.');
+          }
+          items.forEach(function (text) {
+            var li = document.createElement('li');
+            li.textContent = text;
+            profileSummary.appendChild(li);
+          });
+        }
+
+        if (availabilitySummary) {
+          var parts = [];
+          if (state.availability.morning) parts.push('mornings');
+          if (state.availability.afternoon) parts.push('afternoons');
+          if (state.availability.evening) parts.push('evenings');
+          availabilitySummary.textContent = parts.length
+            ? 'Typically available: ' + parts.join(', ')
+            : 'Availability not set yet.';
+        }
+      }
+
+      function populateProfileForm() {
+        var f = state.draft || {};
+        var tagline = document.getElementById('guide-tagline');
+        var preview = document.getElementById('guide-welcome-preview');
+        var avatar = document.getElementById('guide-avatar-url');
+        var langs = document.getElementById('guide-languages');
+        if (tagline) tagline.value = f.title || '';
+        if (preview) preview.value = f.welcomePreview || '';
+        if (avatar) avatar.value = f.avatarUrl || '';
+        if (langs) langs.value = formatLanguages(f.languages || []);
+      }
+
+      function populateAvailabilityForm() {
+        var note = document.getElementById('guide-availability-note');
+        if (note) {
+          note.value = state.availability.note || '';
+        }
+
+        var monthLabel = document.getElementById('guide-admin-availability-month-label');
+        var grid = document.getElementById('guide-admin-availability-grid');
+        if (!monthLabel || !grid) {
+          return;
+        }
+
+        var base = new Date();
+        var year = base.getFullYear();
+        var monthIndex = base.getMonth();
+        var daysInMonth = new Date(year, monthIndex + 1, 0).getDate();
+
+        monthLabel.textContent = base.toLocaleString('default', { month: 'long', year: 'numeric' });
+
+        var cells = [];
+        for (var day = 1; day <= daysInMonth; day += 1) {
+          var classes = ['guide-admin-availability-day'];
+          var dateObj = new Date(year, monthIndex, day);
+          var weekday = dateObj.getDay();
+          var isWeekend = (weekday === 0 || weekday === 6);
+          var isAvailable = !isWeekend;
+          classes.push(isAvailable ? 'is-available' : 'is-unavailable');
+          cells.push('<div class="' + classes.join(' ') + '"><span class="guide-admin-availability-day-number">' + day + '</span></div>');
+        }
+
+        grid.innerHTML = cells.join('');
+      }
+
+      function switchScreen(target) {
+        if (!target) return;
+        state.screen = target;
+        var sections = document.querySelectorAll('.guide-admin-section');
+        for (var i = 0; i < sections.length; i += 1) {
+          if (sections[i].getAttribute('data-screen') === target) {
+            sections[i].classList.add('guide-admin-section--active');
+          } else {
+            sections[i].classList.remove('guide-admin-section--active');
+          }
+        }
+        var navBtns = document.querySelectorAll('.guide-admin-nav-btn');
+        for (var j = 0; j < navBtns.length; j += 1) {
+          if (navBtns[j].getAttribute('data-screen-target') === target) {
+            navBtns[j].classList.add('guide-admin-nav-btn--active');
+            navBtns[j].classList.add('lbpf-nav-pill--active');
+          } else {
+            navBtns[j].classList.remove('guide-admin-nav-btn--active');
+            navBtns[j].classList.remove('lbpf-nav-pill--active');
+          }
+        }
+        if (target === 'home') {
+          renderHome();
+        } else if (target === 'profile-edit') {
+          populateProfileForm();
+        } else if (target === 'availability') {
+          populateAvailabilityForm();
+        }
+      }
+
+      document.addEventListener('DOMContentLoaded', function () {
+        initState();
+        renderHeader();
+        renderHome();
+
+        var shell = document.getElementById('guide-admin-shell');
+        if (!shell) return;
+
+        shell.addEventListener('click', function (event) {
+          var screenTarget = event.target.getAttribute('data-screen-target');
+          if (screenTarget) {
+            switchScreen(screenTarget);
+          }
+        });
+
+        var navBtns = document.querySelectorAll('.guide-admin-nav-btn');
+        for (var i = 0; i < navBtns.length; i += 1) {
+          navBtns[i].addEventListener('click', function (event) {
+            var target = event.currentTarget.getAttribute('data-screen-target');
+            switchScreen(target);
+          });
+        }
+
+        var profileForm = document.getElementById('guide-admin-profile-form');
+        if (profileForm) {
+          profileForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+            if (!state.draft) state.draft = {};
+            var tagline = document.getElementById('guide-tagline');
+            var preview = document.getElementById('guide-welcome-preview');
+            var avatar = document.getElementById('guide-avatar-url');
+            var langs = document.getElementById('guide-languages');
+            var note = document.getElementById('guide-note');
+            if (tagline) state.draft.title = tagline.value || '';
+            if (preview) state.draft.welcomePreview = preview.value || '';
+            if (avatar) state.draft.avatarUrl = avatar.value || '';
+            if (langs) {
+              state.draft.languages = langs.value
+                .split(',')
+                .map(function (s) { return s.trim(); })
+                .filter(Boolean);
+            }
+            if (note) {
+              state.draft._pocketAdminNote = note.value || '';
+            }
+            console.log('Pocket Admin guide draft saved', state.draft);
+            alert('Draft saved. LBPF will review changes before they go live.');
+            renderHeader();
+            renderHome();
+            switchScreen('home');
+          });
+        }
+
+        var availabilityForm = document.getElementById('guide-admin-availability-form');
+        if (availabilityForm) {
+          availabilityForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+            var note = document.getElementById('guide-availability-note');
+            if (note) {
+              state.availability.note = note.value || '';
+            }
+            console.log('Pocket Admin availability note saved', state.availability);
+            alert('Availability note saved for LBPF. Calendar is a read-only snapshot for now.');
+            renderHome();
+            switchScreen('home');
+          });
+        }
+
+        var requestForm = document.getElementById('guide-admin-request-form');
+        if (requestForm) {
+          requestForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+            var payload = {
+              title: (document.getElementById('request-title') || {}).value || '',
+              area: (document.getElementById('request-area') || {}).value || '',
+              notes: (document.getElementById('request-notes') || {}).value || ''
+            };
+            console.log('Pocket Admin tour training request', payload);
+            alert('Request sent as draft to LBPF. They will review it together with you.');
+            requestForm.reset();
+            switchScreen('home');
+          });
+        }
+
+        var openTourControlsBtn = document.getElementById('guide-admin-open-tour-controls');
+        if (openTourControlsBtn) {
+          openTourControlsBtn.addEventListener('click', function () {
+            var tours = (state.draft && state.draft.tours) || [];
+            var first = tours.length ? tours[0] : null;
+            var subtitle = document.getElementById('guide-admin-tour-controls-subtitle');
+            if (subtitle) {
+              subtitle.textContent = first
+                ? first.title + ' – prototype controls only'
+                : 'No tour selected in this prototype.';
+            }
+            switchScreen('tour-controls');
+          });
+        }
+
+        var tourDebriefForm = document.getElementById('guide-admin-tour-debrief-form');
+        if (tourDebriefForm) {
+          tourDebriefForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+            var remarks = (document.getElementById('tour-remarks') || {}).value || '';
+            var caption = (document.getElementById('tour-sm-caption') || {}).value || '';
+            var photosInput = document.getElementById('tour-photos');
+            var photos = [];
+            if (photosInput && photosInput.files && photosInput.files.length) {
+              for (var i = 0; i < photosInput.files.length; i += 1) {
+                photos.push(photosInput.files[i].name);
+              }
+            }
+            console.log('Pocket Admin tour closed (draft)', { remarks: remarks, caption: caption, photos: photos });
+            alert('Tour closed as draft. LBPF will review remarks and any photos or SM content.');
+            tourDebriefForm.reset();
+            switchScreen('home');
+          });
+        }
+
+        var startBtn = document.getElementById('guide-admin-start-tour-btn');
+        if (startBtn) {
+          startBtn.addEventListener('click', function () {
+            alert('Start tour (presence check) will be wired later. This is a visual prototype.');
+          });
+        }
+        var endBtn = document.getElementById('guide-admin-end-tour-btn');
+        if (endBtn) {
+          endBtn.addEventListener('click', function () {
+            alert('You can add remarks and SM caption below, then close the tour as draft.');
+          });
+        }
+      });
+    }());
+  </script>
+</body>
+</html>

@@ -152,6 +152,20 @@ lisboaporfavor-vanilla/
 
 ---
 
+## 🎨 BRAND STRICT IMPLEMENTATION (humans + AI)
+
+1. **Brand as master**
+   - `docs/LBPF_BRAND_PACK.md` plus the tokens in `css/template.css` are the single source of truth for all visual decisions (colors, radii, shadows, spacing, component primitives).
+   - No CSS or HTML in this project may introduce new visual rules that are not defined there as tokens.
+
+2. **Working protocol**
+   - Before changing any CSS/HTML, humans and AI must read this file and the Brand Pack.
+   - For guide/tour work, start with `css/guide-page.css` and align it to Brand tokens first; only then extend the same system to Admin/Pocket Admin.
+
+3. **AI behaviour**
+   - Any AI assistant must treat any value not clearly mapped to a Brand token as a **proposal**, surface it to the human, and apply it only after the Brand Pack has been updated.
+   - Quick fixes or ad-hoc styles outside the Brand system are not allowed.
+
 ## 🔒 LOCKED FILES (DO NOT MODIFY)
 
 **Template Files:**

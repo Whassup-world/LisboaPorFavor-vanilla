@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LisboaPorFavor Admin – Guides & Tours Setup</title>
+  <meta name="description" content="Internal admin page for onboarding new guides and tours for LisboaPorFavor.">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <!-- Base CSS -->
+  <link rel="stylesheet" href="css/template.css">
+  <link rel="stylesheet" href="css/guide-page.css">
+  <style>
+    .admin-page #navbar-placeholder,
+    .admin-page #footer-placeholder {
+      display: none;
+    }
+    body.admin-page {
+      margin: 0;
+      height: 100vh;
+      overflow: hidden;
+      background: #f3f4f6;
+    }
+    .admin-shell {
+      min-height: 100vh;
+      height: 100vh;
+      background: #f3f4f6;
+      display: flex;
+      flex-direction: column;
+    }
+    .admin-shell-header {
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1.75rem;
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .admin-shell-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .admin-shell-brand-link {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+    }
+    .admin-shell-logo-img {
+      height: 40px;
+      width: auto;
+      border-radius: 999px;
+      display: block;
+    }
+    .admin-shell-logo-circle {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      background: #0f172a;
+      color: #f9fafb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .admin-shell-brand-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #111827;
+    }
+    .admin-shell-brand-subtitle {
+      font-size: 0.75rem;
+      color: #6b7280;
+    }
+    .admin-shell-header-right {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .admin-shell-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      border-radius: 999px;
+      border: 1px solid #e5e7eb;
+      background: #ffffff;
+      padding: 0.25rem 0.9rem;
+      font-size: 0.8rem;
+      color: #111827;
+    }
+    .admin-shell-user-pill {
+      cursor: pointer;
+    }
+    .admin-shell-user-pill:hover,
+    .admin-shell-time-pill:hover {
+      background: #f3f4f6;
+    }
+    .admin-shell-time-pill {
+      min-width: 92px;
+      justify-content: center;
+    }
+    .admin-shell-time-session {
+      font-size: 0.8rem;
+      color: #111827;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    .admin-shell-user {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .admin-shell-user-avatar {
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      background: #e5e7eb;
+      color: #111827;
+      font-size: 0.7rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .admin-shell-user-name {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #111827;
+    }
+    .admin-shell-icon-btn {
+      border-radius: 999px;
+      border: 1px solid #e5e7eb;
+      background: #ffffff;
+      width: 32px;
+      height: 32px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 0.9rem;
+      color: #4b5563;
+    }
+    .admin-shell-icon-btn:hover {
+      background: #f3f4f6;
+    }
+    .admin-shell-menu {
+      position: relative;
+      display: inline-flex;
+    }
+    .admin-shell-menu-panel {
+      position: absolute;
+      right: 0;
+      top: 110%;
+      margin-top: 0.25rem;
+      background: #ffffff;
+      border-radius: 0.75rem;
+      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.28);
+      border: 1px solid #e5e7eb;
+      padding: 0.4rem 0;
+      min-width: 180px;
+      z-index: 50;
+      display: none;
+    }
+    .admin-shell-menu-panel--open {
+      display: block;
+    }
+    .admin-shell-menu-item {
+      width: 100%;
+      padding: 0.4rem 0.9rem;
+      border: none;
+      background: transparent;
+      text-align: left;
+      font-size: 0.8rem;
+      color: #111827;
+      cursor: pointer;
+    }
+    .admin-shell-menu-item:hover {
+      background: #f3f4f6;
+    }
+    .admin-shell-body {
+      display: flex;
+      flex: 1 1 auto;
+      min-height: 0;
+      overflow: hidden;
+    }
+    .admin-shell-sidebar {
+      width: 260px;
+      background: #020617;
+      color: #e5e7eb;
+      padding: 1.5rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      height: 100%;
+    }
+    .admin-shell-sidebar-title {
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #9ca3af;
+    }
+    .admin-shell-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+    .admin-shell-nav-item {
+      border-radius: 999px;
+      border: none;
+      padding: 0.5rem 0.9rem;
+      background: transparent;
+      color: #e5e7eb;
+      font-size: 0.85rem;
+      text-align: left;
+      cursor: pointer;
+    }
+    .admin-shell-nav-item--active,
+    .admin-shell-nav-item:hover {
+      background: rgba(148, 163, 184, 0.32);
+    }
+    .admin-shell-main {
+      flex: 1 1 auto;
+      padding: 1.75rem 2rem;
+      min-width: 0;
+      height: 100%;
+      overflow-y: auto;
+    }
+    .admin-shell-main .section-title {
+      margin-bottom: 0.5rem;
+    }
+    .admin-shell-main .welcome-text {
+      margin-bottom: 1.25rem;
+    }
+    .admin-mobile-lock {
+      display: none;
+    }
+    .admin-section {
+      display: none;
+    }
+    .admin-section--active {
+      display: block;
+    }
+    .admin-shell-main .admin-section {
+      min-height: calc(100vh - 64px - 3.5rem);
+    }
+    .admin-shell .guide-sidebar .booking-card {
+      position: sticky;
+      top: 1.75rem;
+      align-self: flex-start;
+    }
+    .admin-shell .page-container {
+      max-width: none;
+      width: 100%;
+      margin: 0;
+    }
+    .admin-shell--sidebar-collapsed .admin-shell-sidebar {
+      width: 140px;
+      padding-left: 0.75rem;
+      padding-right: 0.75rem;
+    }
+    .admin-shell--sidebar-collapsed .admin-shell-sidebar-title {
+      display: none;
+    }
+    .admin-shell-sidebar-toggle {
+      border-radius: 999px;
+      border: 1px solid #374151;
+      background: #020617;
+      color: #e5e7eb;
+      font-size: 0.7rem;
+      padding: 0.25rem 0.75rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      margin-top: 0.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .admin-shell-sidebar-toggle:hover {
+      background: #111827;
+    }
+    .admin-shell--sidebar-collapsed .admin-shell-nav-item {
+      font-size: 0.75rem;
+      padding: 0.4rem 0.5rem;
+      text-align: center;
+      white-space: nowrap;
+    }
+    @media (max-width: 899px) {
+      .admin-shell {
+        display: none;
+      }
+      .admin-mobile-lock {
+        position: fixed;
+        inset: 0;
+        background: #020617;
+        color: #e5e7eb;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+        text-align: center;
+        z-index: 40;
+      }
+      .admin-mobile-lock-inner {
+        max-width: 480px;
+      }
+      .admin-mobile-lock-title {
+        font-size: 1.25rem;
+        margin-bottom: 0.75rem;
+      }
+      .admin-mobile-lock-text {
+        font-size: 0.95rem;
+        color: #9ca3af;
+      }
+    }
+  </style>
+</head>
+<body class="admin-page">
+  <div id="navbar-placeholder"></div>
+
+  <div class="admin-mobile-lock">
+    <div class="admin-mobile-lock-inner">
+      <div class="admin-mobile-lock-title">Admin is desktop only</div>
+      <div class="admin-mobile-lock-text">For safety, please open this control room on a laptop or desktop. Use the content and messaging tools on your phone.</div>
+    </div>
+  </div>
+
+  <div class="admin-shell">
+    <header class="admin-shell-header">
+      <div class="admin-shell-brand">
+        <a href="index.html" class="admin-shell-brand-link">
+          <img src="images/logo-720.png" alt="LisboaPorFavor" class="admin-shell-logo-img">
+        </a>
+      </div>
+      <div class="admin-shell-header-right">
+        <button type="button" class="admin-shell-pill admin-shell-user-pill" aria-label="Account menu">
+          <div class="admin-shell-user">
+            <div class="admin-shell-user-avatar">LB</div>
+            <div class="admin-shell-user-name" id="admin-user-name">LBPF Admin</div>
+          </div>
+        </button>
+        <div class="admin-shell-pill admin-shell-time-pill">
+          <span class="admin-shell-time-session" id="admin-session-time">00:00:00</span>
+        </div>
+        <div class="admin-shell-menu">
+          <button type="button" class="admin-shell-icon-btn admin-shell-menu-toggle" aria-haspopup="true" aria-expanded="false" aria-label="Admin menu">&#8942;&#8942;&#8942;</button>
+          <div class="admin-shell-menu-panel" id="admin-shell-menu-panel">
+            <button type="button" class="admin-shell-menu-item" data-admin-menu-action="page-settings">Page settings</button>
+            <button type="button" class="admin-shell-menu-item" data-admin-menu-action="account-settings">Account settings</button>
+            <button type="button" class="admin-shell-menu-item" data-admin-menu-action="logout">Log off</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="admin-shell-body">
+      <aside class="admin-shell-sidebar">
+        <div class="admin-shell-sidebar-title">Navigation Sidebar</div>
+        <button type="button" class="admin-shell-sidebar-toggle" aria-label="Toggle sidebar width" aria-expanded="true">⟨⟩</button>
+        <nav class="admin-shell-nav" aria-label="Admin navigation sidebar">
+          <button type="button" class="admin-shell-nav-item admin-shell-nav-item--active" data-section-target="main">Main page</button>
+          <button type="button" class="admin-shell-nav-item" data-section-target="agenda">Agenda</button>
+          <button type="button" class="admin-shell-nav-item" data-section-target="messaging">Messaging</button>
+          <button type="button" class="admin-shell-nav-item" data-section-target="stats">Stats</button>
+          <button type="button" class="admin-shell-nav-item" data-section-target="guides">Guides</button>
+          <button type="button" class="admin-shell-nav-item" data-section-target="guides">New guide</button>
+          <button type="button" class="admin-shell-nav-item" data-section-target="tours">Tours</button>
+          <button type="button" class="admin-shell-nav-item" data-section-target="tours">New tour</button>
+          <button type="button" class="admin-shell-nav-item" data-section-target="components">CMS &amp; components</button>
+          <button type="button" class="admin-shell-nav-item" data-section-target="settings">Settings</button>
+        </nav>
+      </aside>
+
+      <main class="admin-shell-main" id="admin-main" role="main">
+        <section class="admin-section admin-section--active" data-section="main">
+          <div class="page-container" style="padding-bottom: 2.5rem;">
+            <h1 class="section-title">Admin main page</h1>
+            <p class="welcome-text">
+              Overview of the LPF platform today: site status, key stats, communication notes and who needs to
+              be present. This is the first stop for admins and staff at the start of a shift.
+            </p>
+          </div>
+        </section>
+
+        <section class="admin-section" data-section="guides">
+          <div class="page-container" style="padding-bottom: 2.5rem;">
+            <h1 class="section-title">Guides onboarding</h1>
+            <p class="welcome-text">
+              For LBPF staff, agents and admins only. Use this workspace to collect the core information
+              for a new guide profile. Final approval and role permissions will
+              be handled separately.
+            </p>
+            <div class="guide-layout" style="grid-template-columns: minmax(0, 2fr) minmax(0, 1.4fr); gap: 2rem;">
+              <!-- Left column: forms -->
+              <div class="guide-main" style="gap: 1.75rem;">
+                <!-- New Guide form -->
+                <section class="welcome-card">
+                  <h2 class="section-title" style="margin-bottom: 0.75rem;">New Guide &ndash; Profile &amp; Resume</h2>
+                  <form id="admin-new-guide-form">
+                    <h3 class="welcome-title" style="font-size: 1.1rem; margin-bottom: 0.75rem;">1. Personal details</h3>
+
+                    <div class="booking-form" style="margin-bottom: 1rem;">
+                      <label class="booking-field">
+                        <span class="field-label">Preferred guide name *</span>
+                        <input type="text" name="guide_preferred_name" required>
+                      </label>
+                      <label class="booking-field">
+                        <span class="field-label">Legal name (for contracts/invoice)</span>
+                        <input type="text" name="guide_legal_name">
+                      </label>
+                      <label class="booking-field">
+                        <span class="field-label">Email *</span>
+                        <input type="email" name="guide_email" required>
+                      </label>
+                      <label class="booking-field">
+                        <span class="field-label">Mobile / WhatsApp</span>
+                        <input type="tel" name="guide_phone">
+                      </label>
+                      <label class="booking-field">
+                        <span class="field-label">Base city / neighbourhood</span>
+                        <input type="text" name="guide_city" placeholder="e.g. Lisbon &ndash; Alfama / Bel&eacute;m">
+                      </label>
+                      <label class="booking-field">
+                        <span class="field-label">Languages (comma separated) *</span>
+                        <input type="text" name="guide_languages" placeholder="English, Dutch, German" required>
+                      </label>
+                    </div>
+
+                    <h3 class="welcome-title" style="font-size: 1.1rem; margin-bottom: 0.75rem;">2. Profile content</h3>
+                    <div class="booking-form" style="margin-bottom: 1rem;">
+                      <label class="booking-field">
+                        <span class="field-label">Short tagline (hero line)</span>
+                        <input type="text" name="guide_tagline" placeholder="Local Lisbon guide for Alfama, Bel&eacute;m and bike tours">
+                      </label>
+                      <label class="booking-field">
+                        <span class="field-label">Welcome preview (2&ndash;3 sentences)</span>
+                        <textarea name="guide_welcome_preview" rows="3" placeholder="Short welcome text shown at the top of the profile."></textarea>
+                      </label>
+                      <label class="booking-field">
+                        <span class="field-label">Full bio / resume *</span>
+                        <textarea name="guide_bio_full" rows="6" required placeholder="Longer story about the guide, experience, why they guide in Lisbon, etc."></textarea>
+                      </label>
+                      <label class="booking-field">
+                        <span class="field-label">Profile photo URL</span>
+                        <input type="url" name="guide_avatar_url" placeholder="images/guides/yourguide/profile.png or https://...">
+                      </label>
+                    </div>
+
+                    <h3 class="welcome-title" style="font-size: 1.1rem; margin-bottom: 0.75rem;">3. Qualified tours &amp; internal grades</h3>
+                    <div class="booking-form" style="margin-bottom: 1rem;">
+                      <label class="booking-field">
+                        <span class="field-label">Qualified for tours (slugs or internal IDs)</span>
+                        <textarea name="guide_tours" rows="3" placeholder="alfama-vintage-market (A), belem-bike-tour (A/B), food-evening-walk (B)"></textarea>
+                      </label>
+                      <label class="booking-field">
+                        <span class="field-label">Internal notes (grades, restrictions, training)</span>
+                        <textarea name="guide_internal_notes" rows="3" placeholder="Only morning tours in high season, bike tours after training completed, etc."></textarea>
+                      </label>
+                    </div>
+
+                    <h3 class="welcome-title" style="font-size: 1.1rem; margin-bottom: 0.75rem;">4. Social &amp; web</h3>
+                    <div class="booking-form" style="margin-bottom: 1rem;">
+                      <label class="booking-field">
+                        <span class="field-label">Instagram handle / URL</span>
+                        <input type="text" name="guide_instagram" placeholder="@lxtourguide or https://instagram.com/...">
+                      </label>
+                      <label class="booking-field">
+                        <span class="field-label">Facebook page</span>
+                        <input type="text" name="guide_facebook">
+                      </label>
+                      <label class="booking-field">
+                        <span class="field-label">TikTok</span>
+                        <input type="text" name="guide_tiktok">
+                      </label>
+                      <label class="booking-field">
+                        <span class="field-label">YouTube</span>
+                        <input type="text" name="guide_youtube">
+                      </label>
+                      <label class="booking-field">
+                        <span class="field-label">Website / other link</span>
+                        <input type="text" name="guide_website">
+                      </label>
+                    </div>
+
+                    <h3 class="welcome-title" style="font-size: 1.1rem; margin-bottom: 0.75rem;">5. Roles, status &amp; GDPR</h3>
+                    <div class="booking-form" style="margin-bottom: 1rem;">
+                      <div class="booking-field">
+                        <span class="field-label">Proposed role(s) for this account</span>
+                        <div class="booking-guests-row" style="flex-direction: column; align-items: flex-start; gap: 0.25rem;">
+                          <label><input type="checkbox" name="role_guide"> Guide</label>
+                          <label><input type="checkbox" name="role_agent"> Agent / partner</label>
+                          <label><input type="checkbox" name="role_staff"> LBPF staff</label>
+                          <label><input type="checkbox" name="role_admin"> Admin</label>
+                        </div>
+                      </div>
+                      <div class="booking-field">
+                        <span class="field-label">Initial status</span>
+                        <select name="guide_status">
+                          <option value="draft">Draft (not visible)</option>
+                          <option value="pending">Pending review</option>
+                          <option value="approved">Approved &ndash; ready to publish</option>
+                        </select>
+                      </div>
+                      <div class="booking-field">
+                        <span class="field-label">GDPR &amp; consent</span>
+                        <div class="booking-guests-row" style="flex-direction: column; align-items: flex-start; gap: 0.25rem;">
+                          <label><input type="checkbox" name="guide_consent_data" required> Guide has agreed that LBPF stores this information for profile, planning and invoicing.</label>
+                          <label><input type="checkbox" name="guide_consent_marketing"> Guide agrees to receive operational / marketing updates by email.</label>
+                        </div>
+                      </div>
+                  <div class="booking-header" style="margin-bottom: 1rem;">
+                    <div>
+                      <div class="detail-label">Draft preview (local only)</div>
+                      <div class="booking-subtitle">Copy &amp; paste into data files / CMS prototype.</div>
+                    </div>
+                  </div>
+                  <div class="booking-details" style="display: block;">
+                    <div class="detail-item" style="margin-bottom: 0.75rem;">
+                      <div>
+                        <div class="detail-label">Guide JSON</div>
+                        <pre id="admin-guide-preview" style="background:#F9FAFB; border-radius:8px; padding:0.75rem; font-size:0.8rem; overflow:auto;">{}</pre>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="booking-footer-note" style="margin-top: 1rem;">
+                    <div class="detail-label">Next step</div>
+                    <div class="detail-value">Later we will connect this page to a real backend and role-based access (guide / agent / staff / admin). For now it helps us standardize data entry.</div>
+                  </div>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </section>
+
+        <section class="admin-section" data-section="agenda">
+          <div class="page-container" style="padding-bottom: 2.5rem;">
+            <h1 class="section-title">Agenda &amp; operations</h1>
+            <p class="welcome-text">Planning hub for schedules, hours and booking engines (Bokun, partner engines, direct bookings). This will connect to the main LPF agenda and external tools.</p>
+            <div class="guide-layout" style="grid-template-columns: minmax(0, 2fr) minmax(0, 1.25fr); gap: 1.75rem; padding-bottom: 0;">
+              <div class="guide-main" style="gap: 1.25rem;">
+                <section class="welcome-card">
+                  <h2 class="section-title" style="margin-bottom: 0.75rem;">Today at a glance</h2>
+                  <p class="welcome-text" style="margin-bottom: 0.75rem;">High-level overview of today on LPF: site status, bookings, and guides who need to be present.</p>
+                  <ul style="margin: 0; padding-left: 1.2rem; font-size: 0.9rem; color: #4B5563;">
+                    <li>Site status and incidents (if any).</li>
+                    <li>Todays bookings summary (confirmed, pending, needs attention).</li>
+                    <li>Guides on duty vs. reserve / unavailable.</li>
+                  </ul>
+                </section>
+
+                <section class="welcome-card">
+                  <h2 class="section-title" style="margin-bottom: 0.75rem;">Guides presence</h2>
+                  <p class="welcome-text" style="margin-bottom: 0.75rem;">Board for who is expected to be present today, who is late or absent, and which reserve guides are on standby.</p>
+                  <ul style="margin: 0; padding-left: 1.2rem; font-size: 0.9rem; color: #4B5563;">
+                    <li>Present / on tour now.</li>
+                    <li>Due to arrive (start times and check-in status).</li>
+                    <li>Unavailable (leave, illness, blocked days).</li>
+                    <li>Reserve guides available for surge demand.</li>
+                  </ul>
+                </section>
+
+                <section class="welcome-card">
+                  <h2 class="section-title" style="margin-bottom: 0.75rem;">Bookings board</h2>
+                  <p class="welcome-text" style="margin-bottom: 0.75rem;">Workspace for todays and upcoming bookings grouped by status, so staff can quickly see what needs action.</p>
+                  <ul style="margin: 0; padding-left: 1.2rem; font-size: 0.9rem; color: #4B5563;">
+                    <li>Confirmed tours and meeting points.</li>
+                    <li>Pending confirmations and holds.</li>
+                    <li>Bookings that need a change, refund or follow-up.</li>
+                  </ul>
+                </section>
+              </div>
+
+              <aside class="guide-sidebar">
+                <div class="booking-card" style="max-height: none;">
+                  <div class="booking-header" style="margin-bottom: 1rem;">
+                    <div>
+                      <div class="booking-name">Engines &amp; channels</div>
+                      <div class="booking-subtitle">Status of booking engines and communication channels.</div>
+                    </div>
+                  </div>
+                  <div class="booking-details" style="display: block;">
+                    <div class="detail-item" style="margin-bottom: 0.5rem;">
+                      <div>
+                        <div class="detail-label">Bokun / core booking engine</div>
+                        <div class="detail-value">Health, last sync, and link to settings for API keys and mapping.</div>
+                      </div>
+                    </div>
+                    <div class="detail-item" style="margin-bottom: 0.5rem;">
+                      <div>
+                        <div class="detail-label">Partner / agent engines</div>
+                        <div class="detail-value">Overview of connected agents and their direct booking feeds.</div>
+                      </div>
+                    </div>
+                    <div class="detail-item">
+                      <div>
+                        <div class="detail-label">Direct LPF bookings</div>
+                        <div class="detail-value">Requests coming from the LPF site or internal forms that need routing.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </section>
+
+        <section class="admin-section" data-section="messaging">
+          <div class="page-container" style="padding-bottom: 2.5rem;">
+            <h1 class="section-title">Messaging</h1>
+            <p class="welcome-text">Future inbox for guides, agents and staff: confirmations, changes, legal updates and operational broadcasts.</p>
+          </div>
+        </section>
+
+        <section class="admin-section" data-section="tours">
+          <div class="page-container" style="padding-bottom: 2.5rem;">
+            <h1 class="section-title">Tours onboarding</h1>
+            <p class="welcome-text">Workspace for drafting and approving tours. Not every guide will be allowed to create tours directly; this section is primarily for admins and selected partners.</p>
+            <div class="guide-layout" style="grid-template-columns: minmax(0, 2fr) minmax(0, 1.4fr); gap: 2rem;">
+              <div class="guide-main" style="gap: 1.75rem;">
+                <section class="welcome-card">
+                  <h2 class="section-title" style="margin-bottom: 0.75rem;">New Tour &ndash; Draft</h2>
+                  <form id="admin-new-tour-form">
+                    <div class="booking-form" style="margin-bottom: 1rem;">
+                      <label class="booking-field">
+                        <span class="field-label">Tour name *</span>
+                        <input type="text" name="tour_name" required>
+                      </label>
+                      <label class="booking-field">
+                        <span class="field-label">Internal slug / ID *</span>
+                        <input type="text" name="tour_slug" placeholder="alfama-vintage-market" required>
+                      </label>
+                      <label class="booking-field">
+                        <span class="field-label">Short description</span>
+                        <textarea name="tour_description" rows="4" placeholder="1&ndash;3 sentences used in cards and tiles."></textarea>
+                      </label>
+                      <label class="booking-field">
+                        <span class="field-label">Highlights (comma separated)</span>
+                        <input type="text" name="tour_highlights" placeholder="Historic sites, Local cuisine, Scenic views">
+                      </label>
+                      <div class="booking-guests-row" style="gap: 1rem;">
+                        <label class="booking-field" style="flex: 1;">
+                          <span class="field-label">Price (&euro;)</span>
+                          <input type="number" name="tour_price" step="0.01" min="0" placeholder="45.00">
+                        </label>
+                        <label class="booking-field" style="flex: 1;">
+                          <span class="field-label">Duration</span>
+                          <input type="text" name="tour_duration" placeholder="3 hours">
+                        </label>
+                      </div>
+                      <label class="booking-field">
+                        <span class="field-label">Max guests</span>
+                        <input type="number" name="tour_max_guests" min="1" placeholder="8">
+                      </label>
+                      <label class="booking-field">
+                        <span class="field-label">Card image URL</span>
+                        <input type="url" name="tour_image" placeholder="images/_rawslug/your-tour-image.webp or https://...">
+                      </label>
+                    </div>
+
+                    <button type="submit" class="btn-primary" style="padding: 0.6rem 1.5rem; border-radius: 24px; border: none;">Save tour draft (local)</button>
+                  </form>
+                </section>
+              </div>
+
+              <aside class="guide-sidebar">
+                <div class="booking-card" style="max-height: none;">
+                  <div class="booking-header" style="margin-bottom: 1rem;">
+                    <div>
+                      <div class="detail-label">Tour draft preview (local only)</div>
+                      <div class="booking-subtitle">Copy &amp; paste into data files / CMS prototype for tours.</div>
+                    </div>
+                  </div>
+                  <div class="booking-details" style="display: block;">
+                    <div class="detail-item">
+                      <div>
+                        <div class="detail-label">Tour JSON</div>
+                        <pre id="admin-tour-preview" style="background:#F9FAFB; border-radius:8px; padding:0.75rem; font-size:0.8rem; overflow:auto;">{}</pre>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="booking-footer-note" style="margin-top: 1rem;">
+                    <div class="detail-label">Next step</div>
+                    <div class="detail-value">Tour drafts will later be linked to approval workflows and partner engines. For now this helps us standardise tour data entry.</div>
+                  </div>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </section>
+
+        <section class="admin-section" data-section="stats">
+          <div class="page-container" style="padding-bottom: 2.5rem;">
+            <h1 class="section-title">Stats &amp; analytics</h1>
+            <p class="welcome-text">High-level overview of site performance, bookings and guide activity. This will later connect to analytics tools and booking engines.</p>
+          </div>
+        </section>
+
+        <section class="admin-section" data-section="components">
+          <div class="page-container" style="padding-bottom: 2.5rem;">
+            <h1 class="section-title">Components &amp; content</h1>
+            <p class="welcome-text">Workspace for UI components, landing blocks and experiments that power the public LPF site.</p>
+          </div>
+        </section>
+
+        <section class="admin-section" data-section="settings">
+          <div class="page-container" style="padding-bottom: 2.5rem;">
+            <h1 class="section-title">Settings &amp; administration</h1>
+            <p class="welcome-text">Admin area for accounts, financials, contracts, legal texts and integrations (analytics, booking engines, partner APIs).</p>
+            <div class="guide-layout" style="grid-template-columns: minmax(0, 2fr) minmax(0, 1.25fr); gap: 1.75rem; padding-bottom: 0;">
+              <div class="guide-main" style="gap: 1.25rem;">
+                <section class="welcome-card">
+                  <h2 class="section-title" style="margin-bottom: 0.75rem;">Accounts &amp; roles</h2>
+                  <p class="welcome-text" style="margin-bottom: 0.75rem;">Configuration for users, roles and access layers (guides, agents, staff, admins).</p>
+                  <ul style="margin: 0; padding-left: 1.2rem; font-size: 0.9rem; color: #4B5563;">
+                    <li>List and search of existing accounts.</li>
+                    <li>Role presets and permissions overview.</li>
+                    <li>Entry points to create a new guide or tour draft.</li>
+                  </ul>
+                </section>
+
+                <section class="welcome-card">
+                  <h2 class="section-title" style="margin-bottom: 0.75rem;">Financials &amp; hours</h2>
+                  <p class="welcome-text" style="margin-bottom: 0.75rem;">Space for pricing, commissions and hours tracking linked to the Agenda.</p>
+                  <ul style="margin: 0; padding-left: 1.2rem; font-size: 0.9rem; color: #4B5563;">
+                    <li>Base prices and commissions per tour and partner.</li>
+                    <li>Hours and presence rules for guides and staff.</li>
+                    <li>Links to external financial systems (invoicing, reports).</li>
+                  </ul>
+                </section>
+
+                <section class="welcome-card">
+                  <h2 class="section-title" style="margin-bottom: 0.75rem;">Legal &amp; policies</h2>
+                  <p class="welcome-text" style="margin-bottom: 0.75rem;">Overview of legal texts and policy versions that apply across the LPF platform.</p>
+                  <ul style="margin: 0; padding-left: 1.2rem; font-size: 0.9rem; color: #4B5563;">
+                    <li>Cancellation, privacy and terms of use.</li>
+                    <li>Version history and last updated dates.</li>
+                    <li>Links to source documents in the internal Legal folder.</li>
+                  </ul>
+                </section>
+              </div>
+
+              <aside class="guide-sidebar">
+                <div class="booking-card" style="max-height: none;">
+                  <div class="booking-header" style="margin-bottom: 1rem;">
+                    <div>
+                      <div class="booking-name">Integrations</div>
+                      <div class="booking-subtitle">Analytics, booking engines and communication tools.</div>
+                    </div>
+                  </div>
+                  <div class="booking-details" style="display: block;">
+                    <div class="detail-item" style="margin-bottom: 0.5rem;">
+                      <div>
+                        <div class="detail-label">Analytics</div>
+                        <div class="detail-value">Configuration for GA / gtag IDs and other tracking tools.</div>
+                      </div>
+                    </div>
+                    <div class="detail-item" style="margin-bottom: 0.5rem;">
+                      <div>
+                        <div class="detail-label">Booking engines</div>
+                        <div class="detail-value">Bokun and partner engines: API keys, endpoints and sync rules.</div>
+                      </div>
+                    </div>
+                    <div class="detail-item">
+                      <div>
+                        <div class="detail-label">Messaging channels</div>
+                        <div class="detail-value">Email, WhatsApp and other channels used for confirmations and updates.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <div id="footer-placeholder"></div>
+
+  <!-- Scripts -->
+  <script src="js/components/footer.js"></script>
+  <script>
+    (function () {
+      'use strict';
+
+      if (!window.lpfAdmin) {
+        window.lpfAdmin = {};
+      }
+      if (!window.lpfAdmin.user) {
+        window.lpfAdmin.user = {
+          name: 'LBPF Admin',
+          role: 'Admin'
+        };
+      }
+      if (typeof window.lpfAdmin.track !== 'function') {
+        window.lpfAdmin.track = function (eventName, payload) {
+          if (typeof window.gtag === 'function') {
+            window.gtag('event', eventName, payload || {});
+          }
+        };
+      }
+
+      var sessionStart = window.lpfAdminSessionStartedAt ? new Date(window.lpfAdminSessionStartedAt) : new Date();
+      window.lpfAdminSessionStartedAt = sessionStart;
+
+      function formToObject(form) {
+        var data = {};
+        if (!form) return data;
+        var elements = form.elements;
+        for (var i = 0; i < elements.length; i += 1) {
+          var el = elements[i];
+          if (!el.name) continue;
+          if (el.type === 'checkbox') {
+            data[el.name] = !!el.checked;
+          } else {
+            data[el.name] = el.value;
+          }
+        }
+        return data;
+      }
+
+      function updatePreview() {
+        var guideForm = document.getElementById('admin-new-guide-form');
+        var tourForm = document.getElementById('admin-new-tour-form');
+        var guidePreview = document.getElementById('admin-guide-preview');
+        var tourPreview = document.getElementById('admin-tour-preview');
+
+        if (guideForm && guidePreview) {
+          var guideData = formToObject(guideForm);
+          guidePreview.textContent = JSON.stringify(guideData, null, 2);
+        }
+        if (tourForm && tourPreview) {
+          var tourData = formToObject(tourForm);
+          tourPreview.textContent = JSON.stringify(tourData, null, 2);
+        }
+      }
+
+      function startLisbonClock() {
+        var sessionEl = document.getElementById('admin-session-time');
+        if (!sessionEl || !sessionStart || !sessionStart.getTime) {
+          return;
+        }
+        function formatSession(secondsTotal) {
+          var hours = Math.floor(secondsTotal / 3600);
+          var minutes = Math.floor((secondsTotal % 3600) / 60);
+          var seconds = secondsTotal % 60;
+          var hh = String(hours).padStart(2, '0');
+          var mm = String(minutes).padStart(2, '0');
+          var ss = String(seconds).padStart(2, '0');
+          return hh + ':' + mm + ':' + ss;
+        }
+        function tick() {
+          var diffMs = Date.now() - sessionStart.getTime();
+          if (diffMs < 0) {
+            diffMs = 0;
+          }
+          var totalSeconds = Math.floor(diffMs / 1000);
+          sessionEl.textContent = formatSession(totalSeconds);
+        }
+        tick();
+        window.setInterval(tick, 1000);
+      }
+
+      document.addEventListener('DOMContentLoaded', function () {
+        var guideForm = document.getElementById('admin-new-guide-form');
+        var tourForm = document.getElementById('admin-new-tour-form');
+        var userNameEl = document.querySelector('.admin-shell-user-name');
+        var navItems = document.querySelectorAll('.admin-shell-nav-item');
+        var sections = document.querySelectorAll('.admin-section');
+        var menuToggle = document.querySelector('.admin-shell-menu-toggle');
+        var menuPanel = document.getElementById('admin-shell-menu-panel');
+        var adminShell = document.querySelector('.admin-shell');
+        var sidebarToggle = document.querySelector('.admin-shell-sidebar-toggle');
+
+        if (userNameEl && window.lpfAdmin && window.lpfAdmin.user) {
+          userNameEl.textContent = window.lpfAdmin.user.name || 'LBPF Admin';
+        }
+
+        function activateSection(target) {
+          if (!target) {
+            return;
+          }
+          for (var j = 0; j < sections.length; j += 1) {
+            if (sections[j].getAttribute('data-section') === target) {
+              sections[j].classList.add('admin-section--active');
+            } else {
+              sections[j].classList.remove('admin-section--active');
+            }
+          }
+          if (window.lpfAdmin && typeof window.lpfAdmin.track === 'function') {
+            window.lpfAdmin.track('admin_nav_change', { section: target });
+          }
+        }
+
+        for (var n = 0; n < navItems.length; n += 1) {
+          navItems[n].addEventListener('click', function (event) {
+            var target = event.currentTarget.getAttribute('data-section-target');
+            var i;
+            for (i = 0; i < navItems.length; i += 1) {
+              navItems[i].classList.remove('admin-shell-nav-item--active');
+            }
+            event.currentTarget.classList.add('admin-shell-nav-item--active');
+            activateSection(target);
+          });
+        }
+
+        if (sidebarToggle && adminShell) {
+          sidebarToggle.addEventListener('click', function () {
+            var collapsed = adminShell.classList.toggle('admin-shell--sidebar-collapsed');
+            sidebarToggle.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
+          });
+        }
+
+        if (menuToggle && menuPanel) {
+          menuToggle.addEventListener('click', function () {
+            var isOpen = menuPanel.classList.toggle('admin-shell-menu-panel--open');
+            menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+          });
+
+          document.addEventListener('click', function (event) {
+            if (!menuPanel.classList.contains('admin-shell-menu-panel--open')) {
+              return;
+            }
+            var target = event.target;
+            if (!menuPanel.contains(target) && target !== menuToggle && !menuToggle.contains(target)) {
+              menuPanel.classList.remove('admin-shell-menu-panel--open');
+              menuToggle.setAttribute('aria-expanded', 'false');
+            }
+          });
+
+          menuPanel.addEventListener('click', function (event) {
+            var action = event.target.getAttribute('data-admin-menu-action');
+            if (!action) {
+              return;
+            }
+            if (window.lpfAdmin && typeof window.lpfAdmin.track === 'function') {
+              window.lpfAdmin.track('admin_menu_click', { action: action });
+            }
+            if (action === 'logout') {
+              window.alert('Log off is not connected yet. Close this tab to end your admin session.');
+            } else {
+              window.alert('"' + event.target.textContent + '" is not wired yet in this prototype.');
+            }
+            menuPanel.classList.remove('admin-shell-menu-panel--open');
+            menuToggle.setAttribute('aria-expanded', 'false');
+          });
+        }
+
+        if (guideForm) {
+          guideForm.addEventListener('input', updatePreview);
+          guideForm.addEventListener('change', updatePreview);
+          guideForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+            updatePreview();
+            alert('Guide draft updated in JSON preview on the right.');
+          });
+        }
+
+        if (tourForm) {
+          tourForm.addEventListener('input', updatePreview);
+          tourForm.addEventListener('change', updatePreview);
+          tourForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+            updatePreview();
+            alert('Tour draft updated in JSON preview on the right.');
+          });
+        }
+
+        updatePreview();
+        activateSection('main');
+        startLisbonClock();
+      });
+    }());
+  </script>
+</body>
+</html>

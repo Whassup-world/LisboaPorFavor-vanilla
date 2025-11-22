@@ -1,0 +1,186 @@
+/* ============================================
+   LBPF Brand Components System
+   Uses tokens from css/template.css
+   ============================================ */
+
+:root {
+  /* Radii tokens (aligned with LXT bento tiles) */
+  --lbpf-radius-none: 0;
+  --lbpf-radius-sm: 6px;
+  --lbpf-radius-md: 16px;
+  --lbpf-radius-pill: 999px;
+
+  /* Shadow tokens (map onto existing template shadows) */
+  --lbpf-shadow-soft: var(--shadow-md, 0 4px 6px rgba(0, 0, 0, 0.07));
+  --lbpf-shadow-strong: var(--shadow-lg, 0 10px 15px rgba(0, 0, 0, 0.10));
+
+  /* Portugal national colors (shared across public guide + admin) */
+  --pt-green: #046A38;
+  --pt-red: #DA291C;
+  --pt-yellow: #FFE900;
+  --pt-blue: #002D72;
+  --pt-white: #FFFFFF;
+
+  /* Lisbon flag inspired colors */
+  --lx-gold: #D3AF26;
+  --lx-green: #417948;
+  --lx-black: #000000;
+  --lx-silver: #CAC9C9;
+
+  /* Neutral greys (UI scale, shared by guide + admin templates) */
+  --lbpf-neutral-900: #111827;
+  --lbpf-neutral-800: #1F2937;
+  --lbpf-neutral-600: #4B5563;
+  --lbpf-neutral-500: #6B7280;
+  --lbpf-neutral-400: #9CA3AF;
+  --lbpf-neutral-300: #D1D5DB;
+  --lbpf-neutral-200: #E5E7EB;
+  --lbpf-neutral-100: #F3F4F6;
+  --lbpf-neutral-50:  #F9FAFB;
+}
+
+/* ============================================
+   Pills / Chips
+   ============================================ */
+
+.lbpf-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--lbpf-radius-pill);
+  padding: 0.32rem 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.70);
+  color: var(--lbpf-text, #262220);
+  font-family: var(--font-body, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  cursor: default;
+  box-shadow: 0 1.7px 6.8px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  line-height: 1.2;
+  gap: 0.35rem;
+}
+
+.lbpf-pill--primary {
+  border-color: rgba(0, 0, 0, 0.04);
+  background: var(--lbpf-color-primary, #8b1436);
+  color: #fdf2f8;
+  box-shadow: 0 6px 18px rgba(139, 20, 54, 0.36);
+}
+
+.lbpf-pill--ghost {
+  border-color: rgba(255, 255, 255, 0.45);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.20), rgba(249, 250, 251, 0.78));
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.15);
+}
+
+.lbpf-pill--tag {
+  padding: 0.2rem 0.8rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  border-radius: var(--lbpf-radius-pill);
+  border-color: rgba(255, 255, 255, 0.7);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(251, 191, 36, 0.35));
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.16);
+}
+
+/* Optional state helpers */
+.lbpf-pill--active {
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.22);
+}
+
+.lbpf-pill--muted {
+  opacity: 0.7;
+}
+
+/* ============================================
+   Cards
+   ============================================ */
+
+.lbpf-card {
+  border-radius: var(--lbpf-radius-md);
+  background: var(--lbpf-surface, #f9f5f0);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  box-shadow: var(--lbpf-shadow-soft);
+}
+
+.lbpf-card--hero {
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: var(--lbpf-shadow-strong);
+  border-color: rgba(255, 255, 255, 0.9);
+}
+
+/* ============================================
+   Tiles (Bento / Dashboard)
+   Canonical spec copied from LXT .bento-tile
+   ============================================ */
+
+.lbpf-tile {
+  border-radius: var(--lbpf-radius-md);
+  padding: 1.1rem 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.lbpf-tile:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.14);
+}
+
+.lbpf-tile--bento {
+  /* Guide/tour bento tiles on PT red/green background */
+  background: radial-gradient(
+    circle at 22% 0%,
+    rgba(255, 255, 255, 0.98) 0%,
+    rgba(255, 255, 255, 0.60) 38%,
+    rgba(255, 255, 255, 0.10) 100%
+  );
+  border-color: rgba(255, 255, 255, 0.90);
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.26);
+}
+
+.lbpf-tile--dashboard {
+  /* Admin / dashboard tiles reuse same shape, calmer fill */
+  background: rgba(255, 255, 255, 0.96);
+  border-color: rgba(148, 163, 184, 0.35);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.14);
+}
+
+/* ============================================
+   Nav pills (bottom nav, sidebar, tabs)
+   ============================================ */
+
+.lbpf-nav-pill {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--lbpf-radius-pill);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: rgba(255, 255, 255, 0.70);
+  padding: 0.3rem 0.9rem;
+  font-size: 0.75rem;
+  color: var(--lbpf-neutral-600, #4B5563);
+  box-shadow: 0 1.7px 6.8px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.lbpf-nav-pill--active {
+  border-color: var(--lbpf-color-primary, #8b1436);
+  color: var(--lbpf-color-primary, #8b1436);
+  box-shadow: 0 4px 14px rgba(139, 20, 54, 0.30);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(254, 242, 242, 1));
+}
+
+.lbpf-nav-pill--muted {
+  opacity: 0.7;
+}
