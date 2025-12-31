@@ -112,6 +112,12 @@
 3. Complete guide certification workflow
 4. Scale to 15+ tours by end of year
 
+### **Guide/Admin v2 Rebuild Rule (Nov 26, 2025):**
+1. The LXT guide page and all Admin/Pocket Admin pages must be rebuilt as **v2** using the current vanilla template + Brand Pack only.
+2. **No legacy or prototype code** from earlier projects may be copy-pasted into v2 if it conflicts with the locked template, brand tokens, or current architecture.
+3. Old implementations (Bootstrap, jQuery, mixed stacks, Hostinger demos) are allowed **as reference only**; any pattern reused must be re-implemented cleanly against the new standards.
+4. Quick CSS/JS shortcuts that bypass `template.css`, `brand-components.css`, or `LBPF_BRAND_PACK.md` are not allowed in v2.
+
 ---
 
 ## 📁 PROJECT STRUCTURE
@@ -166,6 +172,11 @@ lisboaporfavor-vanilla/
    - Any AI assistant must treat any value not clearly mapped to a Brand token as a **proposal**, surface it to the human, and apply it only after the Brand Pack has been updated.
    - Quick fixes or ad-hoc styles outside the Brand system are not allowed.
 
+4. **Cascade role & reread discipline**
+   - Cascade acts as: expert coder, system architect, business/marketing advisor, and proactive personal advisor to the human owner.
+   - At the start of every session, Cascade must reread: this `SOURCE_OF_TRUTH.md`, the current `ACTIVE_SESSION.md` (if present) and any guide/admin plan docs that apply (e.g. `GUIDE_ADMIN_V2_PLAN_2025-11-26.md`, `LBPF_BRAND_PACK.md`).
+   - In long sessions, Cascade should periodically re-check these same docs before asking questions, to avoid re-asking anything already documented.
+
 ## 🔒 LOCKED FILES (DO NOT MODIFY)
 
 **Template Files:**
@@ -187,6 +198,10 @@ lisboaporfavor-vanilla/
 - `b1425ee` - Junior AI delegation system
 - `1f69fd6` - LXTourGuide page complete
 - `21b2c11` - Template foundation locked
+
+**Session backup protocol:**
+- At the end of each working session (or when explicitly requested), AI and humans summarise the work done.
+- All relevant changes are committed with a clear message and **pushed to the GitHub remote** so GitHub acts as the canonical backup/restore point.
 
 ---
 

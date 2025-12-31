@@ -6,6 +6,7 @@ function createHero() {
       <div class="hero-content">
         <h1 class="hero-headline">Discover Lisbon</h1>
         <p class="hero-subheadline">Authentic experiences with local guides</p>
+        <div class="wip-banner">Work in progress — MVP launch soon. Some pages are being updated.</div>
       </div>
     </div>
   `;

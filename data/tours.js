@@ -158,7 +158,7 @@ const featuredTours = [
     id: 'alfama-vintage-market',
     
     // Card Display (GetYourGuide style)
-    title: 'Lisbon: Alfama Vintage Market Walk',
+    title: 'Lisbon - Alfama Vintage Market Walking Tour With Tastings',
     slug: 'lisbon-alfama-vintage-market',
     thumbnail: '/images/_rawslug/cais-das-colunas-view.webp',
     duration: '3 hours',
@@ -221,6 +221,7 @@ const featuredTours = [
     ],
     
     importantInfo: [
+      'Tour operates on Tuesday and Saturday only, aligned with the vintage market days',
       'Flea market only Tues & Sat (9am-6pm)',
       'Tour involves hills and stairs',
       'Best on Tuesday or Saturday for full market',

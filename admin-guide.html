@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LXTourguide Admin - Guide Management | LisboaPorFavor</title>
+  <meta name="description" content="Admin dashboard for LXTourguide to manage profile, tours, availability, and content.">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/template.css">
+  <link rel="stylesheet" href="css/brand-components.css">
+  <link rel="stylesheet" href="css/guide-page.css">
+  <link rel="stylesheet" href="css/admin-guide.css">
+</head>
+<body class="lx-guide-page">
+  <!-- Admin Header (outside main for proper positioning) -->
+  <header class="admin-header">
+    <div class="page-container admin-header-inner">
+      <div class="admin-header-left">
+        <h1 class="admin-title">Guide Dashboard</h1>
+        <p class="admin-subtitle">Manage your profile and content</p>
+      </div>
+      <div class="admin-header-right">
+        <button type="button" class="admin-btn admin-btn-secondary">Preview Public</button>
+        <button type="button" class="admin-btn admin-btn-primary">Save Changes</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="guide-page">
+    <!-- Hero Background Section -->
+    <section class="hero-section"></section>
+
+    <!-- Tiles Section (includes Tile 0) -->
+    <section class="tiles-section">
+      <div class="page-container tiles-grid">
+        <!-- Tile 0: Hero Profile -->
+        <div class="tile tile-hero">
+          <div class="hero-label">Partner of LisboaPorFavor</div>
+          
+          <div class="hero-main">
+            <!-- Column 1: Avatar (LBPFadmin only) -->
+            <div class="hero-col hero-col-avatar">
+              <img src="images/guides/lxtourguide/LXtourguide-profile.png" alt="LXTourguide avatar" class="avatar-box">
+            </div>
+            
+            <!-- Column 2: Name, Tagline, Rating (Guide editable: tagline only) -->
+            <div class="hero-col hero-col-text">
+              <h1 class="hero-name">LXTourguide</h1>
+              <textarea class="hero-tagline-edit" placeholder="Your tagline (max 80 characters)" maxlength="80">Explore Lisbon: Immerse in Culture with Walking, Biking and Optional Tastings</textarea>
+              <div class="hero-rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-number">4.9</span>
+                <span class="rating-count">· 120 reviews</span>
+                <button type="button" class="lbpf-pill lbpf-pill--reviews" style="white-space: nowrap;">See all reviews</button>
+              </div>
+            </div>
+            
+            <!-- Column 3: Logo (LBPFadmin only) -->
+            <a href="/" class="hero-col hero-col-logo logo-button">
+              <img src="images/logo-720.png" alt="LisboaPorFavor logo" class="logo-image">
+              <p class="logo-tagline">Discover Lisbon<br>the way locals<br>actually live it</p>
+            </a>
+          </div>
+          
+          <!-- Tags Row (LBPFadmin only) -->
+          <div class="hero-tags-row">
+            <div class="hero-tags">
+              <span class="tag lbpf-pill lbpf-pill--tag">ID: PTLIS00001</span>
+              <span class="tag lbpf-pill lbpf-pill--tag">Qualified for 5 tours</span>
+              <span class="tag lbpf-pill lbpf-pill--tag">✓ Identified Guide</span>
+              <span class="tag lbpf-pill lbpf-pill--tag">Partner</span>
+              <span class="tag lbpf-pill lbpf-pill--tag">English · Dutch · German</span>
+              <span class="tag lbpf-pill lbpf-pill--tag">Local Expert</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Tile 1: Bio -->
+        <div class="tile tile-bio">
+          <div class="tile-label">About your guide</div>
+          <h2 class="tile-title">See my bio</h2>
+          <p class="tile-text"><textarea class="admin-textarea" placeholder="Tile description" style="width: 100%; min-height: 50px;">Why I guide in Lisbon, what I love about the city, and what to expect from a tour with me.</textarea></p>
+          <div class="tile-body">
+            <!-- Bio Content Editor with Text Formatter -->
+            <textarea class="admin-textarea admin-textarea-large text-formatter" placeholder="Welcome to your bio! Share your story, experience, and what makes your tours special. You can use emojis too! 🌟" style="width: 100%;">Welcome to LXTourguide, your local expert in Lisbon! 🌟 I'm George, your dedicated tour guide, partnering with Lisboaporfavor to offer personalized walking and biking tours that showcase the best of our beautiful city.
+
+Discover historic landmarks, enjoy delicious local cuisine, and uncover hidden gems with a tour tailored just for you!
+
+Why Choose LXTourguide?
+- Customized Tours: Each tour is designed to fit your interests.
+- Local Insights: Gain insider knowledge about Lisbon's rich culture.
+- Memorable Experiences: Create lasting memories with unique adventures.
+
+Ready to start your Lisbon adventure? Contact me to plan your perfect trip! Let's make your journey unforgettable!
+
+Best,
+George
+LXTourguide
+Partner of Lisboaporfavor</textarea>
+            
+            <button type="button" class="admin-btn admin-btn-small">Save Tile</button>
+          </div>
+        </div>
+
+        <!-- Tile 2: Tours -->
+        <div class="tile tile-tours">
+          <div class="tile-label">Tours</div>
+          <h2 class="tile-title">See my tours</h2>
+          <p class="tile-text">A quick snapshot of my most popular tours.</p>
+          <div class="tile-body">
+            <!-- Tours Grid (Read-only for guides, editable only for LBPF admin) -->
+            <div class="tours-grid">
+              <div class="tour-card">
+                <img src="images/_rawslug/cais-das-colunas-view.webp" alt="Alfama Vintage Market Walk" class="tour-card-image">
+                <h4>Alfama Vintage Market Walk</h4>
+                <p class="tour-meta">3 hours · max 8 guests</p>
+                <p class="tour-description">Your bespoke walking route through Alfama's markets and miradouros.</p>
+                <button type="button" class="tour-btn">See available dates</button>
+              </div>
+              <div class="tour-card">
+                <img src="images/_rawslug/cais-das-colunas-view.webp" alt="Belém Bike Tour" class="tour-card-image">
+                <h4>Belém Bike Tour</h4>
+                <p class="tour-meta">2.5–3 hours · max 12 guests</p>
+                <p class="tour-description">Riverside cycling to Belém's monuments with safe, flat paths.</p>
+                <button type="button" class="tour-btn">See available dates</button>
+              </div>
+            </div>
+            
+            <!-- Request Forms Section -->
+            <div style="margin-top: 2rem; display: grid; gap: 1.5rem;">
+              
+              <!-- Request Training Form -->
+              <div style="padding: 1.5rem; background: var(--lbpf-neutral-50); border-radius: 8px; border: 2px dashed var(--lbpf-neutral-300);">
+                <h3 style="font-size: 1rem; font-weight: 600; margin: 0 0 1rem; color: var(--text-primary);">Request Training</h3>
+                <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0 0 1rem;">Request training or support for a specific tour.</p>
+                
+                <div style="display: grid; gap: 1rem;">
+                  <div>
+                    <label style="font-size: 0.75rem; font-weight: 600; color: var(--text-secondary); text-transform: uppercase; display: block; margin-bottom: 0.5rem;">Select Tour *</label>
+                    <select class="admin-input" style="width: 100%;">
+                      <option value="">-- Choose a tour --</option>
+                      <option value="alfama">Alfama Vintage Market Walk</option>
+                      <option value="belem">Belém Bike Tour</option>
+                    </select>
+                  </div>
+                  
+                  <div>
+                    <label style="font-size: 0.75rem; font-weight: 600; color: var(--text-secondary); text-transform: uppercase; display: block; margin-bottom: 0.5rem;">Training Topic *</label>
+                    <textarea class="admin-textarea" placeholder="What training or support do you need for this tour?" style="width: 100%; min-height: 80px;"></textarea>
+                  </div>
+                  
+                  <p style="font-size: 0.75rem; color: var(--lbpf-neutral-600); margin: 0;">* Required fields. Your request will be reviewed by the LBPF admin team.</p>
+                  
+                  <button type="button" class="admin-btn admin-btn-small request-submit-btn" data-request-type="training">Submit Training Request</button>
+                </div>
+              </div>
+              
+              <!-- Request Tour Modification Form -->
+              <div style="padding: 1.5rem; background: var(--lbpf-neutral-50); border-radius: 8px; border: 2px dashed var(--lbpf-neutral-300);">
+                <h3 style="font-size: 1rem; font-weight: 600; margin: 0 0 1rem; color: var(--text-primary);">Request Tour Modification</h3>
+                <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0 0 1rem;">Request changes to an existing tour (e.g., closed dates, unsafe conditions).</p>
+                
+                <div style="display: grid; gap: 1rem;">
+                  <div>
+                    <label style="font-size: 0.75rem; font-weight: 600; color: var(--text-secondary); text-transform: uppercase; display: block; margin-bottom: 0.5rem;">Select Tour *</label>
+                    <select class="admin-input" style="width: 100%;">
+                      <option value="">-- Choose a tour --</option>
+                      <option value="alfama">Alfama Vintage Market Walk</option>
+                      <option value="belem">Belém Bike Tour</option>
+                    </select>
+                  </div>
+                  
+                  <div>
+                    <label style="font-size: 0.75rem; font-weight: 600; color: var(--text-secondary); text-transform: uppercase; display: block; margin-bottom: 0.5rem;">Reason for Modification *</label>
+                    <textarea class="admin-textarea" placeholder="Explain what needs to change and why..." style="width: 100%; min-height: 80px;"></textarea>
+                  </div>
+                  
+                  <p style="font-size: 0.75rem; color: var(--lbpf-neutral-600); margin: 0;">* Required fields. Your request will be reviewed by the LBPF admin team.</p>
+                  
+                  <button type="button" class="admin-btn admin-btn-small request-submit-btn" data-request-type="modification">Submit Modification Request</button>
+                </div>
+              </div>
+              
+              <!-- Request New Tour Form -->
+              <div style="padding: 1.5rem; background: var(--lbpf-neutral-50); border-radius: 8px; border: 2px dashed var(--lbpf-neutral-300);">
+                <h3 style="font-size: 1rem; font-weight: 600; margin: 0 0 1rem; color: var(--text-primary);">Suggest a New Tour</h3>
+                <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0 0 1rem;">Share your creative tour idea. We're always looking for fresh experiences! If approved, you may earn a bonus.</p>
+                
+                <div style="display: grid; gap: 1rem;">
+                  <div>
+                    <label style="font-size: 0.75rem; font-weight: 600; color: var(--text-secondary); text-transform: uppercase; display: block; margin-bottom: 0.5rem;">Tour Title *</label>
+                    <input type="text" class="admin-input" placeholder="e.g., Sunset Rooftop Walk" style="width: 100%;">
+                  </div>
+                  
+                  <div>
+                    <label style="font-size: 0.75rem; font-weight: 600; color: var(--text-secondary); text-transform: uppercase; display: block; margin-bottom: 0.5rem;">Duration *</label>
+                    <input type="text" class="admin-input" placeholder="e.g., 2.5 hours" style="width: 100%;">
+                  </div>
+                  
+                  <div>
+                    <label style="font-size: 0.75rem; font-weight: 600; color: var(--text-secondary); text-transform: uppercase; display: block; margin-bottom: 0.5rem;">Max Group Size *</label>
+                    <input type="number" class="admin-input" placeholder="e.g., 8" style="width: 100%;">
+                  </div>
+                  
+                  <div>
+                    <label style="font-size: 0.75rem; font-weight: 600; color: var(--text-secondary); text-transform: uppercase; display: block; margin-bottom: 0.5rem;">Description *</label>
+                    <textarea class="admin-textarea" placeholder="Describe your tour idea..." style="width: 100%; min-height: 80px;"></textarea>
+                  </div>
+                  
+                  <div>
+                    <label style="font-size: 0.75rem; font-weight: 600; color: var(--text-secondary); text-transform: uppercase; display: block; margin-bottom: 0.5rem;">Inspired By *</label>
+                    <select class="admin-input inspired-by-select" style="width: 100%;">
+                      <option value="">-- Select inspiration source --</option>
+                      <option value="link">Link / Article</option>
+                      <option value="creativity">Creativity</option>
+                      <option value="personal">Personal Experience</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+                  
+                  <div class="inspired-by-other" style="display: none;">
+                    <label style="font-size: 0.75rem; font-weight: 600; color: var(--text-secondary); text-transform: uppercase; display: block; margin-bottom: 0.5rem;">Please specify</label>
+                    <input type="text" class="admin-input" placeholder="Tell us more about your inspiration..." style="width: 100%;">
+                  </div>
+                  
+                  <p style="font-size: 0.75rem; color: var(--lbpf-neutral-600); margin: 0;">* Required fields. Your suggestion will be reviewed by the LBPF admin team.</p>
+                  
+                  <button type="button" class="admin-btn admin-btn-small request-submit-btn" data-request-type="new-tour">Submit Tour Suggestion</button>
+                </div>
+              </div>
+              
+            </div>
+            
+            <button type="button" class="admin-btn admin-btn-small" style="margin-top: 1.5rem;">Save Tile</button>
+          </div>
+        </div>
+
+        <!-- Tile 3: Availability -->
+        <div class="tile tile-availability">
+          <div class="tile-label">Booking</div>
+          <h2 class="tile-title">See my available dates</h2>
+          <p class="tile-text"><textarea class="admin-textarea text-formatter" placeholder="Tile description" style="width: 100%; min-height: 50px;">Pick a date, tour and time of day. I'll confirm and follow up with a personal message.</textarea></p>
+          <div class="tile-body">
+            <label class="admin-label">Set Your Availability (Click dates to toggle)</label>
+            <div class="calendar" id="calendar">
+              <div class="calendar-header">
+                <button type="button" class="calendar-nav-btn" id="calendar-prev">&#8249;</button>
+                <div class="calendar-month" id="calendar-month-label">Month YYYY</div>
+                <button type="button" class="calendar-nav-btn" id="calendar-next">&#8250;</button>
+              </div>
+              <div class="calendar-grid" id="calendar-grid"></div>
+            </div>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 0 0 0.75rem;">
+              <button type="button" class="admin-btn admin-btn-small" id="availability-month-all">All days this month</button>
+              <button type="button" class="admin-btn admin-btn-small admin-btn-secondary" id="availability-month-clear">Clear month</button>
+            </div>
+            <label class="admin-label">Selected slot</label>
+            <div class="selected-slot" id="selected-slot-label">Pick a date & slot in the calendar</div>
+            <p class="admin-hint">Tap a date to toggle full-day availability. Tap a slot to cycle: Available → Confirmed (red) → Clear.</p>
+            <button type="button" class="admin-btn admin-btn-small">Save Tile</button>
+          </div>
+        </div>
+
+        <!-- Tile 4: Reviews -->
+        <div class="tile tile-reviews">
+          <div class="tile-label">Reviews</div>
+          <h2 class="tile-title">See my guest reviews</h2>
+          <p class="tile-text"><textarea class="admin-textarea text-formatter" placeholder="Tile description" style="width: 100%; min-height: 50px;">See what other guests loved about touring Lisbon with me.</textarea></p>
+          <div class="tile-body">
+            <div class="review-card">
+              <p><strong>Sarah J.</strong> — June 2025 | ★★★★★</p>
+              <p>"George was an amazing guide! His knowledge of Lisbon's history made our walking tour so interesting. He took us to hidden spots we would never have found on our own. Highly recommend!"</p>
+            </div>
+            <div class="review-card">
+              <p><strong>Michael T.</strong> — May 2025 | ★★★★★</p>
+              <p>"The food tour was incredible! George took us to authentic local restaurants and explained the history behind each dish. The pastéis de nata were the best I've ever had. A must-do experience in Lisbon!"</p>
+            </div>
+            <div class="review-card">
+              <p><strong>Emma L.</strong> — April 2025 | ★★★★★</p>
+              <p>"The Belém by Bike tour was perfect! George provided comfortable bikes and took us at a nice pace. He knew all the best photo spots and shared fascinating stories about the monuments. Great way to see this beautiful area!"</p>
+            </div>
+            <button type="button" class="admin-btn admin-btn-small">Save Tile</button>
+          </div>
+        </div>
+
+        <!-- Tile 5: Favourites -->
+        <div class="tile tile-favourites">
+          <div class="tile-label">Favourites</div>
+          <h2 class="tile-title">See my favourite spots</h2>
+          <p class="tile-text"><textarea class="admin-textarea text-formatter" placeholder="Tile description" style="width: 100%; min-height: 50px;">A few places I actually visit myself between tours.</textarea></p>
+          <div class="tile-body">
+            <textarea class="admin-textarea admin-textarea-large text-formatter" placeholder="Favourite spots content" style="width: 100%;">Add your favorite places and why you love them...</textarea>
+            <button type="button" class="admin-btn admin-btn-small">Save Tile</button>
+          </div>
+        </div>
+
+        <!-- Tile 6: Gallery -->
+        <div class="tile tile-gallery">
+          <div class="tile-label">Gallery</div>
+          <h2 class="tile-title">See my gallery</h2>
+          <p class="tile-text"><textarea class="admin-textarea text-formatter" placeholder="Tile description" style="width: 100%; min-height: 50px;">Guide photos and highlights from previous tours in Lisbon.</textarea></p>
+          <div class="tile-body">
+            <div class="admin-gallery-upload">
+              <input type="file" id="gallery-upload" class="admin-file-input" multiple accept="image/*">
+              <label for="gallery-upload" class="admin-file-label">Click to upload images (6+ recommended)</label>
+            </div>
+            <div class="admin-gallery-preview">
+              <p class="admin-hint">Uploaded images will appear here</p>
+            </div>
+            <button type="button" class="admin-btn admin-btn-small">Save Tile</button>
+          </div>
+        </div>
+
+        <!-- Tile 7: Rewards & Reviews -->
+        <div class="tile tile-rewards">
+          <div class="tile-label">Rewards & Reviews</div>
+          <h2 class="tile-title">Earn rewards & share your experience</h2>
+          <p class="tile-text">Leave a review, earn a digital photobook, and help us grow.</p>
+          <div class="tile-body">
+            
+            <!-- Review Links Section -->
+            <div style="margin-bottom: 2rem; padding: 1.5rem; background: var(--lbpf-neutral-50); border-radius: 8px;">
+              <h3 style="font-size: 1rem; font-weight: 600; margin: 0 0 1rem; color: var(--text-primary);">Leave a Review</h3>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0 0 1rem;">Share your experience on official review platforms. Your feedback helps us improve and earns you rewards!</p>
+              
+              <div style="display: grid; gap: 0.75rem;">
+                <!-- Google Reviews -->
+                <a href="https://www.google.com/maps/place/LXTourguide" target="_blank" style="display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem; background: var(--pt-white); border: 1px solid var(--lbpf-neutral-300); border-radius: 6px; text-decoration: none; color: var(--text-primary); transition: all 0.2s ease;">
+                  <span style="font-size: 1.5rem;">🔍</span>
+                  <div>
+                    <strong style="display: block; font-size: 0.9rem;">Google Reviews</strong>
+                    <span style="font-size: 0.75rem; color: var(--text-secondary);">4.9★ · 36 reviews</span>
+                  </div>
+                  <span style="margin-left: auto; color: var(--lbpf-color-primary); font-weight: 600;">→</span>
+                </a>
+                
+                <!-- TripAdvisor Reviews (Placeholder) -->
+                <div style="display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem; background: var(--pt-white); border: 1px solid var(--lbpf-neutral-300); border-radius: 6px; opacity: 0.6;">
+                  <span style="font-size: 1.5rem;">🗺️</span>
+                  <div>
+                    <strong style="display: block; font-size: 0.9rem;">TripAdvisor Reviews</strong>
+                    <span style="font-size: 0.75rem; color: var(--text-secondary);">Coming soon</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Digital Photobook Section -->
+            <div style="margin-bottom: 2rem; padding: 1.5rem; background: var(--lbpf-neutral-50); border-radius: 8px;">
+              <h3 style="font-size: 1rem; font-weight: 600; margin: 0 0 1rem; color: var(--text-primary);">Digital Photobook</h3>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0 0 1rem;">After your tour, receive a curated digital photobook with tour highlights, tips, and special offers.</p>
+              
+              <div style="display: grid; gap: 1rem;">
+                <div style="padding: 1rem; background: var(--pt-white); border-radius: 6px; border: 1px solid var(--lbpf-neutral-300); text-align: center;">
+                  <p style="font-size: 0.9rem; color: var(--text-secondary); margin: 0;">📸 Photobook Preview</p>
+                  <p style="font-size: 0.75rem; color: var(--text-secondary); margin: 0.5rem 0 0;">Includes tour photos, local recommendations & exclusive discounts</p>
+                </div>
+                
+                <button type="button" class="admin-btn admin-btn-small" style="background: var(--lbpf-color-primary) !important;">View Photobook Template</button>
+              </div>
+            </div>
+            
+            <!-- UGC Consent Section -->
+            <div style="padding: 1.5rem; background: var(--lbpf-neutral-50); border-radius: 8px; border: 2px dashed var(--lbpf-neutral-300);">
+              <h3 style="font-size: 1rem; font-weight: 600; margin: 0 0 1rem; color: var(--text-primary);">User Generated Content (UGC) Consent</h3>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0 0 1rem;">By uploading photos and reviews, you help us grow and earn rewards. We'll credit you and ask permission before using your content.</p>
+              
+              <div style="display: grid; gap: 1rem;">
+                <label style="display: flex; align-items: flex-start; gap: 0.75rem; cursor: pointer; font-size: 0.85rem;">
+                  <input type="checkbox" style="margin-top: 0.25rem; cursor: pointer; width: 18px; height: 18px; flex-shrink: 0;">
+                  <span>I agree to the <a href="../legal/ugc-consent.html" target="_blank" style="color: var(--lbpf-color-primary); text-decoration: underline;">UGC Consent Agreement</a> and consent to the use of my photos and reviews for marketing purposes.</span>
+                </label>
+                
+                <p style="font-size: 0.75rem; color: var(--text-secondary); margin: 0;">You can revoke consent anytime by contacting legal@lisboaporfavor.com</p>
+              </div>
+            </div>
+            
+            <button type="button" class="admin-btn admin-btn-small" style="margin-top: 1.5rem;">Save Tile</button>
+          </div>
+        </div>
+
+        <!-- Tile 8: Social -->
+        <div class="tile tile-social">
+          <div class="tile-label">Contact</div>
+          <h2 class="tile-title">Stay connected</h2>
+          <p class="tile-text"><textarea class="admin-textarea text-formatter" placeholder="Tile description" style="width: 100%; min-height: 50px;">Follow along or reach out before and after your tour.</textarea></p>
+          <div class="tile-body">
+            <label class="admin-label">Contact Methods:</label>
+            <div class="admin-contact-item">
+              <label class="admin-label">WhatsApp (masked):</label>
+              <input type="tel" class="admin-input" placeholder="+351 9XX XXX XXX" style="width: 100%;">
+            </div>
+            <div class="admin-contact-item">
+              <label class="admin-label">Email (masked):</label>
+              <input type="email" class="admin-input" placeholder="guide@..." style="width: 100%;">
+            </div>
+            <label class="admin-label">Social Media Links:</label>
+            <div class="admin-social-item">
+              <input type="text" class="admin-input" placeholder="Instagram handle" style="width: 100%;">
+            </div>
+            <div class="admin-social-item">
+              <input type="text" class="admin-input" placeholder="Facebook URL" style="width: 100%;">
+            </div>
+            <div class="admin-social-item">
+              <input type="text" class="admin-input" placeholder="YouTube channel" style="width: 100%;">
+            </div>
+            <div class="admin-social-item">
+              <input type="text" class="admin-input" placeholder="Pinterest board" style="width: 100%;">
+            </div>
+            <button type="button" class="admin-btn admin-btn-small">Save Tile</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Admin Footer (outside main for proper positioning) -->
+  <footer class="admin-footer">
+    <div class="page-container admin-footer-inner">
+      <button type="button" class="admin-btn admin-btn-secondary">Cancel</button>
+      <button type="button" class="admin-btn admin-btn-primary">Save All Changes</button>
+      <button type="button" class="admin-btn admin-btn-secondary">Preview Public Page</button>
+    </div>
+  </footer>
+
+  <div id="footer-placeholder"></div>
+
+  <!-- Scripts -->
+  <script src="data/guide-lxtourguide.js"></script>
+  <script src="js/components/footer.js"></script>
+  <script src="js/components/text-formatter.js"></script>
+  <script>
+    (function () {
+      'use strict';
+      
+      // Tile expansion logic (same as public page)
+      function initTileExpansion() {
+        var tiles = document.querySelectorAll('.tile');
+        tiles.forEach(function (tile) {
+          var header = tile.querySelector('.tile-label, .tile-title, .tile-text');
+          if (header) {
+            header.parentElement.addEventListener('click', function (event) {
+              // Only toggle if clicking on header area, not inside tile-body
+              var body = tile.querySelector('.tile-body');
+              if (body && body.contains(event.target)) {
+                return;
+              }
+              
+              var isOpen = tile.classList.contains('tile--open');
+              tiles.forEach(function (t) { t.classList.remove('tile--open'); });
+              if (!isOpen) {
+                tile.classList.add('tile--open');
+              }
+            });
+          }
+        });
+      }
+
+      // Calendar availability logic for admin
+      var availabilityData = {};
+      var currentMonth = new Date();
+      var selected = { dateKey: null, slot: null };
+      var slotOrder = ['EVENING', 'PRIVATE', 'AM', 'PM'];
+
+      var storageKey = 'lbpf_availability_' + ((window.lxtourguideData && window.lxtourguideData.guideId) ? window.lxtourguideData.guideId : 'default');
+
+      function loadAvailabilityFromStorage() {
+        try {
+          availabilityData = JSON.parse(localStorage.getItem(storageKey) || '{}') || {};
+        } catch (e) {
+          availabilityData = {};
+        }
+
+        Object.keys(availabilityData || {}).forEach(function (dateKey) {
+          var entry = availabilityData[dateKey];
+          if (!entry) {
+            delete availabilityData[dateKey];
+            return;
+          }
+          Object.keys(entry).forEach(function (slot) {
+            if (entry[slot] === 'blocked') {
+              delete entry[slot];
+            }
+          });
+          if (!Object.keys(entry).length) {
+            delete availabilityData[dateKey];
+          }
+        });
+      }
+
+      function saveAvailabilityToStorage() {
+        try {
+          localStorage.setItem(storageKey, JSON.stringify(availabilityData || {}));
+        } catch (e) {
+        }
+      }
+
+      function getSlotLabel(slot) {
+        if (slot === 'AM') return 'AM';
+        if (slot === 'PM') return 'PM';
+        if (slot === 'EVENING') return 'Eve';
+        if (slot === 'PRIVATE') return 'Priv';
+        return slot;
+      }
+
+      function cycleStatus(current) {
+        if (!current) return 'available';
+        if (current === 'available') return 'confirmed';
+        return null;
+      }
+
+      function toggleDayAvailability(dateKey) {
+        if (!availabilityData[dateKey]) {
+          availabilityData[dateKey] = {};
+        }
+
+        var allAvailable = slotOrder.every(function (slot) {
+          return availabilityData[dateKey][slot] === 'available';
+        });
+
+        if (allAvailable) {
+          slotOrder.forEach(function (slot) {
+            if (availabilityData[dateKey][slot] === 'available') {
+              delete availabilityData[dateKey][slot];
+            }
+          });
+          if (!Object.keys(availabilityData[dateKey]).length) {
+            delete availabilityData[dateKey];
+          }
+          return;
+        }
+
+        slotOrder.forEach(function (slot) {
+          if (!availabilityData[dateKey][slot]) {
+            availabilityData[dateKey][slot] = 'available';
+          }
+        });
+      }
+
+      function setMonthAllAvailable() {
+        var year = currentMonth.getFullYear();
+        var month = currentMonth.getMonth();
+        var daysInMonth = new Date(year, month + 1, 0).getDate();
+
+        for (var day = 1; day <= daysInMonth; day++) {
+          var dateKey = year + '-' + String(month + 1).padStart(2, '0') + '-' + String(day).padStart(2, '0');
+          if (!availabilityData[dateKey]) availabilityData[dateKey] = {};
+          slotOrder.forEach(function (slot) {
+            availabilityData[dateKey][slot] = 'available';
+          });
+        }
+      }
+
+      function clearMonth() {
+        var year = currentMonth.getFullYear();
+        var month = currentMonth.getMonth();
+        var prefix = year + '-' + String(month + 1).padStart(2, '0') + '-';
+
+        Object.keys(availabilityData || {}).forEach(function (dateKey) {
+          if (dateKey.indexOf(prefix) === 0) {
+            delete availabilityData[dateKey];
+          }
+        });
+      }
+
+      function updateSelectedSlotLabel() {
+        var labelEl = document.getElementById('selected-slot-label');
+        if (!labelEl) return;
+
+        if (!selected.dateKey || !selected.slot) {
+          labelEl.textContent = 'Pick a date & slot in the calendar';
+          return;
+        }
+
+        var parts = selected.dateKey.split('-');
+        var d = new Date(parseInt(parts[0], 10), parseInt(parts[1], 10) - 1, parseInt(parts[2], 10));
+        var dateLabel = d.toLocaleDateString(undefined, { weekday: 'long', day: 'numeric', month: 'long' });
+        labelEl.textContent = dateLabel + ' — ' + getSlotLabel(selected.slot);
+      }
+
+      function renderCalendar() {
+        var year = currentMonth.getFullYear();
+        var month = currentMonth.getMonth();
+        var daysInMonth = new Date(year, month + 1, 0).getDate();
+
+        var monthLabel = currentMonth.toLocaleString('default', { month: 'long', year: 'numeric' });
+        var monthLabelEl = document.getElementById('calendar-month-label');
+        if (monthLabelEl) {
+          monthLabelEl.textContent = monthLabel;
+        }
+
+        var calendarGrid = document.getElementById('calendar-grid');
+        if (!calendarGrid) return;
+
+        var cells = [];
+
+        var firstDay = new Date(year, month, 1);
+        var firstWeekday = (firstDay.getDay() + 6) % 7;
+        for (var pad = 0; pad < firstWeekday; pad++) {
+          cells.push('<div class="calendar-day calendar-day--empty" aria-hidden="true"></div>');
+        }
+
+        for (var day = 1; day <= daysInMonth; day++) {
+          var dateKey = year + '-' + String(month + 1).padStart(2, '0') + '-' + String(day).padStart(2, '0');
+          var weekday = new Date(year, month, day).toLocaleDateString(undefined, { weekday: 'short' });
+
+          var slots = slotOrder.map(function (slot) {
+            var status = availabilityData[dateKey] && availabilityData[dateKey][slot] ? availabilityData[dateKey][slot] : null;
+            var classes = ['calendar-slot'];
+            if (status === 'available') classes.push('is-available');
+            if (status === 'confirmed') classes.push('is-confirmed');
+            if (selected.dateKey === dateKey && selected.slot === slot) classes.push('is-selected');
+
+            return '<button type="button" class="' + classes.join(' ') + '" data-date="' + dateKey + '" data-slot="' + slot + '">' + getSlotLabel(slot) + '</button>';
+          }).join('');
+
+          cells.push(
+            '<div class="calendar-day" data-date="' + dateKey + '">' +
+              '<div class="calendar-day-top">' +
+                '<span class="calendar-day-weekday">' + weekday + '</span>' +
+                '<span class="calendar-day-number">' + day + '</span>' +
+              '</div>' +
+              '<div class="calendar-day-slots">' + slots + '</div>' +
+            '</div>'
+          );
+        }
+
+        var totalCells = firstWeekday + daysInMonth;
+        var trailing = totalCells % 7;
+        if (trailing) {
+          for (var padEnd = 0; padEnd < (7 - trailing); padEnd++) {
+            cells.push('<div class="calendar-day calendar-day--empty" aria-hidden="true"></div>');
+          }
+        }
+
+        calendarGrid.innerHTML = cells.join('');
+        updateSelectedSlotLabel();
+      }
+
+      document.addEventListener('DOMContentLoaded', function () {
+        initTileExpansion();
+        loadAvailabilityFromStorage();
+        renderCalendar();
+
+        var monthAllBtn = document.getElementById('availability-month-all');
+        if (monthAllBtn) {
+          monthAllBtn.addEventListener('click', function (event) {
+            event.preventDefault();
+            setMonthAllAvailable();
+            saveAvailabilityToStorage();
+            renderCalendar();
+          });
+        }
+
+        var monthClearBtn = document.getElementById('availability-month-clear');
+        if (monthClearBtn) {
+          monthClearBtn.addEventListener('click', function (event) {
+            event.preventDefault();
+            clearMonth();
+            saveAvailabilityToStorage();
+            renderCalendar();
+          });
+        }
+
+        var prevBtn = document.getElementById('calendar-prev');
+        var nextBtn = document.getElementById('calendar-next');
+
+        if (prevBtn) {
+          prevBtn.addEventListener('click', function () {
+            currentMonth.setMonth(currentMonth.getMonth() - 1);
+            renderCalendar();
+          });
+        }
+
+        if (nextBtn) {
+          nextBtn.addEventListener('click', function () {
+            currentMonth.setMonth(currentMonth.getMonth() + 1);
+            renderCalendar();
+          });
+        }
+
+        var calendarGrid = document.getElementById('calendar-grid');
+        if (calendarGrid && !calendarGrid.__lbpfSlotBound) {
+          calendarGrid.__lbpfSlotBound = true;
+          calendarGrid.addEventListener('click', function (event) {
+            var slotBtn = event.target.closest('.calendar-slot');
+            if (!slotBtn) {
+              var dayEl = event.target.closest('.calendar-day');
+              var dateKeyDay = dayEl ? dayEl.getAttribute('data-date') : null;
+              if (!dateKeyDay) return;
+              if (dayEl && dayEl.classList.contains('calendar-day--empty')) return;
+              event.preventDefault();
+              event.stopPropagation();
+              selected.dateKey = dateKeyDay;
+              selected.slot = null;
+              toggleDayAvailability(dateKeyDay);
+              saveAvailabilityToStorage();
+              renderCalendar();
+              return;
+            }
+            event.preventDefault();
+            event.stopPropagation();
+
+            var dateKey = slotBtn.getAttribute('data-date');
+            var slot = slotBtn.getAttribute('data-slot');
+            if (!dateKey || !slot) return;
+
+            selected.dateKey = dateKey;
+            selected.slot = slot;
+
+            if (!availabilityData[dateKey]) {
+              availabilityData[dateKey] = {};
+            }
+
+            availabilityData[dateKey][slot] = cycleStatus(availabilityData[dateKey][slot]);
+            if (!availabilityData[dateKey][slot]) {
+              delete availabilityData[dateKey][slot];
+            }
+
+            if (!Object.keys(availabilityData[dateKey]).length) {
+              delete availabilityData[dateKey];
+            }
+
+            saveAvailabilityToStorage();
+
+            renderCalendar();
+          });
+        }
+
+        // Inspired By "Other" conditional field
+        var inspiredBySelects = document.querySelectorAll('.inspired-by-select');
+        inspiredBySelects.forEach(function (select) {
+          select.addEventListener('change', function () {
+            var otherField = this.closest('div').nextElementSibling;
+            if (this.value === 'other') {
+              otherField.style.display = 'block';
+            } else {
+              otherField.style.display = 'none';
+            }
+          });
+        });
+
+        // Request submit button handler
+        var submitBtns = document.querySelectorAll('.request-submit-btn');
+        submitBtns.forEach(function (btn) {
+          btn.addEventListener('click', function (e) {
+            e.preventDefault();
+            
+            var requestType = this.getAttribute('data-request-type');
+            var form = this.closest('div[style*="padding"]');
+            var formData = {};
+            
+            // Collect form data
+            var inputs = form.querySelectorAll('input, textarea, select');
+            inputs.forEach(function (input) {
+              if (input.value) {
+                formData[input.placeholder || input.name || 'field'] = input.value;
+              }
+            });
+            
+            // Create summary message
+            var summary = 'Request Submitted: ' + requestType.replace('-', ' ').toUpperCase() + '\n\n';
+            Object.keys(formData).forEach(function (key) {
+              summary += key + ': ' + formData[key] + '\n';
+            });
+            summary += '\nYour request has been submitted for LBPF admin review.';
+            
+            // Show summary popup
+            alert(summary);
+            
+            // Change button to green and disable
+            this.classList.add('submitted');
+            this.textContent = '✓ Submitted';
+            this.disabled = true;
+          });
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

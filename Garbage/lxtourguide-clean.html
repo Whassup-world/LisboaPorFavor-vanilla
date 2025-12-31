@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LXTourguide - Lisbon Tour Guide | LisboaPorFavor</title>
+  <meta name="description" content="Meet LXTourguide, your local Lisbon expert. Personalized walking and biking tours showcasing the best of Lisbon.">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/template.css">
+  <link rel="stylesheet" href="css/brand-components.css">
+  <link rel="stylesheet" href="css/guide-page.css">
+</head>
+<body class="lbpf-guide-bento-page">
+  <main class="guide-page guide-bento">
+    <section class="guide-bento-hero">
+      <div class="page-container guide-bento-hero-inner">
+        <div class="guide-bento-partner-label">Partner of LisboaPorFavor</div>
+        <div class="guide-bento-hero-main">
+          <div class="guide-bento-avatar-col">
+            <div class="guide-bento-avatar">LX</div>
+          </div>
+          <div class="guide-bento-text-col">
+            <h1 class="guide-bento-name">LXTourguide</h1>
+            <p class="guide-bento-tagline">Local expert for Alfama, Belem and Lisbon by foot or by bike</p>
+            <div class="guide-bento-rating">
+              <span class="stars">★★★★★</span>
+              <span class="guide-bento-rating-number">4.9</span>
+              <span class="guide-bento-rating-count">· 120 reviews</span>
+              <button type="button" class="lbpf-pill lbpf-pill--reviews">See all reviews</button>
+            </div>
+          </div>
+          <div class="guide-bento-logo-col">
+            <img src="images/logo-720.png" alt="LisboaPorFavor logo" class="guide-bento-logo">
+            <p class="guide-bento-logo-tagline">Discover Lisbon<br>the way locals<br>actually live it</p>
+          </div>
+        </div>
+        <div class="guide-bento-hero-tags-row">
+          <div class="guide-bento-hero-tags">
+            <span class="guide-tag guide-tag-id lbpf-pill lbpf-pill--tag">ID: PTLIS00001</span>
+            <span class="guide-tag guide-tag-qualified lbpf-pill lbpf-pill--tag">Qualified for 5 tours</span>
+            <span class="guide-tag guide-tag-verified lbpf-pill lbpf-pill--tag">✓ Identified Guide</span>
+            <span class="guide-tag guide-tag-partner lbpf-pill lbpf-pill--tag">Partner</span>
+            <span class="guide-tag guide-tag-languages lbpf-pill lbpf-pill--tag">English · Dutch · German</span>
+            <span class="guide-tag guide-tag-expert lbpf-pill lbpf-pill--tag">Local Expert</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="guide-bento-tiles">
+      <div class="page-container bento-grid">
+        <!-- Tile 1: Bio -->
+        <div class="bento-tile bento-tile-bio lbpf-tile lbpf-tile--bento">
+          <div class="bento-tile-label">About your guide</div>
+          <h2 class="bento-tile-title">See my bio</h2>
+          <p class="bento-tile-text">Why I guide in Lisbon, what I love about the city, and what to expect from a tour with me.</p>
+          <div class="bento-tile-body">
+            <!-- Filled from guide-bento-lxtourguide.js using welcomeFull -->
+          </div>
+        </div>
+
+        <!-- Tile 2: Tours -->
+        <div class="bento-tile bento-tile-tours lbpf-tile lbpf-tile--bento">
+          <div class="bento-tile-label">Tours</div>
+          <h2 class="bento-tile-title">See my tours</h2>
+          <p class="bento-tile-text">A quick snapshot of my most popular tours.</p>
+          <div class="bento-tile-body">
+            <div class="bento-tours-grid"></div>
+            <p class="bento-tile-text">All tours can be adjusted for your pace, group size and special requests.</p>
+          </div>
+        </div>
+
+        <!-- Tile 3: Booking -->
+        <div class="bento-tile bento-tile-availability lbpf-tile lbpf-tile--bento">
+          <div class="bento-tile-label">Booking</div>
+          <h2 class="bento-tile-title">See my available dates</h2>
+          <p class="bento-tile-text">Pick a date, tour and time of day. I'll confirm and follow up with a personal message.</p>
+          <div class="bento-tile-body">
+            <div class="bento-calendar" id="bento-calendar">
+              <div class="bento-calendar-header">
+                <button type="button" class="bento-calendar-nav-btn" id="bento-calendar-prev">&#8249;</button>
+                <div class="bento-calendar-month" id="bento-calendar-month-label">Month YYYY</div>
+                <button type="button" class="bento-calendar-nav-btn" id="bento-calendar-next">&#8250;</button>
+              </div>
+              <div class="bento-calendar-grid" id="bento-calendar-grid"></div>
+            </div>
+            <div class="bento-booking-controls">
+              <label class="bento-field">
+                <span class="bento-field-label">Choose tour</span>
+                <select id="bento-booking-tour"></select>
+              </label>
+              <label class="bento-field">
+                <span class="bento-field-label">Guests</span>
+                <input type="number" id="bento-booking-guests" min="1" max="12" value="2">
+              </label>
+              <label class="bento-field">
+                <span class="bento-field-label">Children</span>
+                <input type="number" id="bento-booking-children" min="0" max="12" value="0">
+              </label>
+              <div class="bento-field">
+                <span class="bento-field-label">Time of day</span>
+                <div class="bento-time-pills" id="bento-time-pills">
+                  <button type="button" class="bento-time-pill bento-time-pill-active" data-time="AM">AM</button>
+                  <button type="button" class="bento-time-pill" data-time="PM">PM</button>
+                  <button type="button" class="bento-time-pill" data-time="EVENING">Evening</button>
+                  <button type="button" class="bento-time-pill" data-time="PRIVATE">Private</button>
+                </div>
+              </div>
+              <button type="button" class="bento-booking-btn" id="bento-booking-request-btn">Request confirmation / info</button>
+              <p class="bento-request-note" id="bento-booking-feedback"></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tile 4: Reviews -->
+        <div class="bento-tile bento-tile-reviews lbpf-tile lbpf-tile--bento">
+          <div class="bento-tile-label">Reviews</div>
+          <h2 class="bento-tile-title">See my guest reviews</h2>
+          <p class="bento-tile-text">See what other guests loved about touring Lisbon with me.</p>
+          <div class="bento-tile-body">
+            <!-- Filled from guide-bento-lxtourguide.js using reviews[] -->
+          </div>
+        </div>
+
+        <!-- Tile 5: Favourite Spots -->
+        <div class="bento-tile bento-tile-favourites lbpf-tile lbpf-tile--bento">
+          <div class="bento-tile-label">Favourites</div>
+          <h2 class="bento-tile-title">See my favourite spots</h2>
+          <p class="bento-tile-text">A few places I actually visit myself between tours.</p>
+          <div class="bento-tile-body">
+            <p>Think of this as my personal shortlist inside LisboaPorFavor: cafés, viewpoints and corners of the city I return to again and again.</p>
+            <ul>
+              <li>A miradouro for golden-hour views over Alfama.</li>
+              <li>A tiny tasca where I bring friends for grilled fish and vinho verde.</li>
+              <li>A quiet riverside stretch for a post-tour walk or bike ride.</li>
+            </ul>
+            <p>You'll find these and more inside the LisboaPorFavor app once you book a tour.</p>
+          </div>
+        </div>
+
+        <!-- Tile 6: Gallery (guide photos + previous tour photos) -->
+        <div class="bento-tile bento-tile-gallery lbpf-tile lbpf-tile--bento">
+          <div class="bento-tile-label">Gallery</div>
+          <h2 class="bento-tile-title">See my gallery</h2>
+          <p class="bento-tile-text">Guide photos and highlights from previous tours in Lisbon.</p>
+          <div class="bento-tile-body">
+            <!-- Photos and lightbox are populated from guide-bento-lxtourguide.js using images[] -->
+          </div>
+        </div>
+
+        <!-- Tile 7: Rewards (includes Photobook as a reward) -->
+        <div class="bento-tile bento-tile-rewards lbpf-tile lbpf-tile--bento">
+          <div class="bento-tile-label">Rewards</div>
+          <h2 class="bento-tile-title">See your rewards & digital photobook</h2>
+          <p class="bento-tile-text">Small free gifts, extras, and tour highlights when you book with LisboaPorFavor.</p>
+          <div class="bento-tile-body">
+            <p>After launch this tile will show your rewards between the dates you travel and the spots you visit in Lisbon.</p>
+            <p>Examples could include a small local extra on your tour, a digital guide, or a follow-up tip list for your next visit.</p>
+            <hr style="margin: 2rem 0;">
+            <h3 style="text-align: center;">Digital Photobook (Reward)</h3>
+            <p style="text-align: center;">See your tour highlights with guide & client photos.</p>
+            <!-- Photobook gallery populated from guide-bento-lxtourguide.js -->
+            <div style="text-align: center;">
+              <button type="button" class="bento-booking-btn">Download full photobook</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tile 8: Contact/Social -->
+        <div class="bento-tile bento-tile-social lbpf-tile lbpf-tile--bento">
+          <div class="bento-tile-label">Stay connected</div>
+          <h2 class="bento-tile-title">See my social media and how to contact me</h2>
+          <p class="bento-tile-text">Follow along or reach out before and after your tour.</p>
+          <div class="bento-tile-body">
+            <p>You can follow LXTourguide on these channels:</p>
+            <ul>
+              <li>📷 Instagram – behind-the-scenes photos and short reels.</li>
+              <li>👍 Facebook – updates, new tours and guest stories.</li>
+              <li>▶️ YouTube – short clips from walks and rides around Lisbon.</li>
+              <li>📌 Pinterest – boards with viewpoints, tiles, doors and details from the city.</li>
+            </ul>
+            <p>Links and handles will be added once this guide page goes live.</p>
+            <hr>
+            <div style="display: flex; gap: 1.5rem; justify-content: center; align-items: center; flex-wrap: wrap; margin-top: 1.5rem;">
+              <button type="button" class="lbpf-pill lbpf-pill--primary" style="gap: 0.5rem;">
+                <span>💬</span> WhatsApp
+              </button>
+              <button type="button" class="lbpf-pill lbpf-pill--primary" style="gap: 0.5rem;">
+                <span>✉️</span> Email
+              </button>
+            </div>
+            <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 1.5rem; font-size: 1.5rem;">
+              <a href="#" title="Instagram" style="text-decoration: none;">📷</a>
+              <a href="#" title="Facebook" style="text-decoration: none;">👍</a>
+              <a href="#" title="YouTube" style="text-decoration: none;">▶️</a>
+              <a href="#" title="Pinterest" style="text-decoration: none;">📌</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <!-- Scripts -->
+  <script src="data/guide-lxtourguide.js"></script>
+  <script src="js/components/footer.js"></script>
+  <script src="js/pages/guide-bento-lxtourguide.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var tiles = document.querySelectorAll('.bento-tile');
+      tiles.forEach(function (tile) {
+        tile.addEventListener('click', function (event) {
+          if (tile.classList.contains('bento-tile-availability')) {
+            var body = tile.querySelector('.bento-tile-body');
+            if (body && body.contains(event.target)) {
+              return;
+            }
+          }
+          var isOpen = tile.classList.contains('bento-tile--open');
+          tiles.forEach(function (t) { t.classList.remove('bento-tile--open'); });
+          if (!isOpen) {
+            tile.classList.add('bento-tile--open');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

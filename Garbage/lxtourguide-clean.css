@@ -1,0 +1,287 @@
+/* LBPF Guide Clean – LXTourguide Public + Admin
+   Single CSS file for both public and admin views.
+   Brand tokens only: template.css + brand-components.css.
+   No legacy code. */
+
+:root {
+  --guide-clean-max-width: var(--content-width, 880px);
+  --guide-clean-padding: var(--space-32, 32px);
+}
+
+/* ============================================
+   MAIN LAYOUT
+   ============================================ */
+
+.lbpf-guide-clean {
+  background: var(--background);
+}
+
+.guide-clean-main {
+  min-height: 100vh;
+  padding-top: var(--guide-clean-padding);
+  padding-bottom: var(--space-40, 40px);
+}
+
+.guide-clean-shell {
+  max-width: var(--guide-clean-max-width);
+  margin: 0 auto;
+  padding: 0 var(--guide-clean-padding);
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+
+.guide-clean-hero {
+  margin-bottom: var(--space-32, 32px);
+  padding: var(--space-24, 24px);
+  border-radius: var(--lbpf-radius-md, 16px);
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.guide-clean-partner-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--lbpf-neutral-500, #6b7280);
+  margin-bottom: var(--space-16, 16px);
+}
+
+.guide-clean-hero-main {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr 1fr;
+  gap: var(--space-24, 24px);
+  align-items: center;
+  margin-bottom: var(--space-24, 24px);
+}
+
+.guide-clean-avatar-block,
+.guide-clean-text-block,
+.guide-clean-logo-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.guide-clean-avatar {
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  background: var(--lbpf-color-accent, #d4af37);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: var(--space-16, 16px);
+}
+
+.guide-clean-name {
+  font-family: var(--font-heading, "Playfair Display", serif);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 0.4rem;
+}
+
+.guide-clean-tagline {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin: 0 0 0.5rem;
+  line-height: 1.4;
+}
+
+.guide-clean-rating {
+  font-size: 0.9rem;
+  color: var(--lbpf-neutral-600, #4b5563);
+  margin-bottom: var(--space-12, 12px);
+}
+
+.guide-clean-stars {
+  color: var(--lbpf-color-accent, #d4af37);
+  font-size: 1rem;
+  margin-right: 0.25rem;
+}
+
+.guide-clean-ctas {
+  display: flex;
+  gap: var(--space-12, 12px);
+  margin-top: var(--space-16, 16px);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.guide-clean-logo {
+  height: 60px;
+  width: auto;
+  margin-bottom: var(--space-12, 12px);
+}
+
+.guide-clean-logo-tagline {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.guide-clean-tags-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--space-8, 8px);
+}
+
+.guide-clean-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-8, 8px);
+  justify-content: center;
+}
+
+/* ============================================
+   TILES SECTION
+   ============================================ */
+
+.guide-clean-tiles {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-16, 16px);
+}
+
+.guide-clean-tile {
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.guide-clean-tile:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.14);
+}
+
+.guide-clean-tile-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--lbpf-neutral-500, #6b7280);
+  margin-bottom: var(--space-8, 8px);
+}
+
+.guide-clean-tile-title {
+  margin: 0 0 0.35rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.guide-clean-tile-text {
+  margin: 0 0 var(--space-12, 12px);
+  font-size: 0.9rem;
+  color: var(--lbpf-neutral-600, #4b5563);
+}
+
+.guide-clean-tile-body {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.guide-clean-tile-body p {
+  margin: 0 0 0.75rem;
+}
+
+.guide-clean-tile-body ul {
+  margin: 0.5rem 0;
+  padding-left: 1.25rem;
+}
+
+.guide-clean-tile-body li {
+  margin-bottom: 0.5rem;
+}
+
+/* ============================================
+   ADMIN-SPECIFIC STYLES
+   ============================================ */
+
+.lbpf-admin-guide .guide-clean-tile {
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+}
+
+.lbpf-admin-guide .guide-clean-tile:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.admin-guide-tile-body {
+  font-size: 0.85rem;
+  color: var(--lbpf-neutral-600, #4b5563);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 1024px) {
+  .guide-clean-hero-main {
+    grid-template-columns: 1fr;
+    gap: var(--space-16, 16px);
+  }
+
+  .guide-clean-tiles {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .guide-clean-main {
+    padding-top: var(--space-24, 24px);
+    padding-bottom: var(--space-32, 32px);
+  }
+
+  .guide-clean-shell {
+    padding: 0 var(--space-16, 16px);
+  }
+
+  .guide-clean-hero {
+    padding: var(--space-16, 16px);
+    margin-bottom: var(--space-24, 24px);
+  }
+
+  .guide-clean-hero-main {
+    grid-template-columns: 1fr;
+    gap: var(--space-16, 16px);
+  }
+
+  .guide-clean-avatar {
+    width: 96px;
+    height: 96px;
+    font-size: 1.75rem;
+  }
+
+  .guide-clean-name {
+    font-size: 1.5rem;
+  }
+
+  .guide-clean-tiles {
+    grid-template-columns: 1fr;
+    gap: var(--space-12, 12px);
+  }
+
+  .guide-clean-ctas {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .guide-clean-ctas .lbpf-pill {
+    width: 100%;
+  }
+}

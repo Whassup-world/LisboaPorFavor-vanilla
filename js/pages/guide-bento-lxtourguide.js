@@ -60,7 +60,7 @@
   }
 
   function populateBioTile(data) {
-    var bioBody = document.querySelector('.bento-tile-about .bento-tile-body');
+    var bioBody = document.querySelector('.bento-tile-bio .bento-tile-body');
     if (!bioBody || !data.welcomeFull) {
       return;
     }
@@ -228,7 +228,7 @@
   }
 
   function populatePhotobookTile(data) {
-    var body = document.querySelector('.bento-tile-photobook .bento-tile-body');
+    var body = document.querySelector('.bento-tile-gallery .bento-tile-body');
     if (!body || !Array.isArray(data.images) || !data.images.length) {
       return;
     }

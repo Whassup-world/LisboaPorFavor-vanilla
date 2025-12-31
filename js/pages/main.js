@@ -206,7 +206,7 @@ function createMainPage() {
             <p style="margin: 0 0 1.5rem 0;">Leave your email and we’ll send you curated tours and guide suggestions when we launch.</p>
             <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
               <a href="#register" class="btn btn-primary" style="background: var(--primary); color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-block;">Plan my Lisbon experience</a>
-              <a href="#tours" class="btn btn-secondary" style="background: transparent; color: var(--primary); padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; border: 2px solid var(--primary); display: inline-block;">See example tours</a>
+              <a href="tours.html" class="btn btn-secondary" style="background: transparent; color: var(--primary); padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; border: 2px solid var(--primary); display: inline-block;">See example tours</a>
             </div>
           </div>
         </div>

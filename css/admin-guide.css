@@ -1,0 +1,715 @@
+/* Admin Guide v2 – admin-guide-v2-new.css
+   Matches guide-page-v2.css exactly
+   Glasmorphic tiles, 880px container, same styling
+*/
+
+:root {
+  --admin-bg: var(--lbpf-neutral-100);
+}
+
+/* ===== ADMIN PAGE ===== */
+
+.lx-admin-page {
+  background: transparent;
+}
+
+.admin-page {
+  min-height: 100vh;
+  padding-bottom: 2rem;
+}
+
+/* ===== ADMIN HEADER ===== */
+
+.admin-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0.75rem 0;
+  backdrop-filter: blur(10px);
+}
+
+/* Offset main content for fixed header (only when admin-header exists) */
+.admin-header + .guide-page {
+  padding-top: 70px;
+}
+
+/* Admin: Remove hero background, use neutral glossy background */
+.admin-header ~ .guide-page .hero-section {
+  display: none;
+}
+
+.admin-header ~ .guide-page {
+  background: linear-gradient(180deg, var(--lbpf-neutral-100) 0%, var(--lbpf-neutral-50) 100%);
+  min-height: 100vh;
+}
+
+/* Admin: Pull tiles to top with attractive margin */
+.admin-header ~ .guide-page .tile-hero {
+  margin-top: 1.5rem;
+}
+
+.admin-header ~ .guide-page .tiles-section {
+  padding-top: 1rem;
+}
+
+/* Admin: Tagline textarea - matches public .hero-tagline exactly */
+.hero-tagline-edit {
+  width: 100%;
+  min-width: 0;
+  height: auto;
+  border: 2px solid #d32f2f;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-family: inherit;
+  resize: none;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 1;
+  white-space: normal;
+  overflow: visible;
+  color: var(--text-secondary);
+  margin: 0.15rem 0 0.35rem;
+}
+
+/* Admin: Keep same grid as public page */
+
+.admin-header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.admin-header-left {
+  flex: 1;
+}
+
+.admin-title {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0 0 0.25rem;
+  color: var(--text-primary);
+}
+
+.admin-subtitle {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.admin-header-right {
+  display: flex;
+  gap: 1rem;
+}
+
+/* ===== ADMIN-SPECIFIC FORM ELEMENTS ===== */
+
+.admin-file-input {
+  display: none;
+}
+
+.admin-hint {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+/* ===== TILE & HERO STYLES ===== */
+/* All tile and hero styles inherited from guide-page.css */
+/* Only admin-specific overrides in this file */
+
+/* ===== TOURS GRID & CALENDAR ===== */
+
+.tours-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  .tours-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.tour-card {
+  background: var(--pt-white);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--lbpf-neutral-200);
+  transition: all 0.2s ease;
+}
+
+.tour-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.tour-card-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.tour-card h4 {
+  margin: 1rem 1rem 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.tour-meta {
+  margin: 0 1rem 0.75rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.tour-description {
+  margin: 0 1rem 1rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.tour-btn {
+  margin: 0 1rem 1rem;
+  padding: 0.6rem 1rem;
+  background: var(--lx-gold);
+  color: var(--text-primary);
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tour-btn:hover {
+  background: #c4a01f;
+  transform: translateY(-1px);
+}
+
+.calendar {
+  margin-bottom: 1rem;
+  background: var(--pt-white);
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--lbpf-neutral-200);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.calendar-month {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-align: center;
+  flex: 1;
+}
+
+.calendar-nav-btn {
+  background: var(--pt-white);
+  border: 1px solid var(--lbpf-neutral-300);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.calendar-nav-btn:hover {
+  background: var(--lbpf-neutral-100);
+}
+
+.availability-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.calendar-day {
+  width: 100%;
+  padding: 0.35rem;
+  border: 1px solid var(--lbpf-neutral-200);
+  border-radius: 10px;
+  background: var(--pt-white);
+  box-sizing: border-box;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.calendar-day-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.35rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.calendar-day-weekday {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--lbpf-neutral-500);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.calendar-day-number {
+  font-size: 0.95rem;
+  font-weight: 800;
+}
+
+.calendar-day-slots {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0.25rem;
+  flex: 1;
+}
+
+.calendar-slot {
+  border: 1px solid var(--lbpf-neutral-200);
+  border-radius: 8px;
+  background: var(--lbpf-neutral-50);
+  color: var(--lbpf-neutral-700);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0;
+  cursor: pointer;
+}
+
+.calendar-slot:hover {
+  background: var(--lbpf-neutral-100);
+}
+
+.calendar-slot.is-selected {
+  box-shadow: 0 0 0 2px var(--lx-gold), 0 2px 8px rgba(0, 0, 0, 0.12);
+  border-color: var(--lx-gold);
+}
+
+.calendar-slot.is-available {
+  background: rgba(4, 106, 56, 0.14);
+  border-color: rgba(4, 106, 56, 0.45);
+  color: var(--lbpf-neutral-900);
+}
+
+.calendar-slot.is-confirmed {
+  background: var(--pt-red);
+  border-color: var(--pt-red);
+  color: var(--pt-white);
+}
+
+.calendar-day--empty {
+  border: 1px solid transparent;
+  background: transparent;
+  box-shadow: none;
+}
+
+.calendar-day--empty .calendar-day-top,
+.calendar-day--empty .calendar-day-slots {
+  visibility: hidden;
+}
+
+.selected-slot {
+  border-radius: 999px;
+  border: 1px solid var(--lbpf-neutral-300);
+  padding: 0.35rem 0.8rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  background: var(--lbpf-neutral-50);
+  margin-bottom: 0.75rem;
+}
+
+.calendar-day:hover:not(.other-month) {
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== ADMIN TILES SECTION ===== */
+
+.admin-tiles-section {
+  background: transparent;
+  padding: 1rem 0 2.5rem;
+}
+
+/* ===== HERO SECTION REFINEMENTS ===== */
+
+.hero-label {
+  margin-bottom: 1.5rem !important;
+}
+
+.hero-name {
+  margin-top: 0.5rem !important;
+}
+
+.hero-tagline-edit {
+  line-height: 1 !important;
+  margin: 0.5rem 0 0.75rem !important;
+  width: 280px !important;
+  max-width: 100% !important;
+}
+
+.hero-rating {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.4rem !important;
+  flex-wrap: wrap !important;
+  white-space: normal !important;
+}
+
+.stars {
+  font-size: 1rem !important;
+  letter-spacing: 0.1em !important;
+}
+
+.rating-number {
+  white-space: nowrap !important;
+}
+
+.rating-count {
+  white-space: nowrap !important;
+  margin: 0 !important;
+}
+
+.hero-rating .lbpf-pill {
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+}
+
+.hero-tags {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  gap: 0.4rem !important;
+  overflow-x: visible !important;
+}
+
+.hero-tags .tag {
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+}
+
+/* ===== REQUEST SUBMIT BUTTONS ===== */
+
+.request-submit-btn {
+  background: #DA291C !important;
+  color: var(--pt-white) !important;
+  border: none !important;
+  transition: all 0.3s ease !important;
+}
+
+.request-submit-btn:hover {
+  background: #b81f14 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(218, 41, 28, 0.3) !important;
+}
+
+.request-submit-btn.submitted {
+  background: #2e7d32 !important;
+}
+
+.request-submit-btn.submitted:hover {
+  background: #1b5e20 !important;
+}
+
+.admin-tiles-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+/* Admin Tile Base */
+.admin-tile {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(26px) saturate(185%);
+  -webkit-backdrop-filter: blur(26px) saturate(185%);
+  border-radius: 16px;
+  padding: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.50);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.admin-tile:hover {
+  background: rgba(255, 255, 255, 0.65);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.admin-tile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  cursor: pointer;
+}
+
+.admin-tile-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--lbpf-neutral-500);
+  margin-bottom: 0.5rem;
+}
+
+.admin-tile-title {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+  color: var(--text-primary);
+}
+
+.admin-tile-toggle {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--text-secondary);
+  transition: transform 0.2s ease;
+}
+
+.admin-tile--open .admin-tile-toggle {
+  transform: rotate(180deg);
+}
+
+.admin-tile-body {
+  display: none;
+  padding: 1rem 0 0;
+}
+
+.admin-tile--open .admin-tile-body {
+  display: block;
+}
+
+/* Admin Form Elements */
+.admin-input,
+.admin-textarea {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--lbpf-neutral-300);
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-family: inherit;
+  color: var(--text-primary);
+  background: var(--pt-white);
+  margin-bottom: 0.75rem;
+  transition: all 0.2s ease;
+}
+
+.admin-input:focus,
+.admin-textarea:focus {
+  outline: none;
+  border-color: var(--lx-gold);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+}
+
+.admin-textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.admin-textarea-large {
+  min-height: 150px;
+}
+
+.admin-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.35rem;
+  display: block;
+}
+
+.admin-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+}
+
+.admin-checkbox input {
+  cursor: pointer;
+}
+
+/* Admin Buttons */
+.admin-btn {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.admin-btn-primary {
+  background: var(--lx-gold);
+  color: var(--text-primary);
+}
+
+.admin-btn-primary:hover {
+  background: #c9a855;
+  box-shadow: 0 2px 8px rgba(212, 175, 55, 0.3);
+}
+
+.admin-btn-secondary {
+  background: var(--lbpf-neutral-200);
+  color: var(--text-primary);
+}
+
+.admin-btn-secondary:hover {
+  background: var(--lbpf-neutral-300);
+}
+
+.admin-btn-small {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.8rem;
+}
+
+/* Admin Tour Items */
+.admin-tour-item {
+  background: var(--lbpf-neutral-50);
+  padding: 0.75rem;
+  border-radius: 6px;
+  margin-bottom: 0.75rem;
+  border-left: 4px solid var(--lx-gold);
+}
+
+.admin-tour-item p {
+  margin: 0 0 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.admin-tour-item p:last-child {
+  margin-bottom: 0;
+}
+
+/* Availability Calendar */
+.availability-calendar-wrapper {
+  background: var(--pt-white);
+  border: 1px solid var(--lbpf-neutral-200);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+}
+
+.calendar-month-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.calendar-month-label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-align: center;
+  flex: 1;
+}
+
+.calendar-nav-btn {
+  background: var(--pt-white);
+  border: 1px solid var(--lbpf-neutral-300);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.calendar-nav-btn:hover {
+  background: var(--lbpf-neutral-100);
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+  .admin-header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .admin-header-right {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .admin-header-right .admin-btn {
+    width: 100%;
+  }
+
+  .admin-btn-small {
+    width: 100%;
+  }
+
+  .admin-footer-inner {
+    flex-direction: column;
+  }
+
+  .admin-footer-inner .admin-btn {
+    width: 100%;
+  }
+
+  .calendar-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.45rem;
+  }
+
+  .calendar-day--empty {
+    display: none;
+  }
+}
+
+.admin-footer {
+  background: rgba(255, 255, 255, 0.9);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 1.5rem 0;
+  margin-top: 2rem;
+  backdrop-filter: blur(10px);
+}
+
+.admin-footer-inner {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}

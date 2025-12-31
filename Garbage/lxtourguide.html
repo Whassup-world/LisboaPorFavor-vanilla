@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Guide Bento Test | LisboaPorFavor</title>
-  <meta name="description" content="Prototype of the mobile-first guide page with bento tiles for bio, tours, booking, favourites and reviews.">
+  <title>LXTourguide - Lisbon Tour Guide | LisboaPorFavor</title>
+  <meta name="description" content="Meet George from LXTourguide, your local Lisbon expert. Personalized walking and biking tours showcasing the best of Lisbon.">
   <link rel="icon" type="image/png" href="images/favicon.png">
-
+  
   <!-- CSS -->
   <link rel="stylesheet" href="css/template.css">
+  <link rel="stylesheet" href="css/brand-components.css">
   <link rel="stylesheet" href="css/guide-page.css">
 </head>
 <body class="lbpf-guide-bento-page">
@@ -32,7 +33,7 @@
                   <span class="guide-bento-rating-number">4.9</span>
                   <span class="guide-bento-rating-count">· 120 reviews</span>
                 </span>
-                <button type="button" class="guide-bento-reviews-pill">See all reviews</button>
+                <button type="button" class="guide-bento-reviews-pill lbpf-pill lbpf-pill--ghost">See all reviews</button>
               </div>
             </div>
           </div>
@@ -43,12 +44,12 @@
         </div>
         <div class="guide-bento-hero-tags-row">
           <div class="guide-bento-hero-tags">
-            <span class="guide-tag guide-tag-id">ID: PTLIS00001</span>
-            <span class="guide-tag guide-tag-qualified">Qualified for 5 tours</span>
-            <span class="guide-tag guide-tag-verified">✓ Identified Guide</span>
-            <span class="guide-tag guide-tag-partner">Partner</span>
-            <span class="guide-tag guide-tag-languages">English · Dutch · German</span>
-            <span class="guide-tag guide-tag-expert">Local Expert</span>
+            <span class="guide-tag guide-tag-id lbpf-pill lbpf-pill--tag">ID: PTLIS00001</span>
+            <span class="guide-tag guide-tag-qualified lbpf-pill lbpf-pill--tag">Qualified for 5 tours</span>
+            <span class="guide-tag guide-tag-verified lbpf-pill lbpf-pill--tag">✓ Identified Guide</span>
+            <span class="guide-tag guide-tag-partner lbpf-pill lbpf-pill--tag">Partner</span>
+            <span class="guide-tag guide-tag-languages lbpf-pill lbpf-pill--tag">English · Dutch · German</span>
+            <span class="guide-tag guide-tag-expert lbpf-pill lbpf-pill--tag">Local Expert</span>
           </div>
         </div>
       </div>
@@ -56,62 +57,35 @@
 
     <section class="guide-bento-tiles">
       <div class="page-container bento-grid">
-        <!-- Tile 1: See my bio -->
-        <div class="bento-tile bento-tile-about">
+        <div class="bento-tile bento-tile-about lbpf-tile lbpf-tile--bento">
           <div class="bento-tile-label">About your guide</div>
           <h2 class="bento-tile-title">See my bio</h2>
           <p class="bento-tile-text">Why I guide in Lisbon, what I love about the city, and what to expect from a tour with me.</p>
           <div class="bento-tile-body">
-            <p>Welcome to LXTourguide, your local expert in Lisbon. I'm George, your dedicated tour guide, partnering with LisboaPorFavor to offer personalized walking and biking tours that showcase the best of our beautiful city.</p>
-            <p>On a typical day together we might start in a historic neighbourhood, stop for a coffee or pastel de nata where locals actually go, and finish at a viewpoint or riverside spot that feels like "your" Lisbon.</p>
-            <p>Why choose LXTourguide?</p>
-            <ul>
-              <li>Customized tours designed around what you care about most.</li>
-              <li>Local insights and stories you won't find in a standard guidebook.</li>
-              <li>Small groups and a relaxed pace, so you can really enjoy the city.</li>
-            </ul>
-            <p>Ready to start your Lisbon adventure? Let's plan a tour that fits your pace, interests and curiosity.</p>
-            <p>George  LXTourguide, partner of LisboaPorFavor.</p>
+            <!-- Filled from guide-bento-lxtourguide.js using welcomeFull -->
           </div>
         </div>
 
-        <!-- Tile 2: Reviews -->
-        <div class="bento-tile bento-tile-reviews">
+        <div class="bento-tile bento-tile-reviews lbpf-tile lbpf-tile--bento">
           <div class="bento-tile-label">Reviews</div>
           <h2 class="bento-tile-title">See my guest reviews</h2>
           <p class="bento-tile-text">See what other guests loved about touring Lisbon with me.</p>
           <div class="bento-tile-body">
-            <p>"George was an amazing guide! His knowledge of Lisbon's history and his calm way of explaining things made the city come alive."  Sarah J.</p>
-            <p>"The food tour was incredible. We discovered places we'd never have found on our own, and every stop had a story."  Michael T.</p>
-            <p>"Bele9m by bike was the highlight of our trip. Safe paths, great views and lots of local tips."  Emma L.</p>
-            <p>Want to see more or leave your own review? Scroll down to the full reviews section on the main guide page.</p>
+            <!-- Filled from guide-bento-lxtourguide.js using reviews[] -->
           </div>
         </div>
 
-        <!-- Tile 3: See my tours -->
-        <div class="bento-tile bento-tile-tours">
+        <div class="bento-tile bento-tile-tours lbpf-tile lbpf-tile--bento">
           <div class="bento-tile-label">Tours</div>
           <h2 class="bento-tile-title">See my tours</h2>
-          <p class="bento-tile-text">A quick snapshot of two of my most popular tours.</p>
+          <p class="bento-tile-text">A quick snapshot of my most popular tours.</p>
           <div class="bento-tile-body">
-            <div class="bento-tours-grid">
-              <article class="bento-tour-card">
-                <h3 class="bento-tour-title">Alfama Vintage Market Walk</h3>
-                <p class="bento-tour-meta">3 hours b7 from a035 b7 max 8 guests</p>
-                <p class="bento-tour-text">Your bespoke walking route through Alfama's markets, miradouros and backstreets.</p>
-              </article>
-              <article class="bento-tour-card">
-                <h3 class="bento-tour-title">Bele9m Bike Tour</h3>
-                <p class="bento-tour-meta">2.5e280933 hours b7 from a042 b7 max 12 guests</p>
-                <p class="bento-tour-text">Flat, riverside cycling past Lisbon's monuments, viewpoints and cafe9 terraces.</p>
-              </article>
-            </div>
+            <div class="bento-tours-grid"></div>
             <p class="bento-tile-text">All tours can be adjusted for your pace, group size and special requests.</p>
           </div>
         </div>
 
-        <!-- Tile 4: Check availability -->
-        <div class="bento-tile bento-tile-availability">
+        <div class="bento-tile bento-tile-availability lbpf-tile lbpf-tile--bento">
           <div class="bento-tile-label">Booking</div>
           <h2 class="bento-tile-title">See my available dates</h2>
           <p class="bento-tile-text">Pick a date, tour and time of day. I'll confirm and follow up with a personal message.</p>
@@ -127,10 +101,7 @@
             <div class="bento-booking-controls">
               <label class="bento-field">
                 <span class="bento-field-label">Choose tour</span>
-                <select id="bento-booking-tour">
-                  <option value="alfama-vintage-market">Alfama Vintage Market Walk</option>
-                  <option value="belem-bike-tour">Bele9m Bike Tour</option>
-                </select>
+                <select id="bento-booking-tour"></select>
               </label>
               <label class="bento-field">
                 <span class="bento-field-label">Guests</span>
@@ -155,8 +126,7 @@
           </div>
         </div>
 
-        <!-- Tile 5: Rewards -->
-        <div class="bento-tile bento-tile-rewards">
+        <div class="bento-tile bento-tile-rewards lbpf-tile lbpf-tile--bento">
           <div class="bento-tile-label">Rewards</div>
           <h2 class="bento-tile-title">See your rewards</h2>
           <p class="bento-tile-text">Small free gifts and extras when you book with LisboaPorFavor.</p>
@@ -166,13 +136,12 @@
           </div>
         </div>
 
-        <!-- Tile 6: Favourite spots -->
-        <div class="bento-tile bento-tile-favourites">
+        <div class="bento-tile bento-tile-favourites lbpf-tile lbpf-tile--bento">
           <div class="bento-tile-label">Favourites</div>
           <h2 class="bento-tile-title">See my favourite spots</h2>
           <p class="bento-tile-text">A few places I actually visit myself between tours.</p>
           <div class="bento-tile-body">
-            <p>Think of this as my personal shortlist inside LisboaPorFavor: cafe9s, viewpoints and corners of the city I return to again and again.</p>
+            <p>Think of this as my personal shortlist inside LisboaPorFavor: cafés, viewpoints and corners of the city I return to again and again.</p>
             <ul>
               <li>A miradouro for golden-hour views over Alfama.</li>
               <li>A tiny tasca where I bring friends for grilled fish and vinho verde.</li>
@@ -182,29 +151,26 @@
           </div>
         </div>
 
-        <!-- Tile 7: Gallery -->
-        <div class="bento-tile bento-tile-photobook">
+        <div class="bento-tile bento-tile-photobook lbpf-tile lbpf-tile--bento">
           <div class="bento-tile-label">Gallery</div>
           <h2 class="bento-tile-title">See my gallery</h2>
           <p class="bento-tile-text">A small gallery of photos from tours in Lisbon, so you can get a feeling for the day.</p>
           <div class="bento-tile-body">
-            <p>In the future your own photos and short comments can be added here as part of a simple digital photobook.</p>
-            <p>For now you see a few sample images from tours around Lisbon to give you a sense of the views, streets and moments we might share.</p>
+            <!-- Photos and lightbox are populated from guide-bento-lxtourguide.js using images[] -->
           </div>
         </div>
 
-        <!-- Tile 8: Social links -->
-        <div class="bento-tile bento-tile-social">
+        <div class="bento-tile bento-tile-social lbpf-tile lbpf-tile--bento">
           <div class="bento-tile-label">Stay connected</div>
           <h2 class="bento-tile-title">See my social media and how to contact me</h2>
           <p class="bento-tile-text">Follow along or reach out before and after your tour.</p>
           <div class="bento-tile-body">
             <p>You can follow LXTourguide on these channels:</p>
             <ul>
-              <li>Instagram b7 behind-the-scenes photos and short reels.</li>
-              <li>Facebook b7 updates, new tours and guest stories.</li>
-              <li>YouTube b7 short clips from walks and rides around Lisbon.</li>
-              <li>Pinterest b7 boards with viewpoints, tiles, doors and details from the city.</li>
+              <li>Instagram – behind-the-scenes photos and short reels.</li>
+              <li>Facebook – updates, new tours and guest stories.</li>
+              <li>YouTube – short clips from walks and rides around Lisbon.</li>
+              <li>Pinterest – boards with viewpoints, tiles, doors and details from the city.</li>
             </ul>
             <p>Links and handles will be added once this guide page goes live.</p>
           </div>
@@ -213,7 +179,6 @@
     </section>
   </main>
 
-  <!-- Footer (from template) -->
   <div id="footer-placeholder"></div>
 
   <!-- Scripts -->
@@ -231,7 +196,6 @@
               return;
             }
           }
-
           var isOpen = tile.classList.contains('bento-tile--open');
           tiles.forEach(function (t) { t.classList.remove('bento-tile--open'); });
           if (!isOpen) {
@@ -241,6 +205,5 @@
       });
     });
   </script>
-
 </body>
 </html>

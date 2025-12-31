@@ -14,7 +14,7 @@ function createNavbar() {
           <div class="navbar-top-row">
             <div class="navbar-categories">
               <a href="guides.html" class="nav-pill">Guides</a>
-              <a href="#tours" class="nav-pill">Tours</a>
+              <a href="tours.html" class="nav-pill">Tours</a>
               <a href="#partners" class="nav-pill">Local Partners</a>
               <a href="#activities" class="nav-pill">Activities</a>
               <a href="#experiences" class="nav-pill">Experiences</a>

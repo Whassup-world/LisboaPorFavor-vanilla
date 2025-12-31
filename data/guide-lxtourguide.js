@@ -42,7 +42,7 @@ Partner of Lisboaporfavor`,
   tours: [
     {
       slug: "alfama-vintage-market",
-      title: "Alfama Vintage Market Walk",
+      title: "Lisbon - Alfama Vintage Market Walking Tour With Tastings",
       image: "images/_rawslug/cais-das-colunas-view.webp",
       duration: "3 hours",
       price: "€35",

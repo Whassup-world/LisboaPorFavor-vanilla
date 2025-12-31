@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LXTourguide Admin – Guide Dashboard</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/template.css">
+  <link rel="stylesheet" href="css/brand-components.css">
+  <link rel="stylesheet" href="css/guide-page.css">
+</head>
+<body class="lbpf-guide-bento-page lbpf-admin-guide">
+  <main class="guide-page guide-bento">
+    <section class="guide-bento-hero">
+      <div class="page-container guide-bento-hero-inner">
+        <div class="guide-bento-partner-label">Partner of LisboaPorFavor</div>
+        <div class="guide-bento-hero-main">
+          <div class="guide-bento-main-left">
+            <div class="guide-bento-avatar">LX</div>
+            <div class="guide-bento-heading">
+              <h1 class="guide-bento-name">LXTourguide</h1>
+              <p class="guide-bento-tagline">
+                <span class="tagline-part">Local expert for Alfama,</span>
+                <span class="tagline-part"> Belem and Lisbon by foot</span>
+                <span class="tagline-part"> or by bike</span>
+              </p>
+              <div class="guide-bento-meta-row">
+                <span class="guide-bento-rating-line">
+                  <span class="stars">★★★★★</span>
+                  <span class="guide-bento-rating-number">4.9</span>
+                  <span class="guide-bento-rating-count">· 120 reviews</span>
+                </span>
+                <button type="button" class="guide-bento-reviews-pill lbpf-pill lbpf-pill--ghost">Admin Dashboard</button>
+              </div>
+            </div>
+          </div>
+          <a href="index.html" class="guide-bento-logo-block">
+            <img src="images/logo-720.png" alt="LisboaPorFavor logo" class="guide-bento-logo">
+            <p class="guide-bento-logo-tagline">Manage your<br>LXT page<br>& operations</p>
+          </a>
+        </div>
+        <div class="guide-bento-hero-tags-row">
+          <div class="guide-bento-hero-tags">
+            <span class="guide-tag guide-tag-id lbpf-pill lbpf-pill--tag">ID: PTLIS00001</span>
+            <span class="guide-tag guide-tag-qualified lbpf-pill lbpf-pill--tag">Qualified for 5 tours</span>
+            <span class="guide-tag guide-tag-verified lbpf-pill lbpf-pill--tag">✓ Identified Guide</span>
+            <span class="guide-tag guide-tag-partner lbpf-pill lbpf-pill--tag">Partner</span>
+            <span class="guide-tag guide-tag-languages lbpf-pill lbpf-pill--tag">English · Dutch · German</span>
+            <span class="guide-tag guide-tag-expert lbpf-pill lbpf-pill--tag">Local Expert</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="guide-bento-tiles">
+      <div class="page-container bento-grid">
+        <div class="bento-tile bento-tile-about lbpf-tile lbpf-tile--bento admin-guide-tile admin-guide-tile--today">
+          <div class="bento-tile-label">Operations</div>
+          <h2 class="bento-tile-title">Today, messages & agenda</h2>
+          <p class="bento-tile-text">Today's tours, pending requests and unread messages for this guide.</p>
+          <div class="bento-tile-body">
+            <p>Tours today: 2 configured</p>
+            <p>Messages: handled via hello@lisboaporfavor.com and WhatsApp</p>
+            <p>Agenda: daily view will be shown here when calendar integration is wired</p>
+          </div>
+        </div>
+
+        <div class="bento-tile bento-tile-reviews lbpf-tile lbpf-tile--bento admin-guide-tile admin-guide-tile--profile">
+          <div class="bento-tile-label">Profile</div>
+          <h2 class="bento-tile-title">Manage your profile</h2>
+          <p class="bento-tile-text">Guide ID, languages, partner status, and public bio.</p>
+          <div class="bento-tile-body">
+            <p>PTLIS00001 · 3 languages · Partner of LisboaPorFavor</p>
+            <p><button class="lbpf-pill lbpf-pill--ghost" style="margin-top: 0.5rem; padding: 0.35rem 1rem; font-size: 0.8rem;">Edit profile</button></p>
+          </div>
+        </div>
+
+        <div class="bento-tile bento-tile-tours lbpf-tile lbpf-tile--bento admin-guide-tile admin-guide-tile--tours">
+          <div class="bento-tile-label">Tours</div>
+          <h2 class="bento-tile-title">Tours & availability</h2>
+          <p class="bento-tile-text">Tour library and availability windows for this guide.</p>
+          <div class="bento-tile-body">
+            <p>Library for LXTourguide: 5 tours</p>
+            <p>Availability is still managed manually.</p>
+            <p><button class="lbpf-pill lbpf-pill--ghost" style="margin-top: 0.5rem; padding: 0.35rem 1rem; font-size: 0.8rem;">Manage tours</button></p>
+          </div>
+        </div>
+
+        <div class="bento-tile bento-tile-availability lbpf-tile lbpf-tile--bento admin-guide-tile admin-guide-tile--bookings">
+          <div class="bento-tile-label">Bookings</div>
+          <h2 class="bento-tile-title">Bookings & agenda</h2>
+          <p class="bento-tile-text">Booked and pending tours for this guide.</p>
+          <div class="bento-tile-body">
+            <p>Booked and pending tours are tracked manually for now.</p>
+            <p>Later this connects to Bokun/Stripe/Supabase.</p>
+            <p><button class="lbpf-pill lbpf-pill--ghost" style="margin-top: 0.5rem; padding: 0.35rem 1rem; font-size: 0.8rem;">View bookings</button></p>
+          </div>
+        </div>
+
+        <div class="bento-tile bento-tile-rewards lbpf-tile lbpf-tile--bento admin-guide-tile admin-guide-tile--media">
+          <div class="bento-tile-label">Content</div>
+          <h2 class="bento-tile-title">Stories & media uploads</h2>
+          <p class="bento-tile-text">End-of-tour photos and text stories to be uploaded and approved.</p>
+          <div class="bento-tile-body">
+            <p>6 gallery images connected.</p>
+            <p>After each tour, upload new photos and short stories here (storage to be wired).</p>
+            <p><button class="lbpf-pill lbpf-pill--ghost" style="margin-top: 0.5rem; padding: 0.35rem 1rem; font-size: 0.8rem;">Upload media</button></p>
+          </div>
+        </div>
+
+        <div class="bento-tile bento-tile-favourites lbpf-tile lbpf-tile--bento admin-guide-tile admin-guide-tile--comms">
+          <div class="bento-tile-label">Communication</div>
+          <h2 class="bento-tile-title">Messages from LBPF</h2>
+          <p class="bento-tile-text">Announcements, requests, and direct communication from LisboaPorFavor.</p>
+          <div class="bento-tile-body">
+            <p>Announcements and requests from LisboaPorFavor will appear here.</p>
+            <p>No new messages at this time.</p>
+            <p><button class="lbpf-pill lbpf-pill--ghost" style="margin-top: 0.5rem; padding: 0.35rem 1rem; font-size: 0.8rem;">View all</button></p>
+          </div>
+        </div>
+
+        <div class="bento-tile bento-tile-photobook lbpf-tile lbpf-tile--bento admin-guide-tile admin-guide-tile--ops">
+          <div class="bento-tile-label">Tour Info</div>
+          <h2 class="bento-tile-title">Tour operations details</h2>
+          <p class="bento-tile-text">Contact info, meeting points, tour type, and guest details.</p>
+          <div class="bento-tile-body">
+            <p><strong>Contact:</strong> hello@lisboaporfavor.com</p>
+            <p><strong>Meeting Point:</strong> To be set per tour</p>
+            <p><strong>Tour Type:</strong> Walking / Biking</p>
+            <p><button class="lbpf-pill lbpf-pill--ghost" style="margin-top: 0.5rem; padding: 0.35rem 1rem; font-size: 0.8rem;">Edit details</button></p>
+          </div>
+        </div>
+
+        <div class="bento-tile bento-tile-social lbpf-tile lbpf-tile--bento admin-guide-tile admin-guide-tile--settings">
+          <div class="bento-tile-label">Settings</div>
+          <h2 class="bento-tile-title">Settings & access</h2>
+          <p class="bento-tile-text">Login, access controls, and debug tools (Supabase-protected).</p>
+          <div class="bento-tile-body">
+            <p>Auth and access will move to Supabase in the next phase.</p>
+            <p>Front-end only for now.</p>
+            <p><button class="lbpf-pill lbpf-pill--ghost" style="margin-top: 0.5rem; padding: 0.35rem 1rem; font-size: 0.8rem;">Settings</button></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Scripts -->
+  <script src="data/guide-lxtourguide.js"></script>
+  <script src="js/components/footer.js"></script>
+  <script src="js/pages/guide-lxtourguide-clean.js"></script>
+</body>
+</html>

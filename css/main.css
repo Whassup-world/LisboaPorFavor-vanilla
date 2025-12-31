@@ -493,6 +493,18 @@
     grid-template-columns: 1fr;
   }
 }
+
+.wip-banner {
+  display: inline-block;
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--pt-red), var(--pt-green));
+  border: 1px solid var(--lx-gold);
+  color: var(--pt-white);
+  font-weight: 800;
+  font-size: 0.95rem;
+  box-shadow: var(--lbpf-shadow-strong);
+}
 /* Mini hero */
 .mini-hero {
   padding: calc(var(--navbar-height) + 3rem) 2rem 4rem;
