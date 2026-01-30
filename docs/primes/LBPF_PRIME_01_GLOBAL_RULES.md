@@ -31,9 +31,7 @@
 
 2.2.0  CORE (PROJECT KNOWLEDGE BASE)
 2.2.1  lisboaporfavor-vanilla/docs/core/LBPF_BRAND_PACK.md
-2.2.2  lisboaporfavor-vanilla/docs/core/LBPF_ARCHITECTURE.md
-2.2.3  lisboaporfavor-vanilla/docs/core/LBPF_BUSINESS_PLAN.md
-2.2.4  lisboaporfavor-vanilla/docs/core/LBPF_WORKFLOW.md
+2.2.2  lisboaporfavor-vanilla/docs/core/LBPF_BUSINESS_PLAN.md
 
 **END SESSION PROTOCOL**
 
@@ -147,6 +145,58 @@
 8.2.2  X: Main category (1-9)
 8.2.3  Y: Subcategory (0-9)
 8.2.4  Z: Detail level (0-9)
+
+---
+
+9.0.0  ESSENTIAL ARCHITECTURE (INLINE)
+
+9.1.0  PROJECT STRUCTURE
+9.1.1  lisboaporfavor-vanilla/ (root)
+9.1.2  docs/ (primes/, core/, archive/)
+9.1.3  css/ (template.css, brand-components.css, page-specific)
+9.1.4  js/ (components/, pages/, app.js)
+9.1.5  data/ (tours.js, guides.js)
+9.1.6  images/ (_rawslug/, guides/, lbpf logo/)
+9.1.7  HTML files in root (index.html, lxtourguide.html, admin-guide.html)
+
+9.2.0  TECH STACK
+9.2.1  HTML5 + CSS3 + Vanilla JavaScript (no frameworks)
+9.2.2  Component-based architecture (modular JS/CSS)
+9.2.3  CSS variables for brand tokens
+9.2.4  No build system (browser-native)
+
+9.3.0  TEMPLATE TYPES
+9.3.1  Main public (index.html) - LBPF shell colors
+9.3.2  Guide/tour detail (lxtourguide.html) - Bento layout with topic colors
+9.3.3  Admin/staff (admin-guide.html) - Muted, functional UI
+
+---
+
+10.0.0  ESSENTIAL WORKFLOW (INLINE)
+
+10.1.0  SESSION START
+10.1.1  Read LBPF_PRIME_01, 02, 03
+10.1.2  Read LBPF_BRAND_PACK.md before CSS/HTML work
+10.1.3  Check git status before starting
+
+10.2.0  GIT WORKFLOW
+10.2.1  Before changes: git status, git pull
+10.2.2  After changes: git add -A, git commit -m "message", git push
+10.2.3  Commit format: feat:/fix:/docs:/style:/refactor:/chore:
+10.2.4  Backup = committed AND pushed to GitHub
+
+10.3.0  CSS/HTML WORKFLOW (BRAND STRICT)
+10.3.1  Read LBPF_BRAND_PACK.md first
+10.3.2  Use only defined tokens (no ad-hoc values)
+10.3.3  Propose new visual needs in brand pack FIRST
+10.3.4  Add to brand-components.css after approval
+10.3.5  Then use in page-specific CSS
+
+10.4.0  SESSION END
+10.4.1  Commit all changes
+10.4.2  Push to GitHub
+10.4.3  Verify push succeeded
+10.4.4  Ask: "Anything I should remember for next time?"
 
 ---
 

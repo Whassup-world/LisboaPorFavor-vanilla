@@ -81,12 +81,13 @@
 3.2.3  Keep components template-agnostic where possible
 3.2.4  Document component dependencies
 
-3.3.0  FILE ORGANIZATION
+3.3.0  FILE ORGANIZATION (see LBPF_PRIME_01 section 9 for details)
 3.3.1  HTML files in root (index.html, lxtourguide.html, etc.)
 3.3.2  CSS in css/ folder (template.css, brand-components.css, page-specific)
 3.3.3  JS in js/ folder (components/, pages/, app.js)
 3.3.4  Data in data/ folder (tours.js, guides.js)
 3.3.5  Documentation in docs/ folder (primes/, core/, archive/)
+3.3.6  Core contains ONLY: LBPF_BRAND_PACK.md and LBPF_BUSINESS_PLAN.md
 
 ---
 

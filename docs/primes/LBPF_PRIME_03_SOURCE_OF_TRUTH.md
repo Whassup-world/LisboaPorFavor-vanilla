@@ -61,9 +61,7 @@
 
 3.2.0  CORE (CANONICAL)
 3.2.1  docs/core/LBPF_BRAND_PACK.md
-3.2.2  docs/core/LBPF_ARCHITECTURE.md
-3.2.3  docs/core/LBPF_BUSINESS_PLAN.md
-3.2.4  docs/core/LBPF_WORKFLOW.md
+3.2.2  docs/core/LBPF_BUSINESS_PLAN.md
 
 ---
 
@@ -86,17 +84,14 @@
 4.4.2  Content: Colors, typography, spacing, components, topic system
 4.4.3  CRITICAL: This is MANDATORY reading before any CSS/HTML work
 
-4.5.0  TECHNICAL ARCHITECTURE
-4.5.1  Destination: docs/core/LBPF_ARCHITECTURE.md
-4.5.2  Content: File structure, tech stack, component system, dependencies
+4.5.0  BUSINESS VISION AND STRATEGY
+4.5.1  Destination: docs/core/LBPF_BUSINESS_PLAN.md
+4.5.2  Content: 3-tier system, marketplace vision, guide training academy
 
-4.6.0  BUSINESS VISION AND STRATEGY
-4.6.1  Destination: docs/core/LBPF_BUSINESS_PLAN.md
-4.6.2  Content: 3-tier system, marketplace vision, guide training academy
-
-4.7.0  WORKFLOW AND PROCESSES
-4.7.1  Destination: docs/core/LBPF_WORKFLOW.md
-4.7.2  Content: Development workflow, testing, deployment, git practices
+4.6.0  TECHNICAL ARCHITECTURE AND WORKFLOW
+4.6.1  Destination: LBPF_PRIME_01_GLOBAL_RULES.md (sections 9 and 10)
+4.6.2  Content: File structure, tech stack, git workflow, session protocols
+4.6.3  Reason: Keep inline to minimize MD files
 
 ---
 
