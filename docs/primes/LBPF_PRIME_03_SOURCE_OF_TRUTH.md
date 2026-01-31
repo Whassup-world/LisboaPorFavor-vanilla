@@ -20,11 +20,11 @@
 
 ---
 
-1.0.0  WHAT "SOURCE OF TRUTH" MEANS FOR LBPF
+2.0.0  WHAT "SOURCE OF TRUTH" MEANS FOR LBPF
 
-1.0.1  This file defines authority hierarchy and routing rules
-1.0.2  Primes contain rules for their domains; Prime 03 defines what overrides what
-1.0.3  If Prime docs conflict, work stops until reconciled
+2.0.1  This file defines authority hierarchy and routing rules
+2.0.2  Primes contain rules for their domains; Prime 03 defines what overrides what
+2.0.3  If Prime docs conflict, work stops until reconciled
 
 ---
 

@@ -18,7 +18,9 @@
 
 **END METADATA**
 
-**START SESSION PROTOCOL**
+---
+
+2.0.0  SESSION START PROTOCOL
 
 2.0.1  When starting work on LBPF, read Prime 01-03 and relevant Core docs
 2.0.2  LBPF follows TOBE Prime system for consistency

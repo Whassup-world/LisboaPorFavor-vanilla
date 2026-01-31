@@ -20,11 +20,11 @@
 
 ---
 
-1.0.0  ACTIVE SESSION LOG
+2.0.0  ACTIVE SESSION LOG
 
-1.0.1  Last updated: 2026-01-31
+2.0.1  Last updated: 2026-01-31
 
-1.1.0  SESSION 2026-01-31
+2.1.0  SESSION 2026-01-31
 1.1.1  LBPF Prime structure completion + knowledge extraction setup
 1.1.2  Added session start acknowledgement rule to LBPF_PRIME_02 (no coding before user confirmation)
 1.1.3  Fixed End marker branding uniformity across all LBPF Primes (P6 format: **End** + ---)

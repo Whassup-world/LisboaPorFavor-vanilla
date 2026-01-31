@@ -20,14 +20,14 @@
 
 ---
 
-1.0.0  INBOX
+2.0.0  INBOX
 
-1.0.1  Knowledge extraction in progress: consolidating 12 months of research from Bootstrap archives into canonical LBPF docs
-1.0.2  Goal: Extract all valuable knowledge, update canonical docs, archive old files when fully extracted
+2.0.1  Knowledge extraction in progress: consolidating 12 months of research from Bootstrap archives into canonical LBPF docs
+2.0.2  Goal: Extract all valuable knowledge, update canonical docs, archive old files when fully extracted
 
-1.0.3  DEFAULTS
-1.0.4  Max age: 7 days (review and process or defer)
-1.0.5  Priority: HIGH for knowledge extraction (prevents knowledge loss)
+2.0.3  DEFAULTS
+2.0.4  Max age: 7 days (review and process or defer)
+2.0.5  Priority: HIGH for knowledge extraction (prevents knowledge loss)
 
 ---
 

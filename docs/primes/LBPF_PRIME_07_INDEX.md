@@ -20,13 +20,13 @@
 
 ---
 
-1.0.0  PURPOSE
-1.0.1  Single visual overview of Prime Directives and the canonical doc system
-1.0.2  Includes recovery pointers for LBPF project
+2.0.0  PURPOSE
+2.0.1  Single visual overview of Prime Directives and the canonical doc system
+2.0.2  Includes recovery pointers for LBPF project
 
 ---
 
-2.0.0  PRIME DIRECTIVES (CANONICAL)
+3.0.0  PRIME DIRECTIVES (CANONICAL)
 
 2.0.1  docs/primes/LBPF_PRIME_01_GLOBAL_RULES.md
 2.0.2  docs/primes/LBPF_PRIME_02_RULES_AND_ROLES.md

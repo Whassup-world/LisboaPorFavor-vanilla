@@ -20,12 +20,12 @@
 
 ---
 
-1.0.0  PURPOSE
-1.1.0  THIS DOCUMENT ENSURES PRIME COVERS THE FULL LIFECYCLE
-1.1.1  Before development
-1.1.2  During development
-1.1.3  After development (operations)
-1.1.4  Special rules for AI collaboration
+2.0.0  PURPOSE
+2.1.0  THIS DOCUMENT ENSURES PRIME COVERS THE FULL LIFECYCLE
+2.1.1  Before development
+2.1.2  During development
+2.1.3  After development (operations)
+2.1.4  Special rules for AI collaboration
 
 ---
 
