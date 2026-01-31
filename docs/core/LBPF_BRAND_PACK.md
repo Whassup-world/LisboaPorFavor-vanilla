@@ -1,6 +1,29 @@
+**START METADATA**
+
+1.0.1  Metadata Field           Core - Brand Pack
+1.0.2  Title                    LBPF_BRAND_PACK.md
+1.0.3  Version                  V1.0.0
+1.0.4  Version History          2026-01-31: Added metadata section
+                                2025-11-18: Initial creation
+1.0.5  Date Modified            2026-01-31 @ 15.52 hour
+1.0.6  Date Created             2025-11-18 @ 00.00 hour
+1.0.7  File Type                MD
+1.0.8  Tags                     lbpf, brand, design-system, colors, typography, components
+1.0.9  Description              Visual brand system for LisboaPorFavor including color palette, typography, component styles, and design guidelines
+1.0.10 Source                   USER
+1.0.11 Confidentiality Level    INTERNAL
+1.0.12 Owner                    USER
+1.0.13 Canonical path           lisboaporfavor-vanilla/docs/core/LBPF_BRAND_PACK.md
+1.0.14 Local mirror             (optional)
+1.0.15 Remote mirror            GitHub: Whassup-world/LisboaPorFavor-vanilla
+
+**END METADATA**
+
+---
+
 # LBPF Brand Pack · LisboaPorFavor (Draft)
 
-**Last updated:** 2025-11-18
+**Last updated:** 2026-01-31
 
 This brand pack defines the visual system for the LisboaPorFavor vanilla site. It is written so both humans and AIs can use it, and it should stay in sync with TOBE Brand Lab later.
 

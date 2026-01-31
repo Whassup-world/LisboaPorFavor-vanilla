@@ -1,7 +1,30 @@
+**START METADATA**
+
+1.0.1  Metadata Field           Core - Business Plan
+1.0.2  Title                    LBPF_BUSINESS_PLAN.md
+1.0.3  Version                  V1.2.0
+1.0.4  Version History          2026-01-31: Added metadata section, imported Bootstrap archive content (SEO, revenue, metrics)
+                                2026-01-30: Initial creation
+1.0.5  Date Modified            2026-01-31 @ 15.52 hour
+1.0.6  Date Created             2026-01-30 @ 14.05 hour
+1.0.7  File Type                MD
+1.0.8  Tags                     lbpf, business-plan, strategy, revenue, seo
+1.0.9  Description              Comprehensive business plan including vision, three-tier system, strategic goals, revenue model, SEO strategy, content library, and success metrics
+1.0.10 Source                   USER + Bootstrap Archive Import
+1.0.11 Confidentiality Level    INTERNAL
+1.0.12 Owner                    USER
+1.0.13 Canonical path           lisboaporfavor-vanilla/docs/core/LBPF_BUSINESS_PLAN.md
+1.0.14 Local mirror             (optional)
+1.0.15 Remote mirror            GitHub: Whassup-world/LisboaPorFavor-vanilla
+
+**END METADATA**
+
+---
+
 # LBPF Business Plan
 
-**Last updated:** 2026-01-30  
-**Version:** V1.0.0
+**Last updated:** 2026-01-31  
+**Version:** V1.2.0
 
 ---
 
