@@ -632,7 +632,7 @@
 }
 
 .tour-card h4 {
-  margin: 1rem 1.5rem 0.5rem;
+  margin: 0 0 0.5rem 0;
   font-size: 1rem;
   font-weight: 600;
   color: var(--text-primary);
@@ -640,18 +640,16 @@
 }
 
 .tour-category {
-  margin: 0 1.5rem 0.25rem;
+  margin: 0 0 0.25rem 0;
   font-size: 0.85rem;
   color: var(--text-secondary);
   font-weight: 500;
   text-align: left;
   font-style: italic;
-  max-width: calc(100% - 3rem);
-  box-sizing: border-box;
 }
 
 .tour-meta {
-  margin: 0 1.5rem 0.75rem;
+  margin: 0 0 0.75rem 0;
   font-size: 0.85rem;
   color: var(--text-secondary);
   font-weight: 500;
@@ -659,20 +657,18 @@
 }
 
 .tour-description {
-  margin: 0 1.5rem 1rem;
+  margin: 0 0 1rem 0;
   font-size: 0.9rem;
   color: var(--text-secondary);
   line-height: 1.5;
   text-align: left;
   flex-grow: 1;
-  max-width: calc(100% - 3rem);
-  box-sizing: border-box;
 }
 
 .tour-btn {
   display: block;
-  width: calc(100% - 3rem);
-  margin: 0 1.5rem 1.5rem;
+  width: 100%;
+  margin: 0;
   padding: 0.6rem 1rem;
   background: var(--lx-gold);
   color: var(--pt-white);
