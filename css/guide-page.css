@@ -624,6 +624,13 @@
   background: var(--lbpf-neutral-100);
 }
 
+.tour-card-content {
+  padding: 1rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
 .tour-card h4 {
   margin: 1rem 1.5rem 0.5rem;
   font-size: 1rem;
