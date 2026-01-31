@@ -594,7 +594,7 @@
   box-sizing: border-box;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .tours-grid {
     grid-template-columns: 1fr;
   }
@@ -606,6 +606,9 @@
   overflow: hidden;
   border: 1px solid var(--lbpf-neutral-200);
   transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .tour-card:hover {
@@ -625,6 +628,7 @@
   font-size: 1rem;
   font-weight: 600;
   color: var(--text-primary);
+  text-align: left;
 }
 
 .tour-meta {
@@ -632,6 +636,7 @@
   font-size: 0.85rem;
   color: var(--text-secondary);
   font-weight: 500;
+  text-align: left;
 }
 
 .tour-description {
@@ -639,6 +644,8 @@
   font-size: 0.9rem;
   color: var(--text-secondary);
   line-height: 1.5;
+  text-align: left;
+  flex-grow: 1;
 }
 
 .tour-btn {
@@ -654,6 +661,7 @@
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease;
+  margin-top: auto;
 }
 
 .tour-btn:hover {
