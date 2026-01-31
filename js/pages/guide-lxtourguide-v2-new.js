@@ -316,12 +316,26 @@
         if (editBtn) {
           editBtn.addEventListener('click', function() {
             feedback.innerHTML = '';
+            // Keep tile open
+            var tile = document.querySelector('.tile-availability');
+            if (tile) {
+              tile.classList.add('tile--open');
+            }
           });
         }
         
         if (confirmBtn) {
           confirmBtn.addEventListener('click', function() {
-            feedback.innerHTML = '<p style="color: green; font-weight: 600; text-align: center; margin: 1rem 0;">✓ Request submitted! George will confirm within 6 hours.</p>';
+            // Show success message in review area, keep tile open
+            feedback.innerHTML = '<div style="background: var(--lbpf-neutral-50); border: 2px solid var(--lx-gold); border-radius: 12px; padding: 1.5rem; margin: 1rem 0; text-align: center;">' +
+              '<p style="color: green; font-weight: 600; font-size: 1.1rem; margin: 0;">✓ Request submitted! George will confirm asap.</p>' +
+              '</div>';
+            
+            // Keep tile open
+            var tile = document.querySelector('.tile-availability');
+            if (tile) {
+              tile.classList.add('tile--open');
+            }
           });
         }
       }

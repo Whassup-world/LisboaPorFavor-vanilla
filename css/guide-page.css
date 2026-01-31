@@ -637,6 +637,10 @@
   font-weight: 600;
   color: var(--text-primary);
   text-align: center;
+  min-height: 2.4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .tour-category {
@@ -865,7 +869,11 @@
   border-radius: 999px;
   border: 1px solid var(--lbpf-neutral-300);
   padding: 0.25rem 0.7rem;
-  font-size: 0.82rem;
+  font-size: 0.9rem;
+  background: var(--pt-white);
+  color: var(--text-primary);
+  height: 2.5rem;
+  box-sizing: border-box;
 }
 
 #booking-guests,
@@ -891,9 +899,13 @@
   border-radius: 999px;
   border: 1px solid var(--lbpf-neutral-300);
   padding: 0.35rem 0.8rem;
+  background: var(--lbpf-neutral-50);
   font-size: 0.85rem;
   color: var(--text-secondary);
-  background: var(--lbpf-neutral-50);
+  height: 2.5rem;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
 }
 
 .restriction-pills {
