@@ -176,30 +176,44 @@
 3.8.13 - Add session storage (localStorage for MVP, database later)
 3.8.14 - Create role-based routing logic
 3.8.15 - Add "Edit Mode" toggle for logged-in guides on lxtourguide.html
-3.8.16 Priority: HIGH
+3.8.16 Priority: CRITICAL
 3.8.17 Created: 2026-01-31
-3.8.18 Due by: 2026-02-21
+3.8.18 Due by: 2026-02-07 (MOVED UP - guides need to test)
 3.8.19 Lane: INBOX
 3.8.20 Blocker: Cannot launch MVP without guide login
-3.8.21 Reference: Authentication system design
+3.8.21 Blocker: First batch of guides need to "play" with system
+3.8.22 Reference: Authentication system design
 
 3.9.0  TODO ITEM
-3.9.1  Title: Polish admin.html (LBPF Master Admin Dashboard)
-3.9.2  Description: Review and improve admin.html UI/UX before continuing with guide-admin work
-3.9.3  Current Issues: TBD (needs review)
-3.9.4  Actions:
-3.9.5  - Review admin.html layout and functionality
-3.9.6  - Identify UI/UX improvements needed
-3.9.7  - Fix any broken links or incorrect paths
-3.9.8  - Ensure consistent styling with guide pages
-3.9.9  - Test all admin controls and workflows
-3.9.10 - Document admin.html features and usage
-3.9.11 Priority: HIGH
-3.9.12 Created: 2026-01-31
-3.9.13 Due by: 2026-02-07
-3.9.14 Lane: ACTIVE
-3.9.15 Note: User requested to "see admin first" before continuing with guide-admin
-3.9.16 Reference: admin.html
+3.9.1  Title: Major Admin.html Overhaul (DEFERRED until LX + admin-guide complete)
+3.9.2  Description: Complete redesign of admin.html to match brand standards and professional quality
+3.9.3  Current Critical Issues:
+3.9.4  - Navbar has different vertical dimensions on several pages (causes page "hop")
+3.9.5  - Very simplistic UI (not brand-conformant)
+3.9.6  - Guide onboarding looks cheap and unprofessional
+3.9.7  - Logo was invisible (fixed: removed border-radius: 999px)
+3.9.8  Missing Features:
+3.9.9  - Brand management section
+3.9.10 - CSM (Customer Success Management) tools
+3.9.11 - Social Media calendar
+3.9.12 - Communication hub (email, chat, WhatsApp integration)
+3.9.13 - Note: Google Workspace + own domain + pro hosting (Hostinger) available
+3.9.14 Actions (DEFERRED):
+3.9.15 - Fix navbar height consistency across all pages
+3.9.16 - Redesign UI to match LBPF_BRAND_PACK.md standards
+3.9.17 - Redesign guide onboarding flow (professional quality)
+3.9.18 - Add Brand management section
+3.9.19 - Add CSM tools and workflows
+3.9.20 - Add Social Media calendar integration
+3.9.21 - Add Communication hub (email/chat/WhatsApp)
+3.9.22 - Integrate Google Workspace + Hostinger services
+3.9.23 Priority: HIGH (but DEFERRED)
+3.9.24 Created: 2026-01-31
+3.9.25 Due by: TBD (after lxtourguide + admin-guide completion)
+3.9.26 Lane: DEFERRED
+3.9.27 Note: User wants to finish LX + admin-guide first, then move to main page and admin.html
+3.9.28 Note: All 3 pages (lxtourguide, admin-guide, admin) must work together flawlessly
+3.9.29 Reference: admin.html, LBPF_BRAND_PACK.md
 
 ---
 
