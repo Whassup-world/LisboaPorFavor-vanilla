@@ -636,7 +636,7 @@
   font-size: 1rem;
   font-weight: 600;
   color: var(--text-primary);
-  text-align: left;
+  text-align: center;
 }
 
 .tour-category {
@@ -644,7 +644,7 @@
   font-size: 0.85rem;
   color: var(--text-secondary);
   font-weight: 500;
-  text-align: left;
+  text-align: center;
   font-style: italic;
 }
 
@@ -653,7 +653,7 @@
   font-size: 0.85rem;
   color: var(--text-secondary);
   font-weight: 500;
-  text-align: left;
+  text-align: center;
 }
 
 .tour-description {
