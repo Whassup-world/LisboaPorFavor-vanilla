@@ -25,52 +25,52 @@
 2.0.1  Last updated: 2026-01-31
 
 2.1.0  SESSION 2026-01-31
-1.1.1  LBPF Prime structure completion + knowledge extraction setup
-1.1.2  Added session start acknowledgement rule to LBPF_PRIME_02 (no coding before user confirmation)
-1.1.3  Fixed End marker branding uniformity across all LBPF Primes (P6 format: **End** + ---)
-1.1.4  Created LBPF_PRIME_04_OPERATING_SYSTEM.md (lifecycle, security, git discipline)
-1.1.5  Created LBPF_PRIME_05_ACTIVE_SESSION.md (this file - session tracking)
-1.1.6  Created LBPF_PRIME_06_TODO.md (knowledge extraction from Bootstrap archives)
-1.1.7  Next: Create LBPF_PRIME_07_INDEX.md, copy TOBE Core files, scan MD inventory
+2.1.1  LBPF Prime structure completion + knowledge extraction setup
+2.1.2  Added session start acknowledgement rule to LBPF_PRIME_02 (no coding before user confirmation)
+2.1.3  Fixed End marker branding uniformity across all LBPF Primes (P6 format: **End** + ---)
+2.1.4  Created LBPF_PRIME_04_OPERATING_SYSTEM.md (lifecycle, security, git discipline)
+2.1.5  Created LBPF_PRIME_05_ACTIVE_SESSION.md (this file - session tracking)
+2.1.6  Created LBPF_PRIME_06_TODO.md (knowledge extraction from Bootstrap archives)
+2.1.7  Next: Create LBPF_PRIME_07_INDEX.md, copy TOBE Core files, scan MD inventory
 
-1.2.0  SESSION 2026-01-30
-1.2.1  LBPF project cleanup and organization
-1.2.2  Moved nested duplicate folder to Previous_Projects_LBPF archive
-1.2.3  Created minimalist TOBE-matching Prime structure (3 Primes + 2 Core)
-1.2.4  Cleaned up root folder (garbage, bento, tasks to archive)
-1.2.5  Deleted LBPF_ARCHITECTURE.md and LBPF_WORKFLOW.md (moved inline to Prime 01)
-1.2.6  Committed and pushed all cleanup to GitHub
-
----
-
-2.0.0  NEXT PRIORITIES
-
-2.1.0  Complete TOBE structure adoption
-2.1.1  Create LBPF_PRIME_07_INDEX.md (master index)
-2.1.2  Copy all TOBE Core files to LBPF Core with LBPF naming
-2.1.3  Update all paths/links in copied files to LBPF structure
-
-2.2.0  Knowledge extraction from Bootstrap archives
-2.2.1  Extract MASTER_BUSINESS_BLUEPRINT.md → LBPF_BUSINESS_PLAN.md
-2.2.2  Scan Archive_Bootstrap_Versions for additional valuable knowledge files
-2.2.3  Scan _MD_INVENTORY_ALL.txt and _MD_INVENTORY_FILTERED.txt for LBPF content
-
-2.3.0  Git cleanup
-2.3.1  Stage deleted cancelation policy PNGs
-2.3.2  Investigate untracked docs/template/ folder
-2.3.3  Commit and push cleanup
+2.2.0  SESSION 2026-01-30
+2.2.1  LBPF project cleanup and organization
+2.2.2  Moved nested duplicate folder to Previous_Projects_LBPF archive
+2.2.3  Created minimalist TOBE-matching Prime structure (3 Primes + 2 Core)
+2.2.4  Cleaned up root folder (garbage, bento, tasks to archive)
+2.2.5  Deleted LBPF_ARCHITECTURE.md and LBPF_WORKFLOW.md (moved inline to Prime 01)
+2.2.6  Committed and pushed all cleanup to GitHub
 
 ---
 
-3.0.0  SESSION END CHECKLIST (MANDATORY)
+3.0.0  NEXT PRIORITIES
 
-3.0.1  Review this file (LBPF_PRIME_05_ACTIVE_SESSION.md)
-3.0.2  Review LBPF_PRIME_06_TODO.md
-3.0.3  Re-prioritize before saving
-3.0.4  Finish at least one subtask before saving
-3.0.5  Commit all changes to git
-3.0.6  Push to GitHub
-3.0.7  Ask: "Anything I should remember for next time?"
+3.1.0  Complete TOBE structure adoption
+3.1.1  Create LBPF_PRIME_07_INDEX.md (master index)
+3.1.2  Copy all TOBE Core files to LBPF Core with LBPF naming
+3.1.3  Update all paths/links in copied files to LBPF structure
+
+3.2.0  Knowledge extraction from Bootstrap archives
+3.2.1  Extract MASTER_BUSINESS_BLUEPRINT.md → LBPF_BUSINESS_PLAN.md
+3.2.2  Scan Archive_Bootstrap_Versions for additional valuable knowledge files
+3.2.3  Scan _MD_INVENTORY_ALL.txt and _MD_INVENTORY_FILTERED.txt for LBPF content
+
+3.3.0  Git cleanup
+3.3.1  Stage deleted cancelation policy PNGs
+3.3.2  Investigate untracked docs/template/ folder
+3.3.3  Commit and push cleanup
+
+---
+
+4.0.0  SESSION END CHECKLIST (MANDATORY)
+
+4.0.1  Review this file (LBPF_PRIME_05_ACTIVE_SESSION.md)
+4.0.2  Review LBPF_PRIME_06_TODO.md
+4.0.3  Re-prioritize before saving
+4.0.4  Finish at least one subtask before saving
+4.0.5  Commit all changes to git
+4.0.6  Push to GitHub
+4.0.7  Ask: "Anything I should remember for next time?"
 
 ---
 

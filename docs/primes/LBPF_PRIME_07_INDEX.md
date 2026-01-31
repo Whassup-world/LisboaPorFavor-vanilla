@@ -28,93 +28,93 @@
 
 3.0.0  PRIME DIRECTIVES (CANONICAL)
 
-2.0.1  docs/primes/LBPF_PRIME_01_GLOBAL_RULES.md
-2.0.2  docs/primes/LBPF_PRIME_02_RULES_AND_ROLES.md
-2.0.3  docs/primes/LBPF_PRIME_03_SOURCE_OF_TRUTH.md
-2.0.4  docs/primes/LBPF_PRIME_04_OPERATING_SYSTEM.md
-2.0.5  docs/primes/LBPF_PRIME_05_ACTIVE_SESSION.md
-2.0.6  docs/primes/LBPF_PRIME_06_TODO.md
-2.0.7  docs/primes/LBPF_PRIME_07_INDEX.md
+3.0.1  docs/primes/LBPF_PRIME_01_GLOBAL_RULES.md
+3.0.2  docs/primes/LBPF_PRIME_02_RULES_AND_ROLES.md
+3.0.3  docs/primes/LBPF_PRIME_03_SOURCE_OF_TRUTH.md
+3.0.4  docs/primes/LBPF_PRIME_04_OPERATING_SYSTEM.md
+3.0.5  docs/primes/LBPF_PRIME_05_ACTIVE_SESSION.md
+3.0.6  docs/primes/LBPF_PRIME_06_TODO.md
+3.0.7  docs/primes/LBPF_PRIME_07_INDEX.md
 
 ---
 
-3.0.0  PRIME DIRECTIVES DESCRIPTION
+4.0.0  PRIME DIRECTIVES DESCRIPTION
 
-3.1.0  PRIME 01 - Global operating rules, indexing standards, and session protocol. Foundation that governs all LBPF operations.
-3.1.1  PRIME 02 - Rules, roles, workflow lanes, and communication standards. Defines how we work together. Includes mandatory session start acknowledgement.
-3.1.2  PRIME 03 - Source of Truth hierarchy and conflict resolution. Establishes authority and decision paths.
-3.1.3  PRIME 04 - Operating system for development lifecycle, security, git discipline, and release management.
-3.1.4  PRIME 05 - Active session tracking and real-time workflow documentation.
-3.1.5  PRIME 06 - Task management and knowledge extraction from Bootstrap archives.
-3.1.6  PRIME 07 - Master index and system overview. You are here.
-
----
-
-4.0.0  CORE KNOWLEDGE BASE
-
-4.0.1  docs/core/LBPF_BRAND_PACK.md - Visual system (colors, typography, spacing, components). MANDATORY reading before CSS/HTML work.
-4.0.2  docs/core/LBPF_BUSINESS_PLAN.md - Strategic roadmap, 3-tier system, marketplace vision, guide training academy.
+4.1.0  PRIME 01 - Global operating rules, indexing standards, and session protocol. Foundation that governs all LBPF operations.
+4.1.1  PRIME 02 - Rules, roles, workflow lanes, and communication standards. Defines how we work together. Includes mandatory session start acknowledgement.
+4.1.2  PRIME 03 - Source of Truth hierarchy and conflict resolution. Establishes authority and decision paths.
+4.1.3  PRIME 04 - Operating system for development lifecycle, security, git discipline, and release management.
+4.1.4  PRIME 05 - Active session tracking and real-time workflow documentation.
+4.1.5  PRIME 06 - Task management and knowledge extraction from Bootstrap archives.
+4.1.6  PRIME 07 - Master index and system overview. You are here.
 
 ---
 
-5.0.0  SUPPORTING CANONICAL DOCS
+5.0.0  CORE KNOWLEDGE BASE
 
-5.0.1  docs/primes/LBPF_PRIME_05_ACTIVE_SESSION.md (where we left off)
-5.0.2  Core (supporting canonical docs) are indexed in Prime 01 under 2.2.0 CORE (PROJECT KNOWLEDGE BASE)
-5.0.3  This index must not duplicate the Core list; it must point to Prime 01 as the canonical Core index
-
----
-
-6.0.0  INTAKE AND ARCHIVE
-
-6.0.1  docs/archive/ (archived but kept)
-6.0.2  docs/archive/LBPF_DOC_LEGACY_2026-01-30/ (old decision files, absorbed into Primes)
-6.0.3  docs/archive/garbage_2026-01-30/ (old HTML/CSS versions)
-6.0.4  docs/archive/bento_prototype_2026-01-30/ (prototype files)
+5.0.1  docs/core/LBPF_BRAND_PACK.md - Visual system (colors, typography, spacing, components). MANDATORY reading before CSS/HTML work.
+5.0.2  docs/core/LBPF_BUSINESS_PLAN.md - Strategic roadmap, 3-tier system, marketplace vision, guide training academy.
 
 ---
 
-7.0.0  FILESYSTEM RULES (APPLIES TO ALL MARKDOWN FILES)
+6.0.0  SUPPORTING CANONICAL DOCS
 
-7.0.1  Prime directives live in docs/primes/
-7.0.2  Canonical non-Prime documents live in docs/core/
-7.0.3  Work only inside the existing Prime and Core canonical files
-7.0.4  Do not create new files unless the Owner explicitly approves
-7.0.5  No DECISION_*.md or BRAINSTORM_*.md workflow is used (no decision/brainstorm standalone files)
-7.0.6  Archived documents live in docs/archive/
+6.0.1  docs/primes/LBPF_PRIME_05_ACTIVE_SESSION.md (where we left off)
+6.0.2  Core (supporting canonical docs) are indexed in Prime 01 under 2.2.0 CORE (PROJECT KNOWLEDGE BASE)
+6.0.3  This index must not duplicate the Core list; it must point to Prime 01 as the canonical Core index
 
 ---
 
-8.0.0  RECOVERY POINTERS
+7.0.0  INTAKE AND ARCHIVE
 
-8.1.0  CANONICAL LOCATION FOR PRIME FILES
-8.1.1  lisboaporfavor-vanilla/docs/primes/
-
-8.2.0  CANONICAL LOCATION FOR CORE FILES
-8.2.1  lisboaporfavor-vanilla/docs/core/
-
-8.3.0  GIT REPOSITORY
-8.3.1  GitHub: Whassup-world/LisboaPorFavor-vanilla
-8.3.2  Branch: master
-
-8.4.0  INVENTORY EXPORTS (TEMPORARY ASSETS)
-8.4.1  d:/Backup and Documents/W/Windsurf/_MD_INVENTORY_ALL.txt
-8.4.2  d:/Backup and Documents/W/Windsurf/_MD_INVENTORY_FILTERED.txt
-8.4.3  Keep these files in the Windsurf folder until ALL MDs have been addressed
-8.4.4  After that, mark them obsolete
-
-8.5.0  IF PRIME FILES ARE MISSING
-8.5.1  This is a MAJOR PROBLEM. Notify the Owner immediately.
-8.5.2  Restore from repo backup or filesystem backup only after Owner approval.
-8.5.3  Any freeze / unfreeze / re-freeze decisions require Owner approval (see Prime 01).
+7.0.1  docs/archive/ (archived but kept)
+7.0.2  docs/archive/LBPF_DOC_LEGACY_2026-01-30/ (old decision files, absorbed into Primes)
+7.0.3  docs/archive/garbage_2026-01-30/ (old HTML/CSS versions)
+7.0.4  docs/archive/bento_prototype_2026-01-30/ (prototype files)
 
 ---
 
-9.0.0  BOOTSTRAP ARCHIVE LOCATIONS
+8.0.0  FILESYSTEM RULES (APPLIES TO ALL MARKDOWN FILES)
 
-9.0.1  Previous_Projects_LBPF/Archive_Bootstrap_Versions/2026-01-05_lisboaporfavor-bootstrap/
-9.0.2  Previous_Projects_LBPF/Archive_Bootstrap_Versions/lisboaporfavor-bootstrap-backup-oct-23-2025/
-9.0.3  Previous_Projects_LBPF/Archive_Nested_Duplicate_2026-01-30/
+8.0.1  Prime directives live in docs/primes/
+8.0.2  Canonical non-Prime documents live in docs/core/
+8.0.3  Work only inside the existing Prime and Core canonical files
+8.0.4  Do not create new files unless the Owner explicitly approves
+8.0.5  No DECISION_*.md or BRAINSTORM_*.md workflow is used (no decision/brainstorm standalone files)
+8.0.6  Archived documents live in docs/archive/
+
+---
+
+9.0.0  RECOVERY POINTERS
+
+9.1.0  CANONICAL LOCATION FOR PRIME FILES
+9.1.1  lisboaporfavor-vanilla/docs/primes/
+
+9.2.0  CANONICAL LOCATION FOR CORE FILES
+9.2.1  lisboaporfavor-vanilla/docs/core/
+
+9.3.0  GIT REPOSITORY
+9.3.1  GitHub: Whassup-world/LisboaPorFavor-vanilla
+9.3.2  Branch: master
+
+9.4.0  INVENTORY EXPORTS (TEMPORARY ASSETS)
+9.4.1  d:/Backup and Documents/W/Windsurf/_MD_INVENTORY_ALL.txt
+9.4.2  d:/Backup and Documents/W/Windsurf/_MD_INVENTORY_FILTERED.txt
+9.4.3  Keep these files in the Windsurf folder until ALL MDs have been addressed
+9.4.4  After that, mark them obsolete
+
+9.5.0  IF PRIME FILES ARE MISSING
+9.5.1  This is a MAJOR PROBLEM. Notify the Owner immediately.
+9.5.2  Restore from repo backup or filesystem backup only after Owner approval.
+9.5.3  Any freeze / unfreeze / re-freeze decisions require Owner approval (see Prime 01).
+
+---
+
+10.0.0  BOOTSTRAP ARCHIVE LOCATIONS
+
+10.0.1  Previous_Projects_LBPF/Archive_Bootstrap_Versions/2026-01-05_lisboaporfavor-bootstrap/
+10.0.2  Previous_Projects_LBPF/Archive_Bootstrap_Versions/lisboaporfavor-bootstrap-backup-oct-23-2025/
+10.0.3  Previous_Projects_LBPF/Archive_Nested_Duplicate_2026-01-30/
 
 ---
 

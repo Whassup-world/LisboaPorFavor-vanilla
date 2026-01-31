@@ -28,120 +28,144 @@
 
 ---
 
-2.0.0  AUTHORITY HIERARCHY (WHAT OVERRIDES WHAT)
+3.0.0  AUTHORITY HIERARCHY (WHAT OVERRIDES WHAT)
 
-2.1.0  TIER 1: PRIMES (HIGHEST AUTHORITY)
-2.1.1  LBPF_PRIME_01_GLOBAL_RULES.md - Global operating rules
-2.1.2  LBPF_PRIME_02_RULES_AND_ROLES.md - Workflow and roles
-2.1.3  LBPF_PRIME_03_SOURCE_OF_TRUTH.md - This file
+3.1.0  TIER 1: PRIMES (HIGHEST AUTHORITY)
+3.1.1  LBPF_PRIME_01_GLOBAL_RULES.md - Global operating rules
+3.1.2  LBPF_PRIME_02_RULES_AND_ROLES.md - Workflow and roles
+3.1.3  LBPF_PRIME_03_SOURCE_OF_TRUTH.md - This file
+3.1.4  LBPF_PRIME_04_OPERATING_SYSTEM.md - Lifecycle, security, git discipline
+3.1.5  LBPF_PRIME_05_ACTIVE_SESSION.md - Session tracking
+3.1.6  LBPF_PRIME_06_TODO.md - Task management
+3.1.7  LBPF_PRIME_07_INDEX.md - Master index
 
-2.2.0  TIER 2: CORE (CANONICAL KNOWLEDGE)
-2.2.1  LBPF_BRAND_PACK.md - Visual system (MANDATORY for all CSS/HTML)
-2.2.2  LBPF_ARCHITECTURE.md - Technical stack and file structure
-2.2.3  LBPF_BUSINESS_PLAN.md - Vision, strategy, 3-tier system
-2.2.4  LBPF_WORKFLOW.md - How to work on this project
+3.2.0  TIER 2: CORE (CANONICAL KNOWLEDGE)
+3.2.1  LBPF_BRAND_PACK.md - Visual system (MANDATORY for all CSS/HTML)
+3.2.2  LBPF_BUSINESS_PLAN.md - Vision, strategy, 3-tier system
+3.2.3  LBPF_BRAINSTORM.md - Intake for new ideas
+3.2.4  LBPF_EXTERNAL_SOURCES_INPUT.md - External sources
+3.2.5  LBPF_FINANCIAL_BUSINESS_PLAN.md - Financial aspects
+3.2.6  LBPF_MARKETING_AND_SM.md - Marketing strategy
+3.2.7  LBPF_PROJECT_MASTER_TEMPLATE.md - Project template
+3.2.8  LBPF_TOOLS_AND_SPECS.md - Tools registry
+3.2.9  LBPF_WORKFLOW_JUNIOR.md - Junior AI workflow
+3.2.10 LBPF_WORKFLOW_SENIOR.md - Senior AI workflow
+3.2.11 LBPF_WORKFLOW_SUPERVISOR.md - Supervisor AI workflow
 
-2.3.0  TIER 3: IMPLEMENTATION
-2.3.1  CSS files (template.css, brand-components.css, page-specific)
-2.3.2  HTML files (index.html, lxtourguide.html, admin-guide.html)
-2.3.3  JS files (components, pages, data)
+3.3.0  TIER 3: IMPLEMENTATION
+3.3.1  CSS files (template.css, brand-components.css, page-specific)
+3.3.2  HTML files (index.html, lxtourguide.html, admin-guide.html)
+3.3.3  JS files (components, pages, data)
 
-2.4.0  TIER 4: ARCHIVE
-2.4.1  Old versions, deprecated docs, experiments
-2.4.2  Reference only, not authoritative
-
----
-
-3.0.0  CANONICAL DOCUMENTS FOR LBPF
-
-3.1.0  PRIME (CANONICAL)
-3.1.1  docs/primes/LBPF_PRIME_01_GLOBAL_RULES.md
-3.1.2  docs/primes/LBPF_PRIME_02_RULES_AND_ROLES.md
-3.1.3  docs/primes/LBPF_PRIME_03_SOURCE_OF_TRUTH.md
-
-3.2.0  CORE (CANONICAL)
-3.2.1  docs/core/LBPF_BRAND_PACK.md
-3.2.2  docs/core/LBPF_BUSINESS_PLAN.md
+3.4.0  TIER 4: ARCHIVE
+3.4.1  Old versions, deprecated docs, experiments
+3.4.2  Reference only, not authoritative
 
 ---
 
-4.0.0  ROUTING MAP (WHERE INFORMATION MUST LIVE)
+4.0.0  CANONICAL DOCUMENTS FOR LBPF
 
-4.1.0  GLOBAL RULES AND STANDARDS
-4.1.1  Destination: LBPF_PRIME_01_GLOBAL_RULES.md
-4.1.2  Content: Project-wide conventions, quality standards, version control
+4.1.0  PRIME (CANONICAL)
+4.1.1  docs/primes/LBPF_PRIME_01_GLOBAL_RULES.md
+4.1.2  docs/primes/LBPF_PRIME_02_RULES_AND_ROLES.md
+4.1.3  docs/primes/LBPF_PRIME_03_SOURCE_OF_TRUTH.md
+4.1.4  docs/primes/LBPF_PRIME_04_OPERATING_SYSTEM.md
+4.1.5  docs/primes/LBPF_PRIME_05_ACTIVE_SESSION.md
+4.1.6  docs/primes/LBPF_PRIME_06_TODO.md
+4.1.7  docs/primes/LBPF_PRIME_07_INDEX.md
 
-4.2.0  WORKFLOW AND ROLES
-4.2.1  Destination: LBPF_PRIME_02_RULES_AND_ROLES.md
-4.2.2  Content: Communication protocol, safety rules, session protocols
-
-4.3.0  AUTHORITY AND CONFLICTS
-4.3.1  Destination: LBPF_PRIME_03_SOURCE_OF_TRUTH.md (this file)
-4.3.2  Content: What overrides what, routing rules, canonical doc list
-
-4.4.0  BRAND AND VISUAL SYSTEM
-4.4.1  Destination: docs/core/LBPF_BRAND_PACK.md
-4.4.2  Content: Colors, typography, spacing, components, topic system
-4.4.3  CRITICAL: This is MANDATORY reading before any CSS/HTML work
-
-4.5.0  BUSINESS VISION AND STRATEGY
-4.5.1  Destination: docs/core/LBPF_BUSINESS_PLAN.md
-4.5.2  Content: 3-tier system, marketplace vision, guide training academy
-
-4.6.0  TECHNICAL ARCHITECTURE AND WORKFLOW
-4.6.1  Destination: LBPF_PRIME_01_GLOBAL_RULES.md (sections 9 and 10)
-4.6.2  Content: File structure, tech stack, git workflow, session protocols
-4.6.3  Reason: Keep inline to minimize MD files
+4.2.0  CORE (CANONICAL)
+4.2.1  docs/core/LBPF_BRAND_PACK.md
+4.2.2  docs/core/LBPF_BUSINESS_PLAN.md
+4.2.3  docs/core/LBPF_BRAINSTORM.md
+4.2.4  docs/core/LBPF_EXTERNAL_SOURCES_INPUT.md
+4.2.5  docs/core/LBPF_FINANCIAL_BUSINESS_PLAN.md
+4.2.6  docs/core/LBPF_MARKETING_AND_SM.md
+4.2.7  docs/core/LBPF_PROJECT_MASTER_TEMPLATE.md
+4.2.8  docs/core/LBPF_TOOLS_AND_SPECS.md
+4.2.9  docs/core/LBPF_WORKFLOW_JUNIOR.md
+4.2.10 docs/core/LBPF_WORKFLOW_SENIOR.md
+4.2.11 docs/core/LBPF_WORKFLOW_SUPERVISOR.md
 
 ---
 
-5.0.0  DECISION INTEGRATION RULE
+5.0.0  ROUTING MAP (WHERE INFORMATION MUST LIVE)
 
-5.1.0  NO SEPARATE DECISION FILES
-5.1.1  Decisions are absorbed into the correct Prime or Core doc
-5.1.2  Do not create DECISION_*.md files
-5.1.3  Compact knowledge into existing canonical docs
+5.1.0  GLOBAL RULES AND STANDARDS
+5.1.1  Destination: LBPF_PRIME_01_GLOBAL_RULES.md
+5.1.2  Content: Project-wide conventions, quality standards, version control
 
-5.2.0  WHEN A DECISION IS MADE
-5.2.1  Identify which Prime or Core doc it belongs to
-5.2.2  Add to that doc with date and reasoning
-5.2.3  Update version history in metadata
-5.2.4  Archive old decision files to docs/archive/
+5.2.0  WORKFLOW AND ROLES
+5.2.1  Destination: LBPF_PRIME_02_RULES_AND_ROLES.md
+5.2.2  Content: Communication protocol, safety rules, session protocols
 
----
+5.3.0  AUTHORITY AND CONFLICTS
+5.3.1  Destination: LBPF_PRIME_03_SOURCE_OF_TRUTH.md (this file)
+5.3.2  Content: What overrides what, routing rules, canonical doc list
 
-6.0.0  CONFLICT RESOLUTION
+5.4.0  BRAND AND VISUAL SYSTEM
+5.4.1  Destination: docs/core/LBPF_BRAND_PACK.md
+5.4.2  Content: Colors, typography, spacing, components, topic system
+5.4.3  CRITICAL: This is MANDATORY reading before any CSS/HTML work
 
-6.1.0  IF PRIMES CONFLICT
-6.1.1  Work stops immediately
-6.1.2  Flag conflict to user
-6.1.3  Propose resolution options (A/B/C)
-6.1.4  Wait for user decision
-6.1.5  Update conflicting Prime(s)
+5.5.0  BUSINESS VISION AND STRATEGY
+5.5.1  Destination: docs/core/LBPF_BUSINESS_PLAN.md
+5.5.2  Content: 3-tier system, marketplace vision, guide training academy
 
-6.2.0  IF CORE CONFLICTS WITH PRIME
-6.2.1  Prime always wins
-6.2.2  Update Core doc to align
-6.2.3  Document change in version history
-
-6.3.0  IF IMPLEMENTATION CONFLICTS WITH CORE/PRIME
-6.3.1  Core/Prime always wins
-6.3.2  Fix implementation
-6.3.3  Do not modify Core/Prime without approval
+5.6.0  TECHNICAL ARCHITECTURE AND WORKFLOW
+5.6.1  Destination: LBPF_PRIME_01_GLOBAL_RULES.md (sections 9 and 10)
+5.6.2  Content: File structure, tech stack, git workflow, session protocols
+5.6.3  Reason: Keep inline to minimize MD files
 
 ---
 
-7.0.0  MINIMUM-MDS RULE (ANTI-BLOAT)
+6.0.0  DECISION INTEGRATION RULE
 
-7.1.0  DEFAULT BEHAVIOR
-7.1.1  Keep number of MD files as low as possible
-7.1.2  Prefer upgrading existing canonical doc over creating new doc
-7.1.3  Get approval before creating new Prime or Core doc
+6.1.0  NO SEPARATE DECISION FILES
+6.1.1  Decisions are absorbed into the correct Prime or Core doc
+6.1.2  Do not create DECISION_*.md files
+6.1.3  Compact knowledge into existing canonical docs
 
-7.2.0  WHEN UNCERTAIN WHERE CONTENT BELONGS
-7.2.1  Propose destination to user
-7.2.2  Do not create random new files
-7.2.3  Use existing structure
+6.2.0  WHEN A DECISION IS MADE
+6.2.1  Identify which Prime or Core doc it belongs to
+6.2.2  Add to that doc with date and reasoning
+6.2.3  Update version history in metadata
+6.2.4  Archive old decision files to docs/archive/
+
+---
+
+7.0.0  CONFLICT RESOLUTION
+
+7.1.0  IF PRIMES CONFLICT
+7.1.1  Work stops immediately
+7.1.2  Flag conflict to user
+7.1.3  Propose resolution options (A/B/C)
+7.1.4  Wait for user decision
+7.1.5  Update conflicting Prime(s)
+
+7.2.0  IF CORE CONFLICTS WITH PRIME
+7.2.1  Prime always wins
+7.2.2  Update Core doc to align
+7.2.3  Document change in version history
+
+7.3.0  IF IMPLEMENTATION CONFLICTS WITH CORE/PRIME
+7.3.1  Core/Prime always wins
+7.3.2  Fix implementation
+7.3.3  Do not modify Core/Prime without approval
+
+---
+
+8.0.0  MINIMUM-MDS RULE (ANTI-BLOAT)
+
+8.1.0  DEFAULT BEHAVIOR
+8.1.1  Keep number of MD files as low as possible
+8.1.2  Prefer upgrading existing canonical doc over creating new doc
+8.1.3  Get approval before creating new Prime or Core doc
+
+8.2.0  WHEN UNCERTAIN WHERE CONTENT BELONGS
+8.2.1  Propose destination to user
+8.2.2  Do not create random new files
+8.2.3  Use existing structure
 
 ---
 

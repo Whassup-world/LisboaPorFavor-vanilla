@@ -27,14 +27,26 @@
 2.0.3  Brand compliance is MANDATORY - see LBPF_BRAND_PACK.md in Core
 
 2.1.0  PRIMES (MANDATORY)
-2.1.1  lisboaporfavor-vanilla/docs/primes/LBPF_PRIME_01_GLOBAL_RULES.md
-2.1.2  lisboaporfavor-vanilla/docs/primes/LBPF_PRIME_02_RULES_AND_ROLES.md
-2.1.3  lisboaporfavor-vanilla/docs/primes/LBPF_PRIME_03_SOURCE_OF_TRUTH.md
-2.1.4  lisboaporfavor-vanilla/docs/primes/LBPF_PRIME_06_TODO.md
+2.1.1  docs/primes/LBPF_PRIME_01_GLOBAL_RULES.md
+2.1.2  docs/primes/LBPF_PRIME_02_RULES_AND_ROLES.md
+2.1.3  docs/primes/LBPF_PRIME_03_SOURCE_OF_TRUTH.md
+2.1.4  docs/primes/LBPF_PRIME_04_OPERATING_SYSTEM.md
+2.1.5  docs/primes/LBPF_PRIME_05_ACTIVE_SESSION.md
+2.1.6  docs/primes/LBPF_PRIME_06_TODO.md
+2.1.7  docs/primes/LBPF_PRIME_07_INDEX.md
 
 2.2.0  CORE (PROJECT KNOWLEDGE BASE)
-2.2.1  lisboaporfavor-vanilla/docs/core/LBPF_BRAND_PACK.md
-2.2.2  lisboaporfavor-vanilla/docs/core/LBPF_BUSINESS_PLAN.md
+2.2.1  docs/core/LBPF_BRAND_PACK.md - Visual system (MANDATORY for CSS/HTML)
+2.2.2  docs/core/LBPF_BUSINESS_PLAN.md - Strategic roadmap, marketplace vision
+2.2.3  docs/core/LBPF_BRAINSTORM.md - Intake for new ideas
+2.2.4  docs/core/LBPF_EXTERNAL_SOURCES_INPUT.md - External sources and input channels
+2.2.5  docs/core/LBPF_FINANCIAL_BUSINESS_PLAN.md - Financial aspects
+2.2.6  docs/core/LBPF_MARKETING_AND_SM.md - Marketing strategy and social media
+2.2.7  docs/core/LBPF_PROJECT_MASTER_TEMPLATE.md - Project page template structure
+2.2.8  docs/core/LBPF_TOOLS_AND_SPECS.md - Tools registry and API specs
+2.2.9  docs/core/LBPF_WORKFLOW_JUNIOR.md - Junior AI workflow
+2.2.10 docs/core/LBPF_WORKFLOW_SENIOR.md - Senior AI workflow
+2.2.11 docs/core/LBPF_WORKFLOW_SUPERVISOR.md - Supervisor AI workflow
 
 **END SESSION PROTOCOL**
 
@@ -56,8 +68,12 @@
 
 3.2.0  PRIME PURPOSE MAP (WHAT GOES WHERE)
 3.2.1  Prime 01 (this file) -> global operating rules, project-wide conventions
-3.2.2  Prime 02 -> rules, roles, communication format, workflow discipline
+3.2.2  Prime 02 -> rules, roles, communication format, workflow discipline, session start protocol
 3.2.3  Prime 03 -> authority hierarchy, routing rules, "what overrides what"
+3.2.4  Prime 04 -> operating system, lifecycle gates, security, git discipline
+3.2.5  Prime 05 -> active session tracking and real-time workflow documentation
+3.2.6  Prime 06 -> task management and knowledge extraction
+3.2.7  Prime 07 -> master index and system overview
 
 3.3.0  QUALITY STANDARD
 3.3.1  We aim for professional-grade decisions, not shortcuts
