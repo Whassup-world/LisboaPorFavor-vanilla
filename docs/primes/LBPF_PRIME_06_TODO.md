@@ -78,20 +78,37 @@
 3.3.7  Lane: INBOX
 
 3.4.0  TODO ITEM
-3.4.1  Title: Hero Image System - MVP Implementation (End Feb 2026)
-3.4.2  Description: Implement dynamic hero image system for guide pages with carousel and mobile-first design
-3.4.3  Actions:
-3.4.4  - Create /data/hero-config.json with 7 daily rotation images
-3.4.5  - Create /js/hero-manager.js with carousel logic (3-5 images, 8s intervals, fade transitions)
-3.4.6  - Update lxtourguide.html to use dynamic hero system
-3.4.7  - Add CSS for smooth transitions and overlays
-3.4.8  - Test mobile responsiveness (320px, 481px, 769px, 1025px, 1440px+)
-3.4.9  - Optimize images (WebP + JPEG fallback, <200KB each)
-3.4.10 Priority: HIGH
+3.4.1  Title: Replace 3 Placeholder Hero Images with Professional Lisbon Photos
+3.4.2  Description: CRITICAL - Replace placeholder images in hero-config.json with high-quality professional Lisbon photography
+3.4.3  Current placeholders: Parc-Eduardo.jpg (used 2x), cais-das-colunas-view.webp
+3.4.4  Required: 3 unique professional photos showcasing different Lisbon scenes
+3.4.5  Actions:
+3.4.6  - Source/shoot 3 professional Lisbon photos (Alfama, Belém, Tram 28 or similar iconic scenes)
+3.4.7  - Optimize images: WebP format + JPEG fallback, <200KB each
+3.4.8  - Update hero-config.json with new image paths and proper alt text
+3.4.9  - Test carousel rotation on multiple devices
+3.4.10 Priority: CRITICAL
 3.4.11 Created: 2026-01-31
-3.4.12 Due by: 2026-02-28 (MVP Launch)
+3.4.12 Due by: 2026-02-07 (MAX DATE - OVERRIDES 72-HOUR RULE)
 3.4.13 Lane: INBOX
-3.4.14 Reference: LBPF_TOOLS_AND_SPECS.md section 0.0.0
+3.4.14 Blocker: MVP cannot launch with placeholder images
+3.4.15 Reference: /data/hero-config.json
+
+3.4.16 TODO ITEM
+3.4.17 Title: Hero Image System - MVP Implementation (End Feb 2026)
+3.4.18 Description: Implement dynamic hero image system for guide pages with carousel and mobile-first design
+3.4.19 Actions:
+3.4.20 - Create /data/hero-config.json with 7 daily rotation images
+3.4.21 - Create /js/hero-manager.js with carousel logic (3-5 images, 8s intervals, fade transitions)
+3.4.22 - Update lxtourguide.html to use dynamic hero system
+3.4.23 - Add CSS for smooth transitions and overlays
+3.4.24 - Test mobile responsiveness (320px, 481px, 769px, 1025px, 1440px+)
+3.4.25 - Optimize images (WebP + JPEG fallback, <200KB each)
+3.4.26 Priority: HIGH
+3.4.27 Created: 2026-01-31
+3.4.28 Due by: 2026-02-28 (MVP Launch)
+3.4.29 Lane: INBOX
+3.4.30 Reference: LBPF_TOOLS_AND_SPECS.md section 0.0.0
 
 3.5.0  TODO ITEM
 3.5.1  Title: Hero Image System - Phase 1 (March 2026 - First Client Tour)
@@ -120,6 +137,69 @@
 3.6.10 Due by: 2026-06-30
 3.6.11 Lane: DEFERRED
 3.6.12 Reference: LBPF_TOOLS_AND_SPECS.md section 0.5.0
+
+3.7.0  TODO ITEM
+3.7.1  Title: Document Admin Rights vs Guide Rights + Penalty System
+3.7.2  Description: Define access control hierarchy and guide moderation system
+3.7.3  Key Concepts:
+3.7.4  - Guide pages are ONE page with public/private views (not separate pages)
+3.7.5  - Admin has TOTAL rights (can override any guide changes)
+3.7.6  - Guide admin has LIMITED rights (tagline, bio, tours, availability only)
+3.7.7  - Penalty system: Warning → Yellow Card → Red Card
+3.7.8  - Yellow Card: Admin must take site offline or block guide
+3.7.9  - Red Card: Same as yellow (guide blocked from platform)
+3.7.10 - Guides can "wander off" or break community guidelines
+3.7.11 Actions:
+3.7.12 - Document in LBPF_PRIME_02_RULES_AND_ROLES.md
+3.7.13 - Create penalty system workflow
+3.7.14 - Define community guidelines for guides
+3.7.15 - Add admin override UI in admin.html
+3.7.16 Priority: HIGH
+3.7.17 Created: 2026-01-31
+3.7.18 Due by: 2026-02-14
+3.7.19 Lane: INBOX
+3.7.20 Reference: Admin rights hierarchy
+
+3.8.0  TODO ITEM
+3.8.1  Title: Implement Login System for Public/Private Page Views
+3.8.2  Description: Guide pages need authentication to switch between public view and admin edit mode
+3.8.3  Current State: Guide pages are conceptually 1 page with 2 views (public vs private/admin)
+3.8.4  Required:
+3.8.5  - Login system for guides to access admin-guide.html
+3.8.6  - Login system for LBPF admin to access admin.html
+3.8.7  - Session management (who is logged in, what role)
+3.8.8  - Role-based access control (Guide vs Admin)
+3.8.9  - Redirect logic (public → login → admin view)
+3.8.10 Actions:
+3.8.11 - Design login UI (simple email/password or OAuth)
+3.8.12 - Implement authentication backend (future: Node.js + JWT)
+3.8.13 - Add session storage (localStorage for MVP, database later)
+3.8.14 - Create role-based routing logic
+3.8.15 - Add "Edit Mode" toggle for logged-in guides on lxtourguide.html
+3.8.16 Priority: HIGH
+3.8.17 Created: 2026-01-31
+3.8.18 Due by: 2026-02-21
+3.8.19 Lane: INBOX
+3.8.20 Blocker: Cannot launch MVP without guide login
+3.8.21 Reference: Authentication system design
+
+3.9.0  TODO ITEM
+3.9.1  Title: Polish admin.html (LBPF Master Admin Dashboard)
+3.9.2  Description: Review and improve admin.html UI/UX before continuing with guide-admin work
+3.9.3  Current Issues: TBD (needs review)
+3.9.4  Actions:
+3.9.5  - Review admin.html layout and functionality
+3.9.6  - Identify UI/UX improvements needed
+3.9.7  - Fix any broken links or incorrect paths
+3.9.8  - Ensure consistent styling with guide pages
+3.9.9  - Test all admin controls and workflows
+3.9.10 - Document admin.html features and usage
+3.9.11 Priority: HIGH
+3.9.12 Created: 2026-01-31
+3.9.13 Due by: 2026-02-07
+3.9.14 Lane: ACTIVE
+3.9.15 Note: User requested to "see admin first" before continuing with guide-admin
+3.9.16 Reference: admin.html
 
 ---
 
