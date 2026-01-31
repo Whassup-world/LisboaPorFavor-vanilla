@@ -208,19 +208,26 @@ Implementation note: radii and shadows are applied consistently to keep the site
 
 ## 6. Component Standards
 
-### 6.1 Tour Cards (Benchmark Layout - Jan 31, 2026)
+### 6.1 Tour Cards (Benchmark Layout - Jan 31, 2026 - FINAL)
 
 **Structure:**
 ```
 .tour-card (flexbox column, height: 100%)
   └─ .tour-card-image (180px height, object-fit: contain)
   └─ .tour-card-content (padding: 1rem 1.5rem 1.5rem)
-      ├─ h4 (tour name, center-aligned)
+      ├─ h4 (tour name, center-aligned, min-height: 2.5em, line-height: 1.25)
       ├─ .tour-category (center-aligned, italic)
       ├─ .tour-meta (duration/capacity, center-aligned)
       ├─ .tour-description (left-aligned, flex-grow: 1)
-      └─ .tour-btn (width: 100%, margin-top: auto)
+      ├─ .tour-booking-note (center-aligned, italic, secondary color)
+      └─ .tour-btn (width: 100%, margin-top: 0)
 ```
+
+**Critical Alignment Solution:**
+- **h4 uses `min-height: 2.5em` with `line-height: 1.25`** to reserve exactly 2 lines of vertical space
+- This ensures descriptions start at the same vertical position regardless of header wrapping
+- Single-line headers (e.g., "Belem Classic Bike Tour") occupy same space as two-line headers (e.g., "Alfama Vintage Market Walking tour with tastings")
+- **Display: block** (not flexbox) for predictable text flow
 
 **Text Boundaries:**
 - Text starts 1.5rem from left edge (right of boundary line)
@@ -235,11 +242,22 @@ Implementation note: radii and shadows are applied consistently to keep the site
 
 **Visual Hierarchy:**
 1. Image (zoomed to show full composition)
-2. Tour name (h4, bold, center)
+2. Tour name (h4, bold, center, 2-line reserved space)
 3. Category (italic, secondary color, center)
 4. Duration & capacity (secondary color, center)
 5. Description (grows to fill space, left-aligned)
-6. CTA button (pushed to bottom, gold background)
+6. Booking note (center, italic, secondary color)
+7. CTA button (pushed to bottom, gold background)
+
+**Key CSS Values:**
+```css
+.tour-card h4 {
+  min-height: 2.5em;
+  line-height: 1.25;
+  display: block;
+  text-align: center;
+}
+```
 
 This layout is the **standard benchmark** for all tour card implementations across the LBPF platform.
 
