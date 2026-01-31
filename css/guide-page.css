@@ -639,6 +639,8 @@
   font-weight: 500;
   text-align: left;
   font-style: italic;
+  max-width: calc(100% - 3rem);
+  box-sizing: border-box;
 }
 
 .tour-meta {
@@ -656,6 +658,8 @@
   line-height: 1.5;
   text-align: left;
   flex-grow: 1;
+  max-width: calc(100% - 3rem);
+  box-sizing: border-box;
 }
 
 .tour-btn {
