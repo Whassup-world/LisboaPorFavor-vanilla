@@ -193,4 +193,241 @@ It's a comprehensive **Guide Training Academy + Marketplace** that connects qual
 
 ---
 
+## 11. SEO Dominance Strategy
+
+### **The Goal: "Lisbon?" → "LisboaPorFavor.com"**
+
+### **Content Pillars (Target Keywords)**
+
+**1. Food & Dining**
+- "Best pastel de nata in Lisbon"
+- "Where to eat bacalhau in Lisbon"
+- "Lisbon food guide"
+- "Portuguese traditional dishes"
+- "Best restaurants Lisbon"
+
+**2. History & Culture**
+- "History of Lisbon earthquake"
+- "Lisbon Cathedral history"
+- "Portuguese flag meaning"
+- "Azulejo tiles Lisbon"
+- "Calçada Portuguesa"
+
+**3. Street Art**
+- "Bordalo II street art Lisbon"
+- "Best street art in Lisbon"
+- "Urban art tours Lisbon"
+- "Lisbon graffiti"
+
+**4. Tours & Activities**
+- "Best bike tours Lisbon"
+- "Lisbon walking tours"
+- "Segway tours Lisbon"
+- "Things to do in Lisbon"
+
+**5. Day Trips**
+- "Sintra day trip from Lisbon"
+- "How to visit Pena Palace"
+- "Best day trips from Lisbon"
+
+### **Content Publishing Schedule**
+
+**Weekly:**
+- **Monday:** "Monument Monday" (Historical content)
+- **Tuesday:** "Day Trip Tuesday" (Sintra, Cascais, etc.)
+- **Wednesday:** "Dish Wednesday" (Food spotlight)
+- **Thursday:** "History Thursday" (Deep dive)
+- **Friday:** "Street Art Friday" (Urban culture)
+- **Saturday:** "Weekend Guide" (Events & activities)
+- **Sunday:** "Guide Spotlight" (Feature a guide)
+
+**Result:** 365+ pieces of content per year → SEO domination
+
+---
+
+## 12. Content Library Inventory
+
+### **What We Already Have (Research Folder)**
+
+**1. Food & Dining Content (23+ Dishes)**
+- Ameijoas à Bulhão Pato
+- Arroz de Pato
+- Açorda de Marisco
+- Bacalhau (multiple preparations)
+- Bifanas
+- Caldeirada de Peixe
+- Caldo Verde
+- Cataplana de Marisco
+- Cozida à Portuguesa
+- Feijoada à Transmontana
+- Francesinha
+- Leitão da Bairrada
+- Papas de Sarrabulho
+- Polvo à Lagareiro
+- Porco Preto
+- Queijo da Serra
+- Pastel de Nata
+- Prego no Pão
+- + More documented
+
+**Content Strategy:**
+- Weekly "Dish of the Week" blog posts
+- Restaurant review integration
+- Food tour itineraries
+- Chef interviews
+
+**2. Historical & Cultural Content**
+- 25th of April Bridge
+- Lisbon Cathedral (multiple aspects)
+- 13 Hills of Lisbon
+- Lisbon Earthquake of 1755
+- Portuguese Flag & Symbols
+- Armillary Sphere
+- Treaty of Tordesillas
+- Portuguese Discoveries & Explorations
+- Prince Henry the Navigator
+- Calçada Portuguesa (Portuguese pavement)
+- Azulejo Tiles
+- Fado Music Culture
+- Amália Rodrigues
+
+**Content Strategy:**
+- "History Thursday" weekly series
+- Monument deep-dives
+- Cultural explainers
+- Timeline infographics
+
+**3. Street Art & Urban Culture**
+- Arthur Bordalo II (Bordalo II)
+  - Chipmunk
+  - Half Panda
+  - Half Weasel
+  - Monkey
+  - Raccoon
+- Vhils and Pixelpancho
+- Shepard Fairey (Grace)
+- Sainer (Crossroad in Olaias)
+- Eduardo Kobra (Raoni)
+- Urban Art Tours:
+  - Arroios
+  - Alvalade
+  - Chão do Loureiro
+
+**Content Strategy:**
+- "Street Art Spotlight" series
+- Artist interviews
+- Map-based tours
+- Instagram visual content
+
+**4. Day Trip Content**
+
+**Sintra:**
+- Pena Palace (5 images documented)
+- Castle of the Moors (2 images)
+- Route maps & timetables
+
+**Cascais:**
+- Av. Valbom route documented
+
+**Content Strategy:**
+- "Day Trip Tuesday" series
+- Transportation guides
+- Photo galleries
+- Itinerary planners
+
+**5. Tour Route Documentation**
+- Historical Guide - Delicious Bike Tour
+- Historical Guide - Follow the River Bike Tour
+- Historical Guide - Into The Woods Bike Tour
+- Historical Guide - Up The Hills Bike Tour
+- Segway Tours (documented)
+
+**Content Ready:** ✅ Multiple full tour scripts prepared
+
+---
+
+## 13. Detailed Revenue Streams
+
+### **Phase 1 Revenue (Year 1)**
+
+**1. Tour Bookings (Primary)**
+- Commission on guide bookings: 15-20%
+- Direct tour sales
+- Expected: 5-10 bookings/month (Month 1-3)
+- Scale to: 50+ bookings/month (Month 12)
+
+**2. Affiliate Income**
+- Restaurant reservations (TheFork, OpenTable)
+- Hotel bookings (Booking.com affiliate)
+- Activity bookings (GetYourGuide, Viator)
+- Expected: €200-500/month passive
+
+**3. Sponsored Content**
+- Restaurant reviews (sponsored)
+- Hotel features
+- Activity promotions
+- Expected: €500-1000/month (after Month 6)
+
+**4. Guide Subscriptions (Optional)**
+- Premium profile features
+- Featured placement
+- Analytics dashboard
+- Expected: €10-20/guide/month
+
+### **Phase 2 Revenue (Year 2)**
+
+**5. Luxury Partnerships**
+- 5-star hotel commissions (higher rate)
+- Private tour packages
+- VIP experiences
+- Expected: €2000-5000/month
+
+**6. White-label Solutions**
+- Booking widgets for hotels
+- Custom tour packages
+- Branded experiences
+- Expected: €1000-3000/month
+
+---
+
+## 14. Success Metrics & KPIs
+
+### **Phase 1 Targets (Month 12)**
+
+**Traffic:**
+- 10,000+ monthly page views
+- 5,000+ unique visitors/month
+- 500+ email subscribers
+
+**Content:**
+- 200+ published posts
+- 50+ food reviews
+- 30+ historical articles
+- 20+ street art features
+
+**Business:**
+- 10+ registered guides
+- 50+ monthly tour bookings
+- €3,000+ monthly revenue
+- 4.8+ average review rating
+
+**SEO:**
+- Rank page 1 for 50+ keywords
+- Domain Authority 30+
+- 100+ backlinks
+
+### **Phase 2 Targets (Year 2)**
+
+**Partnerships:**
+- 5+ luxury hotel contracts
+- 10+ restaurant collaborations
+- 3+ OTA distribution channels
+
+**Revenue:**
+- €10,000+ monthly revenue
+- 200+ monthly bookings
+- €2,000+ affiliate income
+
+---
+
 **End**
