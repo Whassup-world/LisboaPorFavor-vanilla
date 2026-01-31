@@ -639,7 +639,7 @@
   text-align: center;
   min-height: 2.4em;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
 
@@ -921,6 +921,7 @@
   background: var(--lbpf-neutral-50);
   font-size: 0.75rem;
   cursor: pointer;
+  user-select: none;
 }
 
 .restriction-pill.restriction-pill-active {

@@ -246,7 +246,10 @@
     }
 
     if (requestBtn) {
-      requestBtn.addEventListener('click', function () {
+      requestBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
         var feedback = document.getElementById('booking-feedback');
         if (feedback) {
           if (!bookingState.selectedDate || !bookingState.selectedSlot) {
@@ -257,6 +260,12 @@
           
           // Show order summary
           showOrderSummary();
+          
+          // Keep tile open
+          var tile = document.querySelector('.tile-availability');
+          if (tile) {
+            tile.classList.add('tile--open');
+          }
         }
       });
     }
@@ -314,7 +323,10 @@
         var confirmBtn = document.getElementById('confirm-booking-btn');
         
         if (editBtn) {
-          editBtn.addEventListener('click', function() {
+          editBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
             feedback.innerHTML = '';
             // Keep tile open
             var tile = document.querySelector('.tile-availability');
@@ -325,16 +337,44 @@
         }
         
         if (confirmBtn) {
-          confirmBtn.addEventListener('click', function() {
-            // Show success message in review area, keep tile open
+          confirmBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            // Show success message in review area with reset button
             feedback.innerHTML = '<div style="background: var(--lbpf-neutral-50); border: 2px solid var(--lx-gold); border-radius: 12px; padding: 1.5rem; margin: 1rem 0; text-align: center;">' +
-              '<p style="color: green; font-weight: 600; font-size: 1.1rem; margin: 0;">✓ Request submitted! George will confirm asap.</p>' +
+              '<p style="color: green; font-weight: 600; font-size: 1.1rem; margin: 0 0 1rem 0;">✓ Request submitted! George will confirm asap.</p>' +
+              '<button type="button" id="new-booking-btn" style="padding: 0.6rem 1.5rem; background: var(--lx-gold); color: var(--pt-white); border: none; border-radius: 8px; font-weight: 600; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">Book Another Date</button>' +
               '</div>';
             
-            // Keep tile open
+            // Keep tile open and prevent scroll
             var tile = document.querySelector('.tile-availability');
             if (tile) {
               tile.classList.add('tile--open');
+            }
+            
+            // Add reset button listener
+            var newBookingBtn = document.getElementById('new-booking-btn');
+            if (newBookingBtn) {
+              newBookingBtn.addEventListener('click', function(evt) {
+                evt.preventDefault();
+                evt.stopPropagation();
+                
+                // Clear feedback and reset form
+                feedback.innerHTML = '';
+                
+                // Reset booking state
+                bookingState.selectedDate = null;
+                bookingState.selectedSlot = null;
+                
+                // Re-render calendar
+                renderCalendar();
+                
+                // Keep tile open
+                if (tile) {
+                  tile.classList.add('tile--open');
+                }
+              });
             }
           });
         }
