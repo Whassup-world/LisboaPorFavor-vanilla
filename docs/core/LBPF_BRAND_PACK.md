@@ -206,6 +206,45 @@ Implementation note: radii and shadows are applied consistently to keep the site
 
 ---
 
+## 6. Component Standards
+
+### 6.1 Tour Cards (Benchmark Layout - Jan 31, 2026)
+
+**Structure:**
+```
+.tour-card (flexbox column, height: 100%)
+  └─ .tour-card-image (180px height, object-fit: contain)
+  └─ .tour-card-content (padding: 1rem 1.5rem 1.5rem)
+      ├─ h4 (tour name, center-aligned)
+      ├─ .tour-category (center-aligned, italic)
+      ├─ .tour-meta (duration/capacity, center-aligned)
+      ├─ .tour-description (left-aligned, flex-grow: 1)
+      └─ .tour-btn (width: 100%, margin-top: auto)
+```
+
+**Text Boundaries:**
+- Text starts 1.5rem from left edge (right of boundary line)
+- Text cannot extend beyond CTA borders on right side
+- All child elements have `margin: 0` on left/right
+- Container padding controls all spacing
+
+**Image Specifications:**
+- **Recommended:** 16:9 landscape (640×360px or 800×450px)
+- **Alternative:** 3:2 landscape (600×400px)
+- **Avoid:** Portrait orientation (creates awkward letterboxing)
+
+**Visual Hierarchy:**
+1. Image (zoomed to show full composition)
+2. Tour name (h4, bold, center)
+3. Category (italic, secondary color, center)
+4. Duration & capacity (secondary color, center)
+5. Description (grows to fill space, left-aligned)
+6. CTA button (pushed to bottom, gold background)
+
+This layout is the **standard benchmark** for all tour card implementations across the LBPF platform.
+
+---
+
 ## 5. How this maps to implementation
 
 1. **Vanilla CSS**  

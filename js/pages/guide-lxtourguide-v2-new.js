@@ -254,10 +254,77 @@
             feedback.style.color = '#d32f2f';
             return;
           }
-          feedback.textContent = 'Request submitted! George will confirm within 6 hours.';
-          feedback.style.color = 'green';
+          
+          // Show order summary
+          showOrderSummary();
         }
       });
+    }
+    
+    function showOrderSummary() {
+      var tourSelect = document.getElementById('booking-tour');
+      var guestsInput = document.getElementById('booking-guests');
+      var childrenInput = document.getElementById('booking-children');
+      var bikeExp = document.getElementById('booking-bike-experience');
+      var heightCm = document.getElementById('booking-height-cm');
+      var restrictions = document.getElementById('booking-restrictions');
+      
+      var tourName = tourSelect ? tourSelect.options[tourSelect.selectedIndex].text : 'N/A';
+      var guests = guestsInput ? guestsInput.value : '0';
+      var children = childrenInput ? childrenInput.value : '0';
+      var bikeExpText = bikeExp ? bikeExp.options[bikeExp.selectedIndex].text : 'N/A';
+      var heightText = heightCm && heightCm.value ? heightCm.value + ' cm' : 'Not specified';
+      var restrictionsText = restrictions && restrictions.value ? restrictions.value : 'None';
+      
+      var baseDate = bookingState.monthDate instanceof Date ? bookingState.monthDate : new Date();
+      var year = baseDate.getFullYear();
+      var monthIndex = baseDate.getMonth();
+      var d = new Date(year, monthIndex, bookingState.selectedDate);
+      var dateLabel = d.toLocaleDateString(undefined, {
+        weekday: 'long',
+        day: 'numeric',
+        month: 'long',
+        year: 'numeric'
+      });
+      var slotLabel = getSlotLabel(bookingState.selectedSlot);
+      
+      var summaryHTML = '<div style="background: var(--lbpf-neutral-50); border: 2px solid var(--lx-gold); border-radius: 12px; padding: 1.5rem; margin: 1rem 0;">' +
+        '<h3 style="margin: 0 0 1rem 0; text-align: center; color: var(--text-primary);">Review Your Booking</h3>' +
+        '<div style="display: grid; gap: 0.75rem; font-size: 0.9rem;">' +
+        '<div><strong>Tour:</strong> ' + tourName + '</div>' +
+        '<div><strong>Date & Time:</strong> ' + dateLabel + ' — ' + slotLabel + '</div>' +
+        '<div><strong>Guests:</strong> ' + guests + ' adults, ' + children + ' children</div>' +
+        '<div><strong>Bike Experience:</strong> ' + bikeExpText + '</div>' +
+        '<div><strong>Height:</strong> ' + heightText + '</div>' +
+        '<div><strong>Notes/Restrictions:</strong> ' + restrictionsText + '</div>' +
+        '</div>' +
+        '<div style="display: flex; gap: 1rem; margin-top: 1.5rem; justify-content: center;">' +
+        '<button type="button" id="edit-booking-btn" style="padding: 0.6rem 1.5rem; background: var(--lbpf-neutral-300); color: var(--text-primary); border: none; border-radius: 8px; font-weight: 600; cursor: pointer;">Edit</button>' +
+        '<button type="button" id="confirm-booking-btn" style="padding: 0.6rem 2rem; background: var(--lx-gold); color: var(--pt-white); border: none; border-radius: 8px; font-weight: 600; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">Confirm & Request</button>' +
+        '</div>' +
+        '</div>';
+      
+      var feedback = document.getElementById('booking-feedback');
+      if (feedback) {
+        feedback.innerHTML = summaryHTML;
+        feedback.style.color = 'inherit';
+        
+        // Add event listeners
+        var editBtn = document.getElementById('edit-booking-btn');
+        var confirmBtn = document.getElementById('confirm-booking-btn');
+        
+        if (editBtn) {
+          editBtn.addEventListener('click', function() {
+            feedback.innerHTML = '';
+          });
+        }
+        
+        if (confirmBtn) {
+          confirmBtn.addEventListener('click', function() {
+            feedback.innerHTML = '<p style="color: green; font-weight: 600; text-align: center; margin: 1rem 0;">✓ Request submitted! George will confirm within 6 hours.</p>';
+          });
+        }
+      }
     }
   }
 

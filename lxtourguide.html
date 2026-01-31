@@ -92,8 +92,8 @@
                   <h4>Alfama Vintage Market Walking tour with tastings</h4>
                   <p class="tour-category">Walking tour – Food, market & culture</p>
                   <p class="tour-meta">3 hours · max 8 guests</p>
-                  <p class="tour-description">Your bespoke walking route through Alfama's markets and miradouros with local tastings.</p>
-                  <a href="#tile-availability" class="tour-btn" onclick="event.preventDefault(); document.querySelector('.tile-availability').scrollIntoView({behavior: 'smooth'});">See available dates</a>
+                  <p class="tour-description">Your bespoke walking route through Alfama's historic markets and scenic miradouros. Experience authentic local tastings at hidden gems. Discover vintage tiles, traditional crafts, and neighborhood stories. Perfect for food lovers and culture enthusiasts. Small groups ensure personalized attention.<br><em style="font-size: 0.85em; color: var(--text-secondary);">Full details sent after booking.</em></p>
+                  <a href="#tile-availability" class="tour-btn" onclick="event.preventDefault(); var tile = document.querySelector('.tile-availability'); tile.classList.add('tile--open'); tile.scrollIntoView({behavior: 'smooth', block: 'start'});">See available dates</a>
                 </div>
               </div>
               <div class="tour-card">
@@ -102,8 +102,8 @@
                   <h4>Belem Classic Bike Tour</h4>
                   <p class="tour-category">Bike tour – Monuments & riverside</p>
                   <p class="tour-meta">2.5–3 hours · max 12 guests</p>
-                  <p class="tour-description">Riverside cycling to Belém's monuments with safe, flat paths.</p>
-                  <a href="#tile-availability" class="tour-btn" onclick="event.preventDefault(); document.querySelector('.tile-availability').scrollIntoView({behavior: 'smooth'});">See available dates</a>
+                  <p class="tour-description">Riverside cycling adventure to Belém's iconic monuments along safe, flat paths. Visit the Tower of Belém, Jerónimos Monastery, and Monument to the Discoveries. Enjoy scenic waterfront views and photo stops. Taste the famous pastéis de Belém. Suitable for all cycling levels.<br><em style="font-size: 0.85em; color: var(--text-secondary);">Full details sent after booking.</em></p>
+                  <a href="#tile-availability" class="tour-btn" onclick="event.preventDefault(); var tile = document.querySelector('.tile-availability'); tile.classList.add('tile--open'); tile.scrollIntoView({behavior: 'smooth', block: 'start'});">See available dates</a>
                 </div>
               </div>
               <div class="tour-card">
@@ -112,8 +112,8 @@
                   <h4>Electric Bike Tour "Up the Hill"</h4>
                   <p class="tour-category">E-bike tour – Hills & viewpoints</p>
                   <p class="tour-meta">3–3.5 hours · max 10 guests</p>
-                  <p class="tour-description">Conquer Lisbon's seven hills effortlessly with e-bikes. Stunning viewpoints and hidden neighborhoods.</p>
-                  <a href="#tile-availability" class="tour-btn" onclick="event.preventDefault(); document.querySelector('.tile-availability').scrollIntoView({behavior: 'smooth'});">See available dates</a>
+                  <p class="tour-description">Conquer Lisbon's legendary seven hills effortlessly with premium e-bikes. Reach stunning viewpoints like Graça and Senhora do Monte. Explore hidden neighborhoods locals love. Capture panoramic city and river views. No fitness level required – the e-bike does the work.<br><em style="font-size: 0.85em; color: var(--text-secondary);">Full details sent after booking.</em></p>
+                  <a href="#tile-availability" class="tour-btn" onclick="event.preventDefault(); var tile = document.querySelector('.tile-availability'); tile.classList.add('tile--open'); tile.scrollIntoView({behavior: 'smooth', block: 'start'});">See available dates</a>
                 </div>
               </div>
               <div class="tour-card">
@@ -122,8 +122,8 @@
                   <h4>Private Custom Tour</h4>
                   <p class="tour-category">Custom tour – Your choice</p>
                   <p class="tour-meta">Flexible duration · your group only</p>
-                  <p class="tour-description">Design your perfect Lisbon experience. Walking, biking, or combined. Your interests, your pace.</p>
-                  <a href="#tile-availability" class="tour-btn" onclick="event.preventDefault(); document.querySelector('.tile-availability').scrollIntoView({behavior: 'smooth'});">See available dates</a>
+                  <p class="tour-description">Design your perfect Lisbon experience tailored to your interests. Choose walking, biking, or a combination of both. Focus on food, history, photography, or local life. Set your own pace and schedule. Completely private – just you and your group.<br><em style="font-size: 0.85em; color: var(--text-secondary);">Full details sent after booking.</em></p>
+                  <a href="#tile-availability" class="tour-btn" onclick="event.preventDefault(); var tile = document.querySelector('.tile-availability'); tile.classList.add('tile--open'); tile.scrollIntoView({behavior: 'smooth', block: 'start'});">See available dates</a>
                 </div>
               </div>
             </div>
@@ -144,33 +144,44 @@
                 <button type="button" class="calendar-nav-btn" id="calendar-next">&#8250;</button>
               </div>
               <div class="calendar-grid" id="calendar-grid"></div>
+              <div class="calendar-legend" style="margin-top: 1rem; padding: 0.75rem; background: var(--lbpf-neutral-100); border-radius: 8px; font-size: 0.85rem; color: var(--text-secondary);">
+                <strong style="color: var(--text-primary);">Legend:</strong> 
+                <span style="margin-left: 0.5rem;"><strong>AM</strong> = Morning</span> · 
+                <span><strong>PM</strong> = Afternoon</span> · 
+                <span><strong>Eve</strong> = Evening</span> · 
+                <span><strong>Priv</strong> = Private booking</span>
+              </div>
             </div>
             <div class="booking-controls">
-              <label class="field">
-                <span class="field-label">Choose tour</span>
-                <select id="booking-tour"></select>
-              </label>
-              <label class="field">
-                <span class="field-label">Guests</span>
-                <input type="number" id="booking-guests" min="1" max="12" value="2">
-              </label>
-              <label class="field">
-                <span class="field-label">Children</span>
-                <input type="number" id="booking-children" min="0" max="12" value="0">
-              </label>
-              <div class="field">
-                <span class="field-label">Selected slot</span>
-                <div class="selected-slot" id="selected-slot-label">Pick a date & slot in the calendar</div>
+              <div class="booking-row" style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+                <label class="field" style="margin: 0;">
+                  <span class="field-label">Choose tour</span>
+                  <select id="booking-tour"></select>
+                </label>
+                <label class="field" style="margin: 0;">
+                  <span class="field-label">Guests</span>
+                  <input type="number" id="booking-guests" min="1" max="12" value="2">
+                </label>
+                <label class="field" style="margin: 0;">
+                  <span class="field-label">Children</span>
+                  <input type="number" id="booking-children" min="0" max="12" value="0">
+                </label>
               </div>
-              <label class="field">
-                <span class="field-label">Bike experience</span>
-                <select id="booking-bike-experience">
-                  <option value="">Not applicable / unsure</option>
-                  <option value="beginner">Beginner</option>
-                  <option value="intermediate">Intermediate</option>
-                  <option value="experienced">Experienced</option>
-                </select>
-              </label>
+              <div class="booking-row" style="display: grid; grid-template-columns: 2fr 2fr; gap: 1rem; margin-bottom: 1rem;">
+                <div class="field" style="margin: 0;">
+                  <span class="field-label">Selected slot</span>
+                  <div class="selected-slot" id="selected-slot-label">Pick a date & slot in the calendar</div>
+                </div>
+                <label class="field" style="margin: 0;">
+                  <span class="field-label">Bike experience</span>
+                  <select id="booking-bike-experience">
+                    <option value="">Not applicable / unsure</option>
+                    <option value="beginner">Beginner</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="experienced">Experienced</option>
+                  </select>
+                </label>
+              </div>
               <label class="field">
                 <span class="field-label">Bike size / height (cm)</span>
                 <input type="number" id="booking-height-cm" min="80" max="230" placeholder="e.g. 175">
@@ -181,6 +192,7 @@
               </label>
               <div class="field">
                 <span class="field-label">Quick picks</span>
+                <p style="margin: 0 0 0.5rem 0; font-size: 0.85rem; color: var(--text-secondary); font-style: italic;">Click to add common preferences to your notes below</p>
                 <div class="restriction-pills" id="restriction-pills">
                   <button type="button" class="restriction-pill" data-value="No hills">No hills</button>
                   <button type="button" class="restriction-pill" data-value="Flat route">Flat route</button>
@@ -190,8 +202,11 @@
                   <button type="button" class="restriction-pill" data-value="Kid-friendly">Kid-friendly</button>
                 </div>
               </div>
-              <button type="button" class="booking-btn" id="booking-request-btn">Request confirmation / info</button>
+              <div style="text-align: center;">
+                <button type="button" class="booking-btn" id="booking-request-btn">Request confirmation / info</button>
+              </div>
               <p class="request-note" id="booking-feedback"></p>
+              <p style="text-align: center; margin-top: 0.5rem; font-size: 0.85rem; color: var(--text-secondary); font-style: italic;">Book multiple dates? Submit this, then book again.</p>
             </div>
           </div>
         </div>
