@@ -1,0 +1,77 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2026-01-31T18:30:00Z",
+  "rotation": {
+    "enabled": true,
+    "interval": 8000,
+    "transition": "fade",
+    "transitionDuration": 1000,
+    "images": [
+      {
+        "id": "alfama-sunset",
+        "url": "images/_rawslug/Parc-Eduardo.jpg",
+        "alt": "Alfama district at golden hour",
+        "credit": "LisboaPorFavor",
+        "overlay": {
+          "enabled": false,
+          "title": "Discover Alfama",
+          "subtitle": "Historic heart of Lisbon",
+          "cta": "",
+          "link": ""
+        }
+      },
+      {
+        "id": "belem-tower",
+        "url": "images/_rawslug/cais-das-colunas-view.webp",
+        "alt": "Belém Tower riverside view",
+        "credit": "LisboaPorFavor",
+        "overlay": {
+          "enabled": false,
+          "title": "",
+          "subtitle": "",
+          "cta": "",
+          "link": ""
+        }
+      },
+      {
+        "id": "tram-28",
+        "url": "images/_rawslug/Parc-Eduardo.jpg",
+        "alt": "Iconic Tram 28 through Lisbon streets",
+        "credit": "LisboaPorFavor",
+        "overlay": {
+          "enabled": false,
+          "title": "",
+          "subtitle": "",
+          "cta": "",
+          "link": ""
+        }
+      }
+    ]
+  },
+  "dailyRotation": {
+    "enabled": false,
+    "schedule": [
+      {"day": "monday", "imageId": "alfama-sunset"},
+      {"day": "tuesday", "imageId": "belem-tower"},
+      {"day": "wednesday", "imageId": "tram-28"},
+      {"day": "thursday", "imageId": "alfama-sunset"},
+      {"day": "friday", "imageId": "belem-tower"},
+      {"day": "saturday", "imageId": "tram-28"},
+      {"day": "sunday", "imageId": "alfama-sunset"}
+    ]
+  },
+  "fallback": {
+    "url": "images/_rawslug/Parc-Eduardo.jpg",
+    "alt": "Scenic view of Lisbon"
+  },
+  "performance": {
+    "preloadFirst": true,
+    "lazyLoadRest": true,
+    "maxImageSize": 204800
+  },
+  "notes": {
+    "mvp": "MVP uses 3 placeholder images. Replace with professional Lisbon photos before launch.",
+    "phase1": "Add 4-5 more images and enable overlay system for March 2026.",
+    "phase2": "Add video backgrounds and UGC integration for Q2 2026."
+  }
+}

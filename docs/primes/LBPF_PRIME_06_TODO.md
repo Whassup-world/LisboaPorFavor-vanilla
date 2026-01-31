@@ -77,6 +77,50 @@
 3.3.6  Due by: 2026-02-01
 3.3.7  Lane: INBOX
 
+3.4.0  TODO ITEM
+3.4.1  Title: Hero Image System - MVP Implementation (End Feb 2026)
+3.4.2  Description: Implement dynamic hero image system for guide pages with carousel and mobile-first design
+3.4.3  Actions:
+3.4.4  - Create /data/hero-config.json with 7 daily rotation images
+3.4.5  - Create /js/hero-manager.js with carousel logic (3-5 images, 8s intervals, fade transitions)
+3.4.6  - Update lxtourguide.html to use dynamic hero system
+3.4.7  - Add CSS for smooth transitions and overlays
+3.4.8  - Test mobile responsiveness (320px, 481px, 769px, 1025px, 1440px+)
+3.4.9  - Optimize images (WebP + JPEG fallback, <200KB each)
+3.4.10 Priority: HIGH
+3.4.11 Created: 2026-01-31
+3.4.12 Due by: 2026-02-28 (MVP Launch)
+3.4.13 Lane: INBOX
+3.4.14 Reference: LBPF_TOOLS_AND_SPECS.md section 0.0.0
+
+3.5.0  TODO ITEM
+3.5.1  Title: Hero Image System - Phase 1 (March 2026 - First Client Tour)
+3.5.2  Description: Add dynamic overlays and UGC workflow for first tour
+3.5.3  Actions:
+3.5.4  - Implement dynamic overlay system for offers/promotions
+3.5.5  - Create UGC submission workflow (guide tour reports)
+3.5.6  - Build client photo album generation (manual process)
+3.5.7  - Add structured data markup for SEO
+3.5.8  Priority: MEDIUM
+3.5.9  Created: 2026-01-31
+3.5.10 Due by: 2026-03-15
+3.5.11 Lane: INBOX
+3.5.12 Reference: LBPF_TOOLS_AND_SPECS.md section 0.5.0
+
+3.6.0  TODO ITEM
+3.6.1  Title: Hero Image System - Phase 2 (Q2 2026)
+3.6.2  Description: Add video backgrounds and AI-powered photo sorting
+3.6.3  Actions:
+3.6.4  - Implement video background support (desktop only, mobile fallback to images)
+3.6.5  - Build AI-powered photo sorting (A: Website, B: Social Media, C: Client Albums)
+3.6.6  - Automate photo album generation
+3.6.7  - Add A/B testing for hero effectiveness
+3.6.8  Priority: LOW
+3.6.9  Created: 2026-01-31
+3.6.10 Due by: 2026-06-30
+3.6.11 Lane: DEFERRED
+3.6.12 Reference: LBPF_TOOLS_AND_SPECS.md section 0.5.0
+
 ---
 
 4.0.0  ACTIVE

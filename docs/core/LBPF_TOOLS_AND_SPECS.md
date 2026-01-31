@@ -2,10 +2,11 @@
 
 1.0.1  Metadata Field           Core - Tools and Specs
 1.0.2  Title                    LBPF_TOOLS_AND_SPECS.md
-1.0.3  Version                  V1.2.0
-1.0.4  Version History          2026-01-31: Imported Bootstrap archive content (Bokun booking engine integration plan, API specs, security)
+1.0.3  Version                  V1.3.0
+1.0.4  Version History          2026-01-31: Added Hero Image System (SEO analysis, carousel strategy, UGC workflow, implementation phases)
+                                2026-01-31: Imported Bootstrap archive content (Bokun booking engine integration plan, API specs, security)
                                 2026-01-31: Initial creation from TOBE Core structure
-1.0.5  Date Modified            2026-01-31 @ 15.52 hour
+1.0.5  Date Modified            2026-01-31 @ 18.22 hour
 1.0.6  Date Created             2026-01-31 @ 14.08 hour
 1.0.7  File Type                MD
 1.0.8  Tags                     lbpf, tools, specs, apis, bokun, booking-engine, integration
@@ -18,6 +19,245 @@
 1.0.15 Remote mirror            GitHub: Whassup-world/LisboaPorFavor-vanilla
 
 **END METADATA**
+
+---
+
+## 0.0.0 HERO IMAGE SYSTEM
+
+### 0.1.0 SEO PENALTY ANALYSIS (CRITICAL)
+
+**Decision:** Synced hero images across all guide pages with no delay
+
+**SEO Impact Assessment:**
+
+| Factor | Impact | Explanation |
+|--------|--------|-------------|
+| **Background images** | ✅ No penalty | Not indexed as page content |
+| **Identical hero across pages** | ✅ No penalty | Content (text) is unique per guide |
+| **JavaScript-loaded images** | ✅ No penalty | Google renders JS, sees final image |
+| **Daily image changes** | ✅ Positive | Fresh content signal |
+| **Image alt text** | ⚠️ Important | Must be unique per guide or generic |
+
+**What Google DOES Penalize:**
+- ❌ Duplicate text content (bio, tours, reviews)
+- ❌ Thin content (too little unique text)
+- ❌ Keyword stuffing
+- ❌ Cloaking (showing different content to crawlers vs users)
+
+**What Google IGNORES:**
+- ✅ Decorative background images
+- ✅ CSS styling similarities
+- ✅ Shared navigation/footer
+- ✅ Brand elements (logos, colors)
+
+**Conclusion:** Zero SEO penalty risk. Focus on maximizing uniqueness and professionalism through:
+1. Unique guide bios and tour descriptions
+2. High-quality, professional hero images
+3. Detailed, specific content per guide
+4. Structured data markup
+5. Fast loading times
+
+**SEO Score: 10/10 - Zero penalty risk**
+
+---
+
+### 0.2.0 HERO + TEXT OVERLAY SYSTEM
+
+**Purpose:** Sync hero images with dynamic offers/information
+
+**Use Cases:**
+- Seasonal campaigns ("Summer Special - 20% off")
+- Event promotions ("Lisbon Light Festival Week")
+- Flash sales ("48-hour discount")
+- Contextual info ("Rainy Day? Try Our Indoor Food Tour")
+
+**Technical Implementation:**
+```javascript
+// data/hero-config.json
+{
+  "currentHero": {
+    "image": "images/_rawslug/Alfama-sunset.jpg",
+    "overlay": {
+      "title": "Summer Special",
+      "subtitle": "20% off all walking tours this week",
+      "cta": "Book Now",
+      "link": "/tours?promo=summer20"
+    }
+  }
+}
+```
+
+**Marketing Benefits:**
+- 🎯 Coordinated messaging across all guide pages
+- 🎯 Instant campaign updates (change 1 file, all pages update)
+- 🎯 A/B testing capability
+- 🎯 SEO benefit: overlay text IS indexed by Google
+
+---
+
+### 0.3.0 AUTO-ROTATING HERO SYSTEM
+
+**Selected Strategy:** Multi-Image Carousel (Option A) with Video Preparation (Option B)
+
+**Phase 1 (MVP - Feb 2026):**
+- Multi-image carousel with 3-5 professional photos
+- 8-second intervals with smooth fade transitions
+- Showcases different Lisbon scenes per guide page load
+- Fallback to static image if JavaScript disabled
+
+**Phase 2 (Post-Launch - Q2 2026):**
+- Add video backgrounds for desktop users
+- Mobile: image carousel (data-friendly)
+- Desktop: video option with image fallback
+- Browser detection for optimal format
+
+**Technical Stack:**
+```
+/data/hero-config.json          → Central configuration
+/images/_rawslug/               → Professional photos (7 daily rotation)
+/images/carousel/               → Carousel-specific images (3-5 per page)
+/videos/hero/                   → Video backgrounds (future)
+/js/hero-manager.js             → Rotation & sync logic
+```
+
+**Carousel Configuration:**
+```javascript
+{
+  "rotation": {
+    "interval": 8000,
+    "transition": "fade",
+    "images": [
+      {
+        "url": "images/_rawslug/Alfama-sunset.jpg",
+        "alt": "Alfama at golden hour",
+        "overlay": {
+          "title": "Discover Alfama",
+          "subtitle": "Historic heart of Lisbon"
+        }
+      },
+      {
+        "url": "images/_rawslug/Belem-tower.jpg",
+        "alt": "Belém Tower riverside"
+      },
+      {
+        "url": "images/_rawslug/Tram28.jpg",
+        "alt": "Iconic Tram 28"
+      }
+    ]
+  }
+}
+```
+
+---
+
+### 0.4.0 UGC INTEGRATION WORKFLOW
+
+**Purpose:** User-generated content for hero images and photo albums
+
+**Content Sources:**
+1. **Post-tour submissions** - Clients share photos for website feature
+2. **Guide tour reports** - Mandatory submission of tour images/videos
+3. **Instagram hashtag** - `#LisboaPorFavorTours`
+4. **Review photos** - From booking confirmation emails
+
+**AI-Powered Sorting System (Future):**
+```
+Tour Report Submission (Guide + Client photos/videos)
+         ↓
+    AI Analysis
+         ↓
+    ├─→ A) Website hero/gallery (quality, composition, lighting)
+    ├─→ B) Social Media posts (engagement potential, storytelling)
+    └─→ C) Client photo album (all tour moments, downloadable)
+```
+
+**Client Photo Album:**
+- Downloadable PDF/ZIP from guide page
+- Includes: guide photos + client photos + tour highlights
+- Branded with LisboaPorFavor watermark
+- Reward for booking through platform
+
+**Legal Requirements:**
+- Photo release form signed at booking
+- Credit photographer on website display
+- Curate for quality and brand safety
+- Moderate before publication
+
+**Quality Control:**
+- Professional photos: immediate use
+- UGC photos: review queue → approval → publication
+- Video content: compress, optimize, test across devices
+
+---
+
+### 0.5.0 IMPLEMENTATION PHASES
+
+**MVP Launch: End February 2026**
+- ✅ Static hero image system (7 daily rotation)
+- ✅ Centralized JSON configuration
+- ✅ Mobile-first responsive design
+- ✅ Basic fade transitions
+
+**Phase 1: March 2026 (First Client Tour)**
+- ✅ Multi-image carousel (3-5 images per page)
+- ✅ Dynamic overlay system for offers
+- ✅ UGC submission workflow (guide tour reports)
+- ✅ Client photo album generation (manual)
+
+**Phase 2: Q2 2026**
+- ✅ Video background support (desktop)
+- ✅ AI-powered photo sorting (A/B/C categories)
+- ✅ Automated photo album generation
+- ✅ A/B testing for hero effectiveness
+
+**Phase 3: Q3 2026**
+- ✅ Full UGC integration (Instagram, reviews)
+- ✅ Seasonal campaign automation
+- ✅ Advanced analytics (hero engagement tracking)
+- ✅ White-label hero system for partner agencies
+
+---
+
+### 0.6.0 SEO OPTIMIZATION STRATEGY
+
+**To Maximize SEO with Dynamic Heroes:**
+
+**1. Structured Data:**
+```html
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TouristAttraction",
+  "name": "LXTourguide - Lisbon Tours",
+  "image": [
+    "https://lisboaporfavor.com/images/_rawslug/Alfama-sunset.jpg",
+    "https://lisboaporfavor.com/images/_rawslug/Belem-tower.jpg"
+  ]
+}
+</script>
+```
+
+**2. Image Optimization:**
+- WebP format with JPEG fallback
+- Lazy loading below fold
+- Responsive images (srcset)
+- Descriptive filenames: `alfama-sunset-golden-hour-lisbon.jpg`
+- Compress to <200KB per image
+
+**3. Alt Text Strategy:**
+```html
+<!-- Generic for hero (not indexed) -->
+<div class="hero-section" role="img" aria-label="Scenic view of Lisbon"></div>
+
+<!-- Specific for content images (indexed) -->
+<img src="tour-photo.jpg" alt="LXTourguide leading group through Alfama district">
+```
+
+**4. Performance Metrics:**
+- Target: <2s hero image load time
+- Preload first carousel image
+- Lazy load subsequent images
+- Use CDN for image delivery (future: Cloudflare R2)
 
 ---
 

@@ -2,6 +2,7 @@
    Hero section: 3 equal columns, centered
    Tiles section: grid layout
    No bento framework
+   Mobile-first responsive design for smartphone viewing
 */
 
 :root {
@@ -9,6 +10,14 @@
   --hero-height: 100vh;
   --hero-gap: 1rem;
 }
+
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+/* Mobile-first approach: base styles are for smallest screens */
+/* 320x480px  - Small smartphones (base/default) */
+/* 481x768px  - Medium smartphones & small tablets */
+/* 769x1024px - Tablets & landscape phones */
+/* 1025x1440px - Small desktops & large tablets */
+/* 1440x2560px+ - Large desktops */
 
 .wip-banner {
   display: inline-block;
@@ -34,6 +43,72 @@
   background: var(--hero-bg-image) center / cover no-repeat fixed;
   background-attachment: fixed;
   z-index: -1;
+  transition: background-image 1s ease-in-out;
+}
+
+/* Hero Overlay System */
+.hero-overlay {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: var(--pt-white);
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  padding: 2rem 3rem;
+  border-radius: 16px;
+  max-width: 90%;
+  display: none;
+  z-index: 10;
+}
+
+.hero-overlay-title {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-overlay-subtitle {
+  font-size: 1.1rem;
+  margin: 0 0 1.5rem;
+  opacity: 0.95;
+}
+
+.hero-overlay-cta {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background: var(--lx-gold);
+  color: var(--text-primary);
+  text-decoration: none;
+  border-radius: var(--lbpf-radius-pill);
+  font-weight: 600;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.hero-overlay-cta:hover {
+  background: var(--pt-white);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Mobile overlay adjustments */
+@media (max-width: 768px) {
+  .hero-overlay {
+    padding: 1.5rem 2rem;
+    bottom: 15%;
+  }
+  
+  .hero-overlay-title {
+    font-size: 1.5rem;
+  }
+  
+  .hero-overlay-subtitle {
+    font-size: 0.95rem;
+  }
 }
 
 .tile-hero {
@@ -71,7 +146,59 @@
   margin-bottom: 0.5rem;
 }
 
-/* Desktop: 3 columns grid (avatar | center | logo) - responsive with clamp */
+/* ===== MOBILE RESPONSIVE BREAKPOINTS ===== */
+
+/* Base: 320x480px - Small smartphones (default) */
+.hero-main {
+  padding: 0 0.5rem;
+}
+
+.hero-name {
+  font-size: 1.5rem;
+}
+
+.hero-tagline {
+  font-size: 0.75rem;
+}
+
+.logo-image {
+  width: 50px;
+}
+
+.avatar-box {
+  width: 80px;
+  height: 80px;
+}
+
+/* 481x768px - Medium smartphones & small tablets */
+@media (min-width: 481px) {
+  .hero-main {
+    padding: 0 1rem;
+  }
+  
+  .hero-name {
+    font-size: 1.6rem;
+  }
+  
+  .hero-tagline {
+    font-size: 0.8rem;
+  }
+  
+  .logo-image {
+    width: 55px;
+  }
+  
+  .avatar-box {
+    width: 90px;
+    height: 90px;
+  }
+  
+  .tile {
+    padding: 1.5rem;
+  }
+}
+
+/* 769x1024px - Tablets & landscape phones (3-column layout starts) */
 @media (min-width: 769px) {
   .hero-main {
     display: grid;
@@ -82,6 +209,68 @@
     margin-bottom: 0.75rem;
     margin-top: -1.25rem;
     width: 100%;
+    padding: 0;
+  }
+  
+  .hero-name {
+    font-size: 1.8rem;
+  }
+  
+  .hero-tagline {
+    font-size: 0.8rem;
+  }
+  
+  .logo-image {
+    width: 57px;
+  }
+  
+  .avatar-box {
+    width: 95px;
+    height: 95px;
+  }
+}
+
+/* 1025x1440px - Small desktops & large tablets */
+@media (min-width: 1025px) {
+  .hero-name {
+    font-size: 2rem;
+  }
+  
+  .hero-tagline {
+    font-size: 0.85rem;
+  }
+  
+  .logo-image {
+    width: 60px;
+  }
+  
+  .tile {
+    padding: 1.5rem 2rem;
+  }
+}
+
+/* 1440x2560px+ - Large desktops */
+@media (min-width: 1440px) {
+  .hero-main {
+    grid-template-columns: 1fr minmax(0, 520px) 1fr;
+    gap: 1.5rem;
+  }
+  
+  .hero-name {
+    font-size: 2.2rem;
+  }
+  
+  .hero-tagline {
+    font-size: 0.9rem;
+  }
+  
+  .logo-image {
+    width: 65px;
+  }
+  
+  .avatar-box {
+    width: 100px;
+    height: 100px;
   }
 }
 
