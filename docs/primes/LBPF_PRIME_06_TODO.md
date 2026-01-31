@@ -215,6 +215,49 @@
 3.9.28 Note: All 3 pages (lxtourguide, admin-guide, admin) must work together flawlessly
 3.9.29 Reference: admin.html, LBPF_BRAND_PACK.md
 
+3.10.0 TODO ITEM
+3.10.1 Title: Implement Tour Categorization & Indexing System
+3.10.2 Description: Create structured tour categorization for better navigation and SEO
+3.10.3 Current State: Tours now have category labels (e.g., "Walking tour – Food, market & culture")
+3.10.4 Required:
+3.10.5 - Define tour categories: Walking tours, Bike tours, E-bike tours, Custom tours
+3.10.6 - Add subcategories: Food & culture, Monuments & riverside, Hills & viewpoints, etc.
+3.10.7 - Create tour index/catalog page listing all tours by category
+3.10.8 - Add filtering/sorting by category, duration, group size
+3.10.9 - Implement SEO-friendly URL structure (e.g., /tours/walking/alfama-food-culture)
+3.10.10 Actions:
+3.10.11 - Design tour taxonomy (categories, subcategories, tags)
+3.10.12 - Create tour index page (tours.html or tours-catalog.html)
+3.10.13 - Add category metadata to tour landing pages
+3.10.14 - Implement filtering UI on tour index
+3.10.15 - Add structured data markup for tours (schema.org/TouristTrip)
+3.10.16 Priority: MEDIUM
+3.10.17 Created: 2026-01-31
+3.10.18 Due by: 2026-02-14
+3.10.19 Lane: INBOX
+3.10.20 Reference: Tour categorization system
+
+3.11.0 TODO ITEM
+3.11.1 Title: Add Breadcrumb Navigation System
+3.11.2 Description: Implement breadcrumb navigation for better UX and SEO
+3.11.3 Current State: No breadcrumb navigation on any pages
+3.11.4 Required:
+3.11.5 - Add breadcrumbs to all tour landing pages
+3.11.6 - Add breadcrumbs to guide pages
+3.11.7 - Format: Home > Tours > [Category] > [Tour Name]
+3.11.8 - Example: Home > Tours > Walking Tours > Alfama Vintage Market Walking tour with tastings
+3.11.9 Actions:
+3.11.10 - Design breadcrumb component (HTML + CSS)
+3.11.11 - Add breadcrumb to tour landing page template
+3.11.12 - Add breadcrumb to guide page template
+3.11.13 - Implement breadcrumb structured data (schema.org/BreadcrumbList)
+3.11.14 - Ensure mobile-responsive breadcrumb design
+3.11.15 Priority: MEDIUM
+3.11.16 Created: 2026-01-31
+3.11.17 Due by: 2026-02-14
+3.11.18 Lane: INBOX
+3.11.19 Reference: Breadcrumb navigation
+
 ---
 
 4.0.0  ACTIVE

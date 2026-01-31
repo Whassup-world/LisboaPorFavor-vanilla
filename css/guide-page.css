@@ -624,7 +624,7 @@
 }
 
 .tour-card h4 {
-  margin: 1rem 1rem 0.5rem;
+  margin: 1rem 1.5rem 0.5rem;
   font-size: 1rem;
   font-weight: 600;
   color: var(--text-primary);
@@ -632,7 +632,7 @@
 }
 
 .tour-meta {
-  margin: 0 1rem 0.75rem;
+  margin: 0 1.5rem 0.75rem;
   font-size: 0.85rem;
   color: var(--text-secondary);
   font-weight: 500;
@@ -640,7 +640,7 @@
 }
 
 .tour-description {
-  margin: 0 1rem 1rem;
+  margin: 0 1.5rem 1rem;
   font-size: 0.9rem;
   color: var(--text-secondary);
   line-height: 1.5;
@@ -650,8 +650,8 @@
 
 .tour-btn {
   display: block;
-  width: calc(100% - 2rem);
-  margin: 0 1rem 1rem;
+  width: calc(100% - 3rem);
+  margin: 0 1.5rem 1.5rem;
   padding: 0.6rem 1rem;
   background: var(--lx-gold);
   color: var(--pt-white);
@@ -662,11 +662,15 @@
   cursor: pointer;
   transition: all 0.2s ease;
   margin-top: auto;
+  text-decoration: none;
+  text-align: center;
+  box-sizing: border-box;
 }
 
 .tour-btn:hover {
   background: #c9a855;
   box-shadow: 0 2px 8px rgba(212, 175, 55, 0.3);
+  color: var(--pt-white);
 }
 
 /* Calendar Styles */
