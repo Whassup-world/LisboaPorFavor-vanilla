@@ -637,10 +637,9 @@
   font-weight: 600;
   color: var(--text-primary);
   text-align: center;
-  min-height: 2.4em;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
+  min-height: 2.5em;
+  line-height: 1.25;
+  display: block;
 }
 
 .tour-category {
@@ -857,6 +856,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.15rem;
+  cursor: default;
 }
 
 .field-label {

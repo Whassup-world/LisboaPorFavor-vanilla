@@ -367,6 +367,27 @@
                 bookingState.selectedDate = null;
                 bookingState.selectedSlot = null;
                 
+                // Reset form inputs
+                var tourSelect = document.getElementById('booking-tour');
+                var guestsInput = document.getElementById('booking-guests');
+                var childrenInput = document.getElementById('booking-children');
+                var bikeExp = document.getElementById('booking-bike-experience');
+                var heightCm = document.getElementById('booking-height-cm');
+                var restrictions = document.getElementById('booking-restrictions');
+                
+                if (tourSelect) tourSelect.selectedIndex = 0;
+                if (guestsInput) guestsInput.value = '2';
+                if (childrenInput) childrenInput.value = '0';
+                if (bikeExp) bikeExp.selectedIndex = 0;
+                if (heightCm) heightCm.value = '';
+                if (restrictions) restrictions.value = '';
+                
+                // Clear active restriction pills
+                var pills = document.querySelectorAll('.restriction-pill');
+                pills.forEach(function(pill) {
+                  pill.classList.remove('restriction-pill-active');
+                });
+                
                 // Re-render calendar
                 renderCalendar();
                 
