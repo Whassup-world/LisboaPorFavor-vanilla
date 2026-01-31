@@ -2,14 +2,15 @@
 
 1.0.1  Metadata Field           Core - Business Plan
 1.0.2  Title                    LBPF_BUSINESS_PLAN.md
-1.0.3  Version                  V1.2.0
-1.0.4  Version History          2026-01-31: Added metadata section, imported Bootstrap archive content (SEO, revenue, metrics)
+1.0.3  Version                  V1.3.0
+1.0.4  Version History          2026-01-31: Restructured with Write Once Fill All approach - added placeholders and cross-references to Marketing/Financial/Tools files
+                                2026-01-31: Added metadata section, imported Bootstrap archive content (SEO, revenue, metrics)
                                 2026-01-30: Initial creation
-1.0.5  Date Modified            2026-01-31 @ 15.52 hour
+1.0.5  Date Modified            2026-01-31 @ 16.06 hour
 1.0.6  Date Created             2026-01-30 @ 14.05 hour
 1.0.7  File Type                MD
-1.0.8  Tags                     lbpf, business-plan, strategy, revenue, seo
-1.0.9  Description              Comprehensive business plan including vision, three-tier system, strategic goals, revenue model, SEO strategy, content library, and success metrics
+1.0.8  Tags                     lbpf, business-plan, strategy, revenue, seo, write-once-fill-all
+1.0.9  Description              Master business plan with cross-references to specialized Core files. Uses Write Once Fill All principle - content synced across LBPF_MARKETING_AND_SM.md, LBPF_FINANCIAL_BUSINESS_PLAN.md, and LBPF_TOOLS_AND_SPECS.md
 1.0.10 Source                   USER + Bootstrap Archive Import
 1.0.11 Confidentiality Level    INTERNAL
 1.0.12 Owner                    USER
@@ -22,9 +23,6 @@
 ---
 
 # LBPF Business Plan
-
-**Last updated:** 2026-01-31  
-**Version:** V1.2.0
 
 ---
 
@@ -83,6 +81,8 @@ It's a comprehensive **Guide Training Academy + Marketplace** that connects qual
 
 ## 4. Revenue Model
 
+**→ See LBPF_FINANCIAL_BUSINESS_PLAN.md for detailed financial projections**
+
 ### **Primary Revenue Streams**
 1. **Commission on bookings** (15-20% per tour)
 2. **Guide certification fees** (one-time + annual renewal)
@@ -93,6 +93,10 @@ It's a comprehensive **Guide Training Academy + Marketplace** that connects qual
 5. **Affiliate partnerships** (restaurants, venues, transport)
 6. **Sponsored content** (featured tours, promoted guides)
 7. **White-label licensing** (other cities using our platform)
+
+**[PLACEHOLDER: Revenue Projections - Year 1, 2, 3 forecasts needed in LBPF_FINANCIAL_BUSINESS_PLAN.md]**
+**[PLACEHOLDER: Break-even Analysis - calculate in LBPF_FINANCIAL_BUSINESS_PLAN.md]**
+**[PLACEHOLDER: Pricing Strategy - define exact fees and commission structure]**
 
 ---
 
@@ -120,41 +124,32 @@ It's a comprehensive **Guide Training Academy + Marketplace** that connects qual
 
 ## 6. Marketing Strategy
 
-### **Target Audiences**
-1. **Travelers:** English/Dutch/German speakers seeking authentic Lisbon
-2. **Guides:** New and experienced seeking certification/clients
-3. **Agencies:** Looking for quality freelance guides
-4. **Partners:** Restaurants, venues wanting tour referrals
+**→ See LBPF_MARKETING_AND_SM.md for complete marketing plan**
 
-### **Marketing Channels**
-- **SEO:** Content-rich guide/tour pages
-- **Social Media:** Instagram, Pinterest (visual Lisbon content)
-- **Partnerships:** TripAdvisor, Bokun integration
-- **Word of mouth:** Guide and traveler referrals
-- **Content marketing:** Blog, multi-day stories, local insights
+### **Quick Reference**
+- **Target Audiences:** Travelers, Guides, Agencies, Partners
+- **Primary Channels:** SEO, Social Media, Partnerships, Content Marketing
+- **Month 1-3:** Foundation building (website, social presence, content library)
+- **Month 4-6:** Growth phase (paid ads, partnerships, influencer outreach)
+- **Month 7-12:** Scale phase (automation, analytics, optimization)
+
+**[PLACEHOLDER: Marketing Budget - needs financial projections]**
+**[PLACEHOLDER: KPIs and Success Metrics - define in LBPF_MARKETING_AND_SM.md]**
 
 ---
 
 ## 7. Technology Strategy
 
-### **Current Stack (MVP)**
-- Vanilla HTML/CSS/JS (no frameworks)
-- Component-based architecture
-- Brand token system
-- Manual content management
+**→ See LBPF_TOOLS_AND_SPECS.md for complete technical specifications**
 
-### **Phase 2 (CMS Integration)**
-- Form-based guide/tour creation
-- JSON data storage
-- Automated page generation
-- Calendar integration
+### **Quick Reference**
+- **Current Stack:** Vanilla HTML/CSS/JS, component-based, brand token system
+- **Phase 2:** CMS integration, JSON data, automated generation
+- **Phase 3:** Full platform with booking, payments, reviews, analytics
+- **Bokun Integration:** Planned for Month 2-3 (see LBPF_TOOLS_AND_SPECS.md section 1.2.0)
 
-### **Phase 3 (Full Platform)**
-- User accounts (guides, travelers, agencies)
-- Booking system integration (Bokun or similar)
-- Payment processing
-- Review/rating system
-- Analytics dashboard
+**[PLACEHOLDER: Technology Budget - needs cost estimates for hosting, tools, APIs]**
+**[PLACEHOLDER: Development Timeline - coordinate with LBPF_TOOLS_AND_SPECS.md]**
 
 ---
 

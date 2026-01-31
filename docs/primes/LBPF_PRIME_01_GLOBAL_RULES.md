@@ -89,6 +89,15 @@
 3.4.3  Y = Minor version (non-breaking features)
 3.4.4  Z = Patch version (fixes only)
 
+3.5.0  WRITE ONCE, FILL ALL (MANDATORY)
+3.5.1  Any content that relates to multiple files MUST be synced across all relevant files
+3.5.2  When writing content, identify which other files need the same/related information
+3.5.3  Update all related files immediately - do not leave orphaned or inconsistent content
+3.5.4  Use cross-references and placeholders to link related content
+3.5.5  Example: Marketing idea in Cascade → add to P06 TODO → update LBPF_MARKETING_AND_SM.md → reference in LBPF_BUSINESS_PLAN.md
+3.5.6  This prevents scattered information and ensures single source of truth
+3.5.7  When updating version in metadata, ensure content reflects the changes described in version history
+
 ---
 
 4.0.0  GOVERNANCE

@@ -46,7 +46,17 @@
 3.1.10 Priority: HIGH
 3.1.11 Created: 2026-01-31
 3.1.12 Due by: 2026-02-07
-3.1.13 Lane: INBOX
+3.1.13 Lane: COMPLETED (2026-01-31)
+
+3.2.0  TODO ITEM
+3.2.1  Title: Sync "Write Once Fill All" rule to TOBE Prime 01
+3.2.2  Description: New global rule added to LBPF_PRIME_01 section 3.5.0 must be synced to TOBE project
+3.2.3  Action: Add identical rule to TOBE_PRIME_01_GLOBAL_RULES.md
+3.2.4  Rationale: Cross-project consistency - this is a universal workflow rule
+3.2.5  Priority: MEDIUM
+3.2.6  Created: 2026-01-31
+3.2.7  Due by: 2026-02-07
+3.2.8  Lane: INBOX
 
 3.2.0  TODO ITEM
 3.2.1  Title: Scan Archive_Bootstrap_Versions for additional valuable knowledge files
