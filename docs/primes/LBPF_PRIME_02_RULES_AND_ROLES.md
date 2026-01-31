@@ -20,6 +20,22 @@
 
 ---
 
+0.0.0  SESSION START PROTOCOL (CRITICAL)
+
+0.1.0  MANDATORY ACKNOWLEDGEMENT
+0.1.1  At session start, AI must read all Primes and relevant Core docs
+0.1.2  AI must respond with: "Up to speed. Priority: [TASK]. Ready?"
+0.1.3  AI MUST WAIT for user confirmation before ANY coding or file changes
+0.1.4  NO code edits, NO file operations, NO git commands until user confirms
+0.1.5  This prevents hallucinations and uncontrolled changes
+
+0.2.0  REASON
+0.2.1  User cannot afford faulty/hallucinating AI going havoc in code
+0.2.2  All changes must be deliberate and approved
+0.2.3  Session start confirmation ensures alignment before action
+
+---
+
 1.0.0  ROLES AND RESPONSIBILITIES
 
 1.1.0  THE USER PROFILE
@@ -123,4 +139,6 @@
 
 ---
 
-**End** (Always end the page with this line)
+**End**
+
+---

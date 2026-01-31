@@ -145,4 +145,6 @@
 
 ---
 
-**End** (Always end the page with this line)
+**End**
+
+---

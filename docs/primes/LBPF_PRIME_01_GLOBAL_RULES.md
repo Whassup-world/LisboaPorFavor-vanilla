@@ -28,6 +28,7 @@
 2.1.1  lisboaporfavor-vanilla/docs/primes/LBPF_PRIME_01_GLOBAL_RULES.md
 2.1.2  lisboaporfavor-vanilla/docs/primes/LBPF_PRIME_02_RULES_AND_ROLES.md
 2.1.3  lisboaporfavor-vanilla/docs/primes/LBPF_PRIME_03_SOURCE_OF_TRUTH.md
+2.1.4  lisboaporfavor-vanilla/docs/primes/LBPF_PRIME_06_TODO.md
 
 2.2.0  CORE (PROJECT KNOWLEDGE BASE)
 2.2.1  lisboaporfavor-vanilla/docs/core/LBPF_BRAND_PACK.md
@@ -200,4 +201,6 @@
 
 ---
 
-**End** (Always end the page with this line)
+**End**
+
+---
